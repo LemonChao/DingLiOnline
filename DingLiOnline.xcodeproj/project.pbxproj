@@ -1,0 +1,749 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		383BDC14FD97DC358339BAD0 /* Pods_DingLiOnlineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F4B33BDBC04046F08D03D4 /* Pods_DingLiOnlineUITests.framework */; };
+		639E0697888F8A291FD61F77 /* Pods_DingLiOnlineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B53910849BAFED252DF560F /* Pods_DingLiOnlineTests.framework */; };
+		6CB9065222E996ED00C40C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9065122E996ED00C40C9F /* AppDelegate.swift */; };
+		6CB9065422E996ED00C40C9F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9065322E996ED00C40C9F /* ViewController.swift */; };
+		6CB9065722E996ED00C40C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB9065522E996ED00C40C9F /* Main.storyboard */; };
+		6CB9065A22E996ED00C40C9F /* DingLiOnline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9065822E996ED00C40C9F /* DingLiOnline.xcdatamodeld */; };
+		6CB9065C22E996EE00C40C9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CB9065B22E996EE00C40C9F /* Assets.xcassets */; };
+		6CB9065F22E996EE00C40C9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB9065D22E996EE00C40C9F /* LaunchScreen.storyboard */; };
+		6CB9066A22E996EE00C40C9F /* DingLiOnlineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9066922E996EE00C40C9F /* DingLiOnlineTests.swift */; };
+		6CB9067522E996EE00C40C9F /* DingLiOnlineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9067422E996EE00C40C9F /* DingLiOnlineUITests.swift */; };
+		EB8790C9BD3EDFB9B97AEE14 /* Pods_DingLiOnline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CE9FC9CD6CD52D8E750138 /* Pods_DingLiOnline.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6CB9066622E996EE00C40C9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CB9064622E996ED00C40C9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CB9064D22E996ED00C40C9F;
+			remoteInfo = DingLiOnline;
+		};
+		6CB9067122E996EE00C40C9F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6CB9064622E996ED00C40C9F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CB9064D22E996ED00C40C9F;
+			remoteInfo = DingLiOnline;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4353373A31CD277F9BD91392 /* Pods-DingLiOnlineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DingLiOnlineTests.debug.xcconfig"; path = "Target Support Files/Pods-DingLiOnlineTests/Pods-DingLiOnlineTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4E6CFC6956560F45A040D2C4 /* Pods-DingLiOnline.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DingLiOnline.debug.xcconfig"; path = "Target Support Files/Pods-DingLiOnline/Pods-DingLiOnline.debug.xcconfig"; sourceTree = "<group>"; };
+		50CE9FC9CD6CD52D8E750138 /* Pods_DingLiOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DingLiOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B53910849BAFED252DF560F /* Pods_DingLiOnlineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DingLiOnlineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A6A8D143B891FD30FA9FC4C /* Pods-DingLiOnlineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DingLiOnlineUITests.debug.xcconfig"; path = "Target Support Files/Pods-DingLiOnlineUITests/Pods-DingLiOnlineUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6CB9064E22E996ED00C40C9F /* DingLiOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingLiOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CB9065122E996ED00C40C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6CB9065322E996ED00C40C9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6CB9065622E996ED00C40C9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6CB9065922E996ED00C40C9F /* DingLiOnline.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DingLiOnline.xcdatamodel; sourceTree = "<group>"; };
+		6CB9065B22E996EE00C40C9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6CB9065E22E996EE00C40C9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6CB9066022E996EE00C40C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CB9066522E996EE00C40C9F /* DingLiOnlineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DingLiOnlineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CB9066922E996EE00C40C9F /* DingLiOnlineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DingLiOnlineTests.swift; sourceTree = "<group>"; };
+		6CB9066B22E996EE00C40C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6CB9067022E996EE00C40C9F /* DingLiOnlineUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DingLiOnlineUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CB9067422E996EE00C40C9F /* DingLiOnlineUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DingLiOnlineUITests.swift; sourceTree = "<group>"; };
+		6CB9067622E996EE00C40C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76F08DD974B00307E667E1C5 /* Pods-DingLiOnlineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DingLiOnlineUITests.release.xcconfig"; path = "Target Support Files/Pods-DingLiOnlineUITests/Pods-DingLiOnlineUITests.release.xcconfig"; sourceTree = "<group>"; };
+		89F4B33BDBC04046F08D03D4 /* Pods_DingLiOnlineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DingLiOnlineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF2CC12BC43503B59DF9C35C /* Pods-DingLiOnlineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DingLiOnlineTests.release.xcconfig"; path = "Target Support Files/Pods-DingLiOnlineTests/Pods-DingLiOnlineTests.release.xcconfig"; sourceTree = "<group>"; };
+		F45D2246441F98888EC4B86E /* Pods-DingLiOnline.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DingLiOnline.release.xcconfig"; path = "Target Support Files/Pods-DingLiOnline/Pods-DingLiOnline.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6CB9064B22E996ED00C40C9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB8790C9BD3EDFB9B97AEE14 /* Pods_DingLiOnline.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CB9066222E996EE00C40C9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				639E0697888F8A291FD61F77 /* Pods_DingLiOnlineTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CB9066D22E996EE00C40C9F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				383BDC14FD97DC358339BAD0 /* Pods_DingLiOnlineUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		395EE0762B35E6584056F21A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				50CE9FC9CD6CD52D8E750138 /* Pods_DingLiOnline.framework */,
+				5B53910849BAFED252DF560F /* Pods_DingLiOnlineTests.framework */,
+				89F4B33BDBC04046F08D03D4 /* Pods_DingLiOnlineUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CB9064522E996ED00C40C9F = {
+			isa = PBXGroup;
+			children = (
+				6CB9065022E996ED00C40C9F /* DingLiOnline */,
+				6CB9066822E996EE00C40C9F /* DingLiOnlineTests */,
+				6CB9067322E996EE00C40C9F /* DingLiOnlineUITests */,
+				6CB9064F22E996ED00C40C9F /* Products */,
+				EAE2A0B60132C2C007E0AC30 /* Pods */,
+				395EE0762B35E6584056F21A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6CB9064F22E996ED00C40C9F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6CB9064E22E996ED00C40C9F /* DingLiOnline.app */,
+				6CB9066522E996EE00C40C9F /* DingLiOnlineTests.xctest */,
+				6CB9067022E996EE00C40C9F /* DingLiOnlineUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6CB9065022E996ED00C40C9F /* DingLiOnline */ = {
+			isa = PBXGroup;
+			children = (
+				6CB9065122E996ED00C40C9F /* AppDelegate.swift */,
+				6CB9065322E996ED00C40C9F /* ViewController.swift */,
+				6CB9065522E996ED00C40C9F /* Main.storyboard */,
+				6CB9065B22E996EE00C40C9F /* Assets.xcassets */,
+				6CB9065D22E996EE00C40C9F /* LaunchScreen.storyboard */,
+				6CB9066022E996EE00C40C9F /* Info.plist */,
+				6CB9065822E996ED00C40C9F /* DingLiOnline.xcdatamodeld */,
+			);
+			path = DingLiOnline;
+			sourceTree = "<group>";
+		};
+		6CB9066822E996EE00C40C9F /* DingLiOnlineTests */ = {
+			isa = PBXGroup;
+			children = (
+				6CB9066922E996EE00C40C9F /* DingLiOnlineTests.swift */,
+				6CB9066B22E996EE00C40C9F /* Info.plist */,
+			);
+			path = DingLiOnlineTests;
+			sourceTree = "<group>";
+		};
+		6CB9067322E996EE00C40C9F /* DingLiOnlineUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6CB9067422E996EE00C40C9F /* DingLiOnlineUITests.swift */,
+				6CB9067622E996EE00C40C9F /* Info.plist */,
+			);
+			path = DingLiOnlineUITests;
+			sourceTree = "<group>";
+		};
+		EAE2A0B60132C2C007E0AC30 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E6CFC6956560F45A040D2C4 /* Pods-DingLiOnline.debug.xcconfig */,
+				F45D2246441F98888EC4B86E /* Pods-DingLiOnline.release.xcconfig */,
+				4353373A31CD277F9BD91392 /* Pods-DingLiOnlineTests.debug.xcconfig */,
+				AF2CC12BC43503B59DF9C35C /* Pods-DingLiOnlineTests.release.xcconfig */,
+				6A6A8D143B891FD30FA9FC4C /* Pods-DingLiOnlineUITests.debug.xcconfig */,
+				76F08DD974B00307E667E1C5 /* Pods-DingLiOnlineUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6CB9064D22E996ED00C40C9F /* DingLiOnline */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CB9067922E996EE00C40C9F /* Build configuration list for PBXNativeTarget "DingLiOnline" */;
+			buildPhases = (
+				A315AD59B345911564DB09DF /* [CP] Check Pods Manifest.lock */,
+				6CB9064A22E996ED00C40C9F /* Sources */,
+				6CB9064B22E996ED00C40C9F /* Frameworks */,
+				6CB9064C22E996ED00C40C9F /* Resources */,
+				EAD3144B276EF6AD97CC46A6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DingLiOnline;
+			productName = DingLiOnline;
+			productReference = 6CB9064E22E996ED00C40C9F /* DingLiOnline.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6CB9066422E996EE00C40C9F /* DingLiOnlineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CB9067C22E996EE00C40C9F /* Build configuration list for PBXNativeTarget "DingLiOnlineTests" */;
+			buildPhases = (
+				DFA46632B202ED3DE992D370 /* [CP] Check Pods Manifest.lock */,
+				6CB9066122E996EE00C40C9F /* Sources */,
+				6CB9066222E996EE00C40C9F /* Frameworks */,
+				6CB9066322E996EE00C40C9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CB9066722E996EE00C40C9F /* PBXTargetDependency */,
+			);
+			name = DingLiOnlineTests;
+			productName = DingLiOnlineTests;
+			productReference = 6CB9066522E996EE00C40C9F /* DingLiOnlineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6CB9066F22E996EE00C40C9F /* DingLiOnlineUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6CB9067F22E996EE00C40C9F /* Build configuration list for PBXNativeTarget "DingLiOnlineUITests" */;
+			buildPhases = (
+				AD8D7CCBEC3BCF753CF75FA9 /* [CP] Check Pods Manifest.lock */,
+				6CB9066C22E996EE00C40C9F /* Sources */,
+				6CB9066D22E996EE00C40C9F /* Frameworks */,
+				6CB9066E22E996EE00C40C9F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6CB9067222E996EE00C40C9F /* PBXTargetDependency */,
+			);
+			name = DingLiOnlineUITests;
+			productName = DingLiOnlineUITests;
+			productReference = 6CB9067022E996EE00C40C9F /* DingLiOnlineUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6CB9064622E996ED00C40C9F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = zchao;
+				TargetAttributes = {
+					6CB9064D22E996ED00C40C9F = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					6CB9066422E996EE00C40C9F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 6CB9064D22E996ED00C40C9F;
+					};
+					6CB9066F22E996EE00C40C9F = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 6CB9064D22E996ED00C40C9F;
+					};
+				};
+			};
+			buildConfigurationList = 6CB9064922E996ED00C40C9F /* Build configuration list for PBXProject "DingLiOnline" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6CB9064522E996ED00C40C9F;
+			productRefGroup = 6CB9064F22E996ED00C40C9F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6CB9064D22E996ED00C40C9F /* DingLiOnline */,
+				6CB9066422E996EE00C40C9F /* DingLiOnlineTests */,
+				6CB9066F22E996EE00C40C9F /* DingLiOnlineUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6CB9064C22E996ED00C40C9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CB9065F22E996EE00C40C9F /* LaunchScreen.storyboard in Resources */,
+				6CB9065C22E996EE00C40C9F /* Assets.xcassets in Resources */,
+				6CB9065722E996ED00C40C9F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CB9066322E996EE00C40C9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CB9066E22E996EE00C40C9F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A315AD59B345911564DB09DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DingLiOnline-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD8D7CCBEC3BCF753CF75FA9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DingLiOnlineUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFA46632B202ED3DE992D370 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DingLiOnlineTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EAD3144B276EF6AD97CC46A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DingLiOnline/Pods-DingLiOnline-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DingLiOnline/Pods-DingLiOnline-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6CB9064A22E996ED00C40C9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CB9065422E996ED00C40C9F /* ViewController.swift in Sources */,
+				6CB9065222E996ED00C40C9F /* AppDelegate.swift in Sources */,
+				6CB9065A22E996ED00C40C9F /* DingLiOnline.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CB9066122E996EE00C40C9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CB9066A22E996EE00C40C9F /* DingLiOnlineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6CB9066C22E996EE00C40C9F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6CB9067522E996EE00C40C9F /* DingLiOnlineUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6CB9066722E996EE00C40C9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CB9064D22E996ED00C40C9F /* DingLiOnline */;
+			targetProxy = 6CB9066622E996EE00C40C9F /* PBXContainerItemProxy */;
+		};
+		6CB9067222E996EE00C40C9F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6CB9064D22E996ED00C40C9F /* DingLiOnline */;
+			targetProxy = 6CB9067122E996EE00C40C9F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6CB9065522E996ED00C40C9F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CB9065622E996ED00C40C9F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6CB9065D22E996EE00C40C9F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6CB9065E22E996EE00C40C9F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6CB9067722E996EE00C40C9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6CB9067822E996EE00C40C9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6CB9067A22E996EE00C40C9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E6CFC6956560F45A040D2C4 /* Pods-DingLiOnline.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DingLiOnline/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leyukeji.DingLiOnline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6CB9067B22E996EE00C40C9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F45D2246441F98888EC4B86E /* Pods-DingLiOnline.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DingLiOnline/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leyukeji.DingLiOnline;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6CB9067D22E996EE00C40C9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4353373A31CD277F9BD91392 /* Pods-DingLiOnlineTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DingLiOnlineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leyukeji.DingLiOnlineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DingLiOnline.app/DingLiOnline";
+			};
+			name = Debug;
+		};
+		6CB9067E22E996EE00C40C9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF2CC12BC43503B59DF9C35C /* Pods-DingLiOnlineTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DingLiOnlineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leyukeji.DingLiOnlineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DingLiOnline.app/DingLiOnline";
+			};
+			name = Release;
+		};
+		6CB9068022E996EE00C40C9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A6A8D143B891FD30FA9FC4C /* Pods-DingLiOnlineUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DingLiOnlineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leyukeji.DingLiOnlineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DingLiOnline;
+			};
+			name = Debug;
+		};
+		6CB9068122E996EE00C40C9F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76F08DD974B00307E667E1C5 /* Pods-DingLiOnlineUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DingLiOnlineUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.leyukeji.DingLiOnlineUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DingLiOnline;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CB9064922E996ED00C40C9F /* Build configuration list for PBXProject "DingLiOnline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CB9067722E996EE00C40C9F /* Debug */,
+				6CB9067822E996EE00C40C9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CB9067922E996EE00C40C9F /* Build configuration list for PBXNativeTarget "DingLiOnline" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CB9067A22E996EE00C40C9F /* Debug */,
+				6CB9067B22E996EE00C40C9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CB9067C22E996EE00C40C9F /* Build configuration list for PBXNativeTarget "DingLiOnlineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CB9067D22E996EE00C40C9F /* Debug */,
+				6CB9067E22E996EE00C40C9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6CB9067F22E996EE00C40C9F /* Build configuration list for PBXNativeTarget "DingLiOnlineUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6CB9068022E996EE00C40C9F /* Debug */,
+				6CB9068122E996EE00C40C9F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6CB9065822E996ED00C40C9F /* DingLiOnline.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6CB9065922E996ED00C40C9F /* DingLiOnline.xcdatamodel */,
+			);
+			currentVersion = 6CB9065922E996ED00C40C9F /* DingLiOnline.xcdatamodel */;
+			path = DingLiOnline.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6CB9064622E996ED00C40C9F /* Project object */;
+}
