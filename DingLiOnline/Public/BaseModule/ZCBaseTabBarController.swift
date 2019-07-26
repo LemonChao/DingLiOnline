@@ -20,7 +20,7 @@ class ZCBaseTabBarController: UITabBarController {
     }()
     
     lazy var classifyNav: ZCBaseNavigationController = {
-        let vc = ZCHomeViewController()
+        let vc = ZCClassifyViewController()
         let nav = ZCBaseNavigationController.init(rootViewController: vc)
         nav.tabBarItem = UITabBarItem.init(title: "分类", image: UIImage(named: "classify_normal")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "classify_select")?.withRenderingMode(.alwaysOriginal))
         nav.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:NormalColor], for: .normal)
@@ -29,7 +29,7 @@ class ZCBaseTabBarController: UITabBarController {
     }()
 
     lazy var circleNav: ZCBaseNavigationController = {
-        let vc = ZCHomeViewController()
+        let vc = ZCCircleViewController()
         let nav = ZCBaseNavigationController.init(rootViewController: vc)
         nav.tabBarItem = UITabBarItem.init(title: "圈子", image: UIImage(named: "circle_normal")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "circle_select")?.withRenderingMode(.alwaysOriginal))
         nav.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:NormalColor], for: .normal)
@@ -38,7 +38,7 @@ class ZCBaseTabBarController: UITabBarController {
     }()
 
     lazy var myselfNav: ZCBaseNavigationController = {
-        let vc = ZCHomeViewController()
+        let vc = ZCMyselfViewController()
         let nav = ZCBaseNavigationController.init(rootViewController: vc)
         nav.tabBarItem = UITabBarItem.init(title: "我的", image: UIImage(named: "myself_normal")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "myself_select")?.withRenderingMode(.alwaysOriginal))
         nav.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:NormalColor], for: .normal)
@@ -51,6 +51,6 @@ class ZCBaseTabBarController: UITabBarController {
         super.viewDidLoad()
 
         self.viewControllers = [self.homeNav,self.classifyNav,self.circleNav,self.myselfNav]
-        self.tabBar.backgroundImage = UIImage.init()
+        self.tabBar.backgroundImage = UIImage.imageColor(UIColor.white)
     }
 }

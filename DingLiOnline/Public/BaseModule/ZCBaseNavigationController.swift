@@ -13,18 +13,25 @@ class ZCBaseNavigationController: UINavigationController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // no: 解决scrollView 往上偏移
+        self.navigationBar.isTranslucent = false;
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        if self.viewControllers.count >= 1 {
+            viewController.hidesBottomBarWhenPushed = true
+        }
+        super.pushViewController(viewController, animated: animated)
     }
-    */
-
+    
+    // 状态栏style 交给内部vc控制
+    override var childForStatusBarStyle: UIViewController? {
+        return self.topViewController
+    }
+    
+    // 状态栏hidden 交给内部vc控制
+    override var childForStatusBarHidden: UIViewController? {
+        return self.topViewController
+    }
+    
 }

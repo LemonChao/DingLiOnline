@@ -134,6 +134,44 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return image!
     }
+    
+    
+    public class func imageColor(_ color: UIColor) -> UIImage {
+        return self.imageColor(color: color, size: CGSize(width: 1, height: 1))
+    }
+    
+    
+    public class func imageColor(color: UIColor, size aSize: CGSize) -> UIImage {
+        var bSize = aSize
+        if bSize.equalTo(CGSize(width: 0, height: 0)) {
+            bSize = CGSize(width: 1, height: 1)
+        }
+        
+        UIGraphicsBeginImageContextWithOptions(bSize, false, 0)
+        let context = UIGraphicsGetCurrentContext()
+        context?.setFillColor(color.cgColor)
+        context?.fill(CGRect(x: 0, y: 0, w: bSize.width, h: bSize.height))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+
+        return image!
+    }
+    
+//    convenience init(color aColor: UIColor, size aSize: CGSize){
+//        self.init()
+//
+//        var bSize = aSize
+//        if bSize.equalTo(CGSize(width: 0, height: 0)) {
+//            bSize = CGSize(width: 1, height: 1)
+//        }
+//
+//        UIGraphicsBeginImageContextWithOptions(bSize, false, 0)
+//        let context = UIGraphicsGetCurrentContext()
+//        context?.setFillColor(aColor.cgColor)
+//        context?.fill(CGRect(x: 0, y: 0, w: bSize.width, h: bSize.height))
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//    }
 }
 
 #endif

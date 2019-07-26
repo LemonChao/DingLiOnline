@@ -117,7 +117,6 @@ func kNOTIFY_REMOVE(observer: Any, name: String) {
 }
 
 //代码缩写
-//let kApplication = UIApplication.shared
 let kAPPKeyWindow = UIApplication.shared.keyWindow
 let kAppDelegate = UIApplication.shared.delegate
 let kAppNotificationCenter = NotificationCenter.default
