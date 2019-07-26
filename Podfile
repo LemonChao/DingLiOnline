@@ -9,7 +9,8 @@ target 'DingLiOnline' do
   pod 'SwiftyJSON', '~> 5.0.0'
   pod 'Alamofire', '~> 4.8.2'
   pod 'SnapKit', '~> 4.2.0'
-
+  pod 'Kingfisher', '~> 4.10.1'
+  
   target 'DingLiOnlineTests' do
     inherit! :search_paths
     # Pods for testing
