@@ -72,6 +72,12 @@
 		6C24685F22EAD8FB00A8CD19 /* BlockTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24682C22EAD8FA00A8CD19 /* BlockTap.swift */; };
 		6C24686022EAD8FB00A8CD19 /* CharacterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24682D22EAD8FA00A8CD19 /* CharacterExtensions.swift */; };
 		6C24686122EAD8FB00A8CD19 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24682E22EAD8FB00A8CD19 /* UIFontExtensions.swift */; };
+		6C4EF18B22EBEDE500E3D68B /* ZCCircleNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EF18A22EBEDE500E3D68B /* ZCCircleNavigationBar.swift */; };
+		6C4EF18D22EBFA9B00E3D68B /* ZCFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EF18C22EBFA9B00E3D68B /* ZCFocusViewController.swift */; };
+		6C4EF19022EBFAE100E3D68B /* ZCBaseCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EF18F22EBFAE100E3D68B /* ZCBaseCircleViewController.swift */; };
+		6C4EF19222EBFB1400E3D68B /* ZCMycircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EF19122EBFB1400E3D68B /* ZCMycircleViewController.swift */; };
+		6C4EF19422EBFB4900E3D68B /* ZCTopicListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EF19322EBFB4900E3D68B /* ZCTopicListViewController.swift */; };
+		6C4EF19622EC033900E3D68B /* ZCCircleNavigationBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EF19522EC033900E3D68B /* ZCCircleNavigationBarCell.swift */; };
 		6CB9065222E996ED00C40C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9065122E996ED00C40C9F /* AppDelegate.swift */; };
 		6CB9065722E996ED00C40C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB9065522E996ED00C40C9F /* Main.storyboard */; };
 		6CB9065A22E996ED00C40C9F /* DingLiOnline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9065822E996ED00C40C9F /* DingLiOnline.xcdatamodeld */; };
@@ -168,6 +174,12 @@
 		6C24682C22EAD8FA00A8CD19 /* BlockTap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockTap.swift; sourceTree = "<group>"; };
 		6C24682D22EAD8FA00A8CD19 /* CharacterExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterExtensions.swift; sourceTree = "<group>"; };
 		6C24682E22EAD8FB00A8CD19 /* UIFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
+		6C4EF18A22EBEDE500E3D68B /* ZCCircleNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCircleNavigationBar.swift; sourceTree = "<group>"; };
+		6C4EF18C22EBFA9B00E3D68B /* ZCFocusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCFocusViewController.swift; sourceTree = "<group>"; };
+		6C4EF18F22EBFAE100E3D68B /* ZCBaseCircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseCircleViewController.swift; sourceTree = "<group>"; };
+		6C4EF19122EBFB1400E3D68B /* ZCMycircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMycircleViewController.swift; sourceTree = "<group>"; };
+		6C4EF19322EBFB4900E3D68B /* ZCTopicListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCTopicListViewController.swift; sourceTree = "<group>"; };
+		6C4EF19522EC033900E3D68B /* ZCCircleNavigationBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCircleNavigationBarCell.swift; sourceTree = "<group>"; };
 		6CB9064E22E996ED00C40C9F /* DingLiOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingLiOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB9065122E996ED00C40C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CB9065622E996ED00C40C9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -286,7 +298,12 @@
 		6C24670A22EA9C9200A8CD19 /* Circle */ = {
 			isa = PBXGroup;
 			children = (
+				6C4EF18F22EBFAE100E3D68B /* ZCBaseCircleViewController.swift */,
 				6C24671D22EAA73500A8CD19 /* ZCCircleViewController.swift */,
+				6C4EF18C22EBFA9B00E3D68B /* ZCFocusViewController.swift */,
+				6C4EF19122EBFB1400E3D68B /* ZCMycircleViewController.swift */,
+				6C4EF19322EBFB4900E3D68B /* ZCTopicListViewController.swift */,
+				6C4EF18922EBECA900E3D68B /* Views */,
 			);
 			path = Circle;
 			sourceTree = "<group>";
@@ -398,6 +415,15 @@
 				6C24681F22EAD8F900A8CD19 /* UserDefaultsExtension.swift */,
 			);
 			path = EZSwiftExtensions;
+			sourceTree = "<group>";
+		};
+		6C4EF18922EBECA900E3D68B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C4EF18A22EBEDE500E3D68B /* ZCCircleNavigationBar.swift */,
+				6C4EF19522EC033900E3D68B /* ZCCircleNavigationBarCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		6CB9064522E996ED00C40C9F = {
@@ -698,8 +724,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C4EF19022EBFAE100E3D68B /* ZCBaseCircleViewController.swift in Sources */,
 				6C24683722EAD8FB00A8CD19 /* CGRectExtensions.swift in Sources */,
 				6C24672622EAAD2400A8CD19 /* SystemHeader.swift in Sources */,
+				6C4EF19422EBFB4900E3D68B /* ZCTopicListViewController.swift in Sources */,
 				6C24686122EAD8FB00A8CD19 /* UIFontExtensions.swift in Sources */,
 				6C24684322EAD8FB00A8CD19 /* TimerExtensions.swift in Sources */,
 				6C24671622EA9E9F00A8CD19 /* ZCBaseViewController.swift in Sources */,
@@ -734,6 +762,7 @@
 				6C24684E22EAD8FB00A8CD19 /* UILabelExtensions.swift in Sources */,
 				6C24685822EAD8FB00A8CD19 /* FloatingPointExtensions.swift in Sources */,
 				6C24685122EAD8FB00A8CD19 /* UITextFieldExtensions.swift in Sources */,
+				6C4EF18B22EBEDE500E3D68B /* ZCCircleNavigationBar.swift in Sources */,
 				6C24684C22EAD8FB00A8CD19 /* UIColoredView.swift in Sources */,
 				6C24683122EAD8FB00A8CD19 /* BundleExtensions.swift in Sources */,
 				6C24672522EAAD2400A8CD19 /* InterfaceHeader.swift in Sources */,
@@ -743,10 +772,13 @@
 				6C24683322EAD8FB00A8CD19 /* BlockSwipe.swift in Sources */,
 				6C24683022EAD8FB00A8CD19 /* DictionaryExtensions.swift in Sources */,
 				6C24672222EAACEC00A8CD19 /* UIColor+WUIKit.swift in Sources */,
+				6C4EF18D22EBFA9B00E3D68B /* ZCFocusViewController.swift in Sources */,
 				6C24685B22EAD8FB00A8CD19 /* ArrayExtensions.swift in Sources */,
 				6C24684222EAD8FB00A8CD19 /* BoolExtensions.swift in Sources */,
 				6C24684522EAD8FB00A8CD19 /* BlockPinch.swift in Sources */,
 				6C24683A22EAD8FB00A8CD19 /* NSAttributedStringExtensions.swift in Sources */,
+				6C4EF19222EBFB1400E3D68B /* ZCMycircleViewController.swift in Sources */,
+				6C4EF19622EC033900E3D68B /* ZCCircleNavigationBarCell.swift in Sources */,
 				6C24684B22EAD8FB00A8CD19 /* NSDictionaryExtensions.swift in Sources */,
 				6C24686022EAD8FB00A8CD19 /* CharacterExtensions.swift in Sources */,
 				6C24685522EAD8FB00A8CD19 /* StringExtensions.swift in Sources */,

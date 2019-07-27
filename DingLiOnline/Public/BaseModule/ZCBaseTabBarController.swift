@@ -29,7 +29,7 @@ class ZCBaseTabBarController: UITabBarController {
     }()
 
     lazy var circleNav: ZCBaseNavigationController = {
-        let vc = ZCCircleViewController()
+        let vc = ZCBaseCircleViewController()
         let nav = ZCBaseNavigationController.init(rootViewController: vc)
         nav.tabBarItem = UITabBarItem.init(title: "圈子", image: UIImage(named: "circle_normal")?.withRenderingMode(.alwaysOriginal), selectedImage: UIImage(named: "circle_select")?.withRenderingMode(.alwaysOriginal))
         nav.tabBarItem.setTitleTextAttributes([NSAttributedString.Key.foregroundColor:NormalColor], for: .normal)

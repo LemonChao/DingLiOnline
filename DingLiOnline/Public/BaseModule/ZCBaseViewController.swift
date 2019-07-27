@@ -9,10 +9,6 @@
 import UIKit
 
 class ZCBaseViewController: UIViewController {
-
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +25,12 @@ class ZCBaseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+//        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+//        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     

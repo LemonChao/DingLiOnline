@@ -14,12 +14,6 @@ class ZCCircleViewController: ZCBaseViewController {
         super.viewDidLoad()
 
     }
-    
-    override func configCustomNav() {
-        let view = UIView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: 44))
-        view.backgroundColor = UIColor.cyan
-        self.navigationController?.navigationBar.addSubview(view)
-    }
 
 
 }
