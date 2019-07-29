@@ -23,7 +23,7 @@ class ZCCircleNavigationBarCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.button.frame = CGRect(x: 0, y: 0, w: frame.width, h: frame.height)
-        self.addSubview(self.button)
+        self.contentView.addSubview(self.button)
     }
     
     required init?(coder aDecoder: NSCoder) {

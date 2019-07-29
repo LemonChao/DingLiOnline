@@ -20,7 +20,7 @@ class ZCCircleNavigationBar: ZCBaseView {
             self.rootScrollView.contentSize = CGSize(width: SCREEN_WIDTH*CGFloat(viewControllers.count), height: CGFloat(contentViewHeight))
         }
     }
-    var contentViewHeight = 0.0
+    var contentViewHeight: CGFloat = 0.0
     var parentViewController: ZCBaseViewController!
     var delegate: AnyObject?
     var lineEdgeInsets = UIEdgeInsets(top: 40, left: 4, bottom: 2, right: 4)
@@ -60,9 +60,9 @@ class ZCCircleNavigationBar: ZCBaseView {
 
     init(frame aFrame: CGRect, parent aParent: UIViewController) {
         super.init(frame: aFrame)
-        contentViewHeight = Double(SCREEN_HEIGHT) - NavBarHeight - TabBarHeight
+        contentViewHeight = SCREEN_HEIGHT - NavBarHeight - TabBarHeight
         collectionView.frame = CGRect(x: 0, y: 0, w: frame.width, h: frame.height)
-        rootScrollView.frame = CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: CGFloat(contentViewHeight))
+        rootScrollView.frame = CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: contentViewHeight)
         lineView.frame = CGRect(x: lineEdgeInsets.left, y: lineEdgeInsets.top, w: 38-lineEdgeInsets.left-lineEdgeInsets.right, h: frame.height-lineEdgeInsets.top-lineEdgeInsets.bottom)
         parentViewController = aParent as? ZCBaseViewController
         self.collectionView.delegate = self

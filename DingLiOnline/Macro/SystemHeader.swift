@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import SnapKit
 
 //获取沙盒Document路径
 let kDocumentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first
@@ -54,7 +54,18 @@ func FitWidth(_ width: CGFloat) -> CGFloat {
 
 func FitHeight(_ height: CGFloat) -> CGFloat {
     return height / 667 * SCREEN_HEIGHT
+}
 
+func FontSize(_ size: CGFloat) -> CGFloat {
+    if SCREEN_WIDTH < 375 {
+        return size - 1
+    }
+    
+    if SCREEN_WIDTH > 375 {
+        return size + 1
+    }
+    
+    return size
 }
 
 //APP 名字
@@ -95,13 +106,13 @@ let IS_IPHONE_XsMax =  (UIScreen.instancesRespond(to: #selector(getter: UIScreen
 let kiPhoneX = (IS_IPHONE_X || IS_IPHONE_Xr || IS_IPHONE_XsMax)
 
 //获取状态栏高度
-let StatusBarHeight     = (kiPhoneX ? 44.0 : 20.0)
+let StatusBarHeight     = CGFloat((kiPhoneX ? 44.0 : 20.0))
 //获取导航栏高度
-let NavBarHeight        = (kiPhoneX ? 88.0 : 64.0)
+let NavBarHeight        = CGFloat((kiPhoneX ? 88.0 : 64.0))
 //获取tabBar高度
-let TabBarHeight        = (kiPhoneX ? 83.0 : 49.0)
+let TabBarHeight        = CGFloat((kiPhoneX ? 83.0 : 49.0))
 //获取虚拟home键高度
-let IndicatorHomeHeight = (kiPhoneX ? 34.0 : 0.0)
+let IndicatorHomeHeight = CGFloat((kiPhoneX ? 34.0 : 0.0))
 
 // 注册通知
 func kNOTIFY_ADD(observer: Any, selector: Selector, name: String) {

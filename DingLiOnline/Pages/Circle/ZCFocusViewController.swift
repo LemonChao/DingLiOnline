@@ -10,20 +10,47 @@ import UIKit
 
 class ZCFocusViewController: ZCBaseViewController {
 
+    lazy var tableView: UITableView = {
+        let view = UITableView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-NavBarHeight-TabBarHeight), style: .plain)
+        view.separatorStyle = UITableViewCell.SeparatorStyle.none
+        view.dataSource = self
+        view.delegate = self
+        view.register(ZCFocusTableViewCell.self, forCellReuseIdentifier: NSStringFromClass(ZCFocusTableViewCell.self))
+        view.tableFooterView = UIView()
+        view.estimatedRowHeight = 500
+        return view
+    }()
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.red
+        
+        self.view.addSubview(tableView)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+extension ZCFocusViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ZCFocusTableViewCell.self)) as! ZCFocusTableViewCell
+        cell.model = "5432"
+        return cell
+        
+    }
+    
+    
+}
+
+extension ZCFocusViewController: UITableViewDelegate {
+    
+}
+
+
