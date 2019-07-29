@@ -23,7 +23,7 @@ class ZCCircleNavigationBar: ZCBaseView {
     var contentViewHeight = 0.0
     var parentViewController: ZCBaseViewController!
     var delegate: AnyObject?
-    var lineEdgeInsets = UIEdgeInsets(top: 40, left: 5, bottom: 2, right: 5)
+    var lineEdgeInsets = UIEdgeInsets(top: 40, left: 4, bottom: 2, right: 4)
     
     
     var currentIndex = 0
@@ -39,7 +39,7 @@ class ZCCircleNavigationBar: ZCBaseView {
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
+        layout.minimumLineSpacing = 34
         layout.scrollDirection = UICollectionView.ScrollDirection.horizontal
         
         let view = UICollectionView(frame: CGRect(x: 0, y: 0, w: 0, h: 0), collectionViewLayout: layout)
@@ -63,7 +63,7 @@ class ZCCircleNavigationBar: ZCBaseView {
         contentViewHeight = Double(SCREEN_HEIGHT) - NavBarHeight - TabBarHeight
         collectionView.frame = CGRect(x: 0, y: 0, w: frame.width, h: frame.height)
         rootScrollView.frame = CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: CGFloat(contentViewHeight))
-        lineView.frame = CGRect(x: lineEdgeInsets.left, y: lineEdgeInsets.top, w: frame.width-lineEdgeInsets.left-lineEdgeInsets.right, h: frame.height-lineEdgeInsets.top-lineEdgeInsets.bottom)
+        lineView.frame = CGRect(x: lineEdgeInsets.left, y: lineEdgeInsets.top, w: 38-lineEdgeInsets.left-lineEdgeInsets.right, h: frame.height-lineEdgeInsets.top-lineEdgeInsets.bottom)
         parentViewController = aParent as? ZCBaseViewController
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
@@ -152,11 +152,11 @@ class ZCCircleNavigationBar: ZCBaseView {
     
 }
 
-//extension ZCCircleNavigationBar: UICollectionViewDelegateFlowLayout{
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return CGSize(width: FitWidth(40), height: 44)
-//    }
-//}
+extension ZCCircleNavigationBar: UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 38, height: 44)
+    }
+}
 
 
 extension ZCCircleNavigationBar: UICollectionViewDataSource {
