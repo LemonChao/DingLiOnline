@@ -17,10 +17,25 @@ class ZCFocusTableViewCell: UITableViewCell {
             contentLabel.text = "《圣歌》在推出之后，又不少玩家表示游戏的装备系统非常不合理，希望BioWare能进行调整，今天《圣歌》的首席制作人Ben Irving在Reddit上公布了游戏的装备系统的改动计划，Ben Irving表示，调整将会在近日上线。"
             topicButton.setTitle("#笙歌爷爷", for: .normal)
             timeLabel.text = "1小时前"
+            gridPictureView.photos = ["1","1","1","1","1","1","1","1","1"]
+            
             
             rewardButton.imagePosition(.Left, spacing: FitWidth(5))
             commentButton.imagePosition(.Left, spacing: FitWidth(5))
             zanButton.imagePosition(.Left, spacing: FitWidth(5))
+//            let height = gridPictureView.config.collectionFrame.height
+//
+//            gridPictureView.snp.updateConstraints { (make) in
+//                make.height.equalTo(height)
+//            }
+            let size = gridPictureView.config.collectionFrame.size
+            
+            gridPictureView.snp.updateConstraints { (make) in
+                make.size.equalTo(size)
+            }
+
+            
+            self.superview?.layoutIfNeeded()
 
         }
         get {
@@ -65,13 +80,13 @@ class ZCFocusTableViewCell: UITableViewCell {
             make.top.equalTo(avatarImgView.snp_bottom).offset(FitWidth(10))
         }
         gridPictureView.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview().inset(margin)
+            make.left.equalToSuperview().inset(margin)
             make.top.equalTo(contentLabel.snp_bottom).offset(FitWidth(10))
-            make.height.equalTo(60)
+            make.size.equalTo(CGSize.zero)
         }
         
         topicButton.snp.makeConstraints { (make) in
-            make.left.equalTo(gridPictureView.left)
+            make.left.equalToSuperview().inset(margin)
             make.top.equalTo(gridPictureView.snp_bottom).offset(FitWidth(10))
             make.height.equalTo(FitWidth(24))
         }
@@ -124,7 +139,13 @@ class ZCFocusTableViewCell: UITableViewCell {
     }
     
     @objc func shareButtonAction(button: UIButton) {
+        lineView.snp.updateConstraints { (make) in
+            make.height.equalTo(FitWidth(50))
+        }
         
+//        self.superview?.layoutIfNeeded()
+        
+        (self.superview as! UITableView).reloadData()
     }
     
     @objc func zanButtonAction(button: UIButton) {
@@ -218,8 +239,8 @@ class ZCFocusTableViewCell: UITableViewCell {
         return view
     }()
     
-    lazy var gridPictureView: UIView = {
-        let view = UIView()
+    lazy var gridPictureView: ZCGridPictureView = {
+        let view = ZCGridPictureView()
         return view
     }()
     

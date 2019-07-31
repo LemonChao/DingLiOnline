@@ -20,7 +20,7 @@ class ZCBaseCircleViewController: ZCBaseViewController {
         let cusNaviBar = ZCCircleNavigationBar(frame: CGRect(x: (SCREEN_WIDTH-182)/2, y: 0, w: 182, h: 44), parent:self)
         cusNaviBar.contentViewHeight = SCREEN_HEIGHT - NavBarHeight - TabBarHeight
         cusNaviBar.titles = ["关注","圈子","我的"]
-        cusNaviBar.viewControllers = [ZCFocusViewController(),ZCMycircleViewController(),ZCTopicListViewController()]
+        cusNaviBar.viewControllers = [ZCFocusViewController(),ZCCircleViewController(),ZCMycircleViewController()]
         cusNaviBar.parentViewController = self
         cusNaviBar.delegate = self
         cusNaviBar .reloadPages()
