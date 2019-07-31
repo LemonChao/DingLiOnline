@@ -17,17 +17,12 @@ class ZCFocusTableViewCell: UITableViewCell {
             contentLabel.text = "《圣歌》在推出之后，又不少玩家表示游戏的装备系统非常不合理，希望BioWare能进行调整，今天《圣歌》的首席制作人Ben Irving在Reddit上公布了游戏的装备系统的改动计划，Ben Irving表示，调整将会在近日上线。"
             topicButton.setTitle("#笙歌爷爷", for: .normal)
             timeLabel.text = "1小时前"
-            gridPictureView.photos = ["1","1","1","1","1","1","1","1","1"]
+            gridPictureView.photos = Array(repeating: "1", count: Int(arc4random() % 8 + 1))
             
             
             rewardButton.imagePosition(.Left, spacing: FitWidth(5))
             commentButton.imagePosition(.Left, spacing: FitWidth(5))
             zanButton.imagePosition(.Left, spacing: FitWidth(5))
-//            let height = gridPictureView.config.collectionFrame.height
-//
-//            gridPictureView.snp.updateConstraints { (make) in
-//                make.height.equalTo(height)
-//            }
             let size = gridPictureView.config.collectionFrame.size
             
             gridPictureView.snp.updateConstraints { (make) in

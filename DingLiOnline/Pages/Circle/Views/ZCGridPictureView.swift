@@ -16,8 +16,6 @@ struct GridLayoutConfig {
     var interitemSpacing: CGFloat = 0
     var collectionFrame = CGRect.zero
     
-    var collectionSize = CGSize.zero
-    
     init(_ aCount: Int) {
         count = aCount
         switch aCount {
@@ -75,15 +73,17 @@ class ZCGridPictureView: UIView {
     
     
     lazy var collectionView: UICollectionView = {
-        let layout = ZCWaterfallFlowLayout.init()
+        let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        layout.dataSource = self
         let collection = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collection.dataSource = self
         collection.delegate = self
         collection.register(ZCGirdPhotosViewCell.self, forCellWithReuseIdentifier: NSStringFromClass(ZCGirdPhotosViewCell.self))
         collection.backgroundColor = UIColor.white
+        collection.bounces = false
+        collection.showsVerticalScrollIndicator = false
+        collection.showsHorizontalScrollIndicator = false
         return collection
     }()
     
@@ -118,6 +118,18 @@ extension ZCGridPictureView: UICollectionViewDataSource {
 }
 
 extension ZCGridPictureView: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return self.config.itemSize
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return self.config.lineSpacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return self.config.interitemSpacing
+    }
     
 }
 
