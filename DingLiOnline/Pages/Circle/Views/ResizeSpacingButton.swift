@@ -20,7 +20,7 @@ class ResizeSpacingButton: UIButton {
     init(position aPosition: ImagePosition, spacing aSpacing:CGFloat) {
         super.init(frame: CGRect.zero)
         position = aPosition
-        spacing = 0
+        spacing = aSpacing
     }
     
     required init?(coder aDecoder: NSCoder) {

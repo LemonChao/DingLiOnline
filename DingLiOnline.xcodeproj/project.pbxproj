@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		383BDC14FD97DC358339BAD0 /* Pods_DingLiOnlineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F4B33BDBC04046F08D03D4 /* Pods_DingLiOnlineUITests.framework */; };
 		639E0697888F8A291FD61F77 /* Pods_DingLiOnlineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B53910849BAFED252DF560F /* Pods_DingLiOnlineTests.framework */; };
+		6C19456922F2CD280015B381 /* ZCMyCircleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C19456822F2CD280015B381 /* ZCMyCircleHeaderView.swift */; };
 		6C24671222EA9E4600A8CD19 /* ZCBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24671122EA9E4600A8CD19 /* ZCBaseTabBarController.swift */; };
 		6C24671422EA9E7500A8CD19 /* ZCBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24671322EA9E7500A8CD19 /* ZCBaseNavigationController.swift */; };
 		6C24671622EA9E9F00A8CD19 /* ZCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24671522EA9E9F00A8CD19 /* ZCBaseViewController.swift */; };
@@ -84,6 +85,7 @@
 		6C8BF9EA22EFE24D00FF0698 /* ZCGirdPhotosViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BF9E922EFE24D00FF0698 /* ZCGirdPhotosViewCell.swift */; };
 		6C8BF9EC22EFF55A00FF0698 /* ZCCollectionViewWaterfallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BF9EB22EFF55A00FF0698 /* ZCCollectionViewWaterfallFlowLayout.swift */; };
 		6C8BF9EE22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BF9ED22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift */; };
+		6CB8719522F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8719422F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift */; };
 		6CB9065222E996ED00C40C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9065122E996ED00C40C9F /* AppDelegate.swift */; };
 		6CB9065722E996ED00C40C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB9065522E996ED00C40C9F /* Main.storyboard */; };
 		6CB9065A22E996ED00C40C9F /* DingLiOnline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9065822E996ED00C40C9F /* DingLiOnline.xcdatamodeld */; };
@@ -93,6 +95,8 @@
 		6CB9067522E996EE00C40C9F /* DingLiOnlineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9067422E996EE00C40C9F /* DingLiOnlineUITests.swift */; };
 		6CCD6C2122EE912A0037C491 /* ZCFocusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD6C2022EE912A0037C491 /* ZCFocusTableViewCell.swift */; };
 		6CCD6C2322EEA7B20037C491 /* UIButton+EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD6C2222EEA7B20037C491 /* UIButton+EdgeInsets.swift */; };
+		6CE921AD22F3CF5500C997B5 /* ZCClassifyRightController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE921AC22F3CF5500C997B5 /* ZCClassifyRightController.swift */; };
+		6CE921AF22F3D02300C997B5 /* ZCClassifyRightCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CE921AE22F3D02300C997B5 /* ZCClassifyRightCollectionCell.swift */; };
 		EB8790C9BD3EDFB9B97AEE14 /* Pods_DingLiOnline.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50CE9FC9CD6CD52D8E750138 /* Pods_DingLiOnline.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,6 +123,7 @@
 		50CE9FC9CD6CD52D8E750138 /* Pods_DingLiOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DingLiOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B53910849BAFED252DF560F /* Pods_DingLiOnlineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DingLiOnlineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6A8D143B891FD30FA9FC4C /* Pods-DingLiOnlineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DingLiOnlineUITests.debug.xcconfig"; path = "Target Support Files/Pods-DingLiOnlineUITests/Pods-DingLiOnlineUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C19456822F2CD280015B381 /* ZCMyCircleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyCircleHeaderView.swift; sourceTree = "<group>"; };
 		6C24671122EA9E4600A8CD19 /* ZCBaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseTabBarController.swift; sourceTree = "<group>"; };
 		6C24671322EA9E7500A8CD19 /* ZCBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseNavigationController.swift; sourceTree = "<group>"; };
 		6C24671522EA9E9F00A8CD19 /* ZCBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseViewController.swift; sourceTree = "<group>"; };
@@ -194,6 +199,7 @@
 		6C8BF9E922EFE24D00FF0698 /* ZCGirdPhotosViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGirdPhotosViewCell.swift; sourceTree = "<group>"; };
 		6C8BF9EB22EFF55A00FF0698 /* ZCCollectionViewWaterfallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCollectionViewWaterfallFlowLayout.swift; sourceTree = "<group>"; };
 		6C8BF9ED22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCircleCollectionViewCell.swift; sourceTree = "<group>"; };
+		6CB8719422F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCClassifyLeftCell.swift; sourceTree = "<group>"; };
 		6CB9064E22E996ED00C40C9F /* DingLiOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingLiOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB9065122E996ED00C40C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6CB9065622E996ED00C40C9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -209,6 +215,8 @@
 		6CB9067622E996EE00C40C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CCD6C2022EE912A0037C491 /* ZCFocusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCFocusTableViewCell.swift; sourceTree = "<group>"; };
 		6CCD6C2222EEA7B20037C491 /* UIButton+EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+EdgeInsets.swift"; sourceTree = "<group>"; };
+		6CE921AC22F3CF5500C997B5 /* ZCClassifyRightController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCClassifyRightController.swift; sourceTree = "<group>"; };
+		6CE921AE22F3D02300C997B5 /* ZCClassifyRightCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCClassifyRightCollectionCell.swift; sourceTree = "<group>"; };
 		76F08DD974B00307E667E1C5 /* Pods-DingLiOnlineUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DingLiOnlineUITests.release.xcconfig"; path = "Target Support Files/Pods-DingLiOnlineUITests/Pods-DingLiOnlineUITests.release.xcconfig"; sourceTree = "<group>"; };
 		89F4B33BDBC04046F08D03D4 /* Pods_DingLiOnlineUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DingLiOnlineUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF2CC12BC43503B59DF9C35C /* Pods-DingLiOnlineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DingLiOnlineTests.release.xcconfig"; path = "Target Support Files/Pods-DingLiOnlineTests/Pods-DingLiOnlineTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -251,6 +259,15 @@
 				89F4B33BDBC04046F08D03D4 /* Pods_DingLiOnlineUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6C19456522F2CC540015B381 /* MyCircle */ = {
+			isa = PBXGroup;
+			children = (
+				6C4EF19122EBFB1400E3D68B /* ZCMycircleViewController.swift */,
+				6C19456822F2CD280015B381 /* ZCMyCircleHeaderView.swift */,
+			);
+			path = MyCircle;
 			sourceTree = "<group>";
 		};
 		6C24670322EA985F00A8CD19 /* Supporting Files */ = {
@@ -316,9 +333,9 @@
 			isa = PBXGroup;
 			children = (
 				6C4EF18F22EBFAE100E3D68B /* ZCBaseCircleViewController.swift */,
+				6C19456522F2CC540015B381 /* MyCircle */,
 				6C4EF18C22EBFA9B00E3D68B /* ZCFocusViewController.swift */,
 				6C24671D22EAA73500A8CD19 /* ZCCircleViewController.swift */,
-				6C4EF19122EBFB1400E3D68B /* ZCMycircleViewController.swift */,
 				6C4EF19322EBFB4900E3D68B /* ZCTopicListViewController.swift */,
 				6C4EF18922EBECA900E3D68B /* Views */,
 			);
@@ -329,6 +346,8 @@
 			isa = PBXGroup;
 			children = (
 				6C24671B22EAA72800A8CD19 /* ZCClassifyViewController.swift */,
+				6CE921AC22F3CF5500C997B5 /* ZCClassifyRightController.swift */,
+				6CB8719322F3CC9900B6CCF2 /* Views */,
 			);
 			path = Classify;
 			sourceTree = "<group>";
@@ -446,6 +465,15 @@
 				6C8BF9E722EFDC9E00FF0698 /* ZCGridPictureView.swift */,
 				6C8BF9E922EFE24D00FF0698 /* ZCGirdPhotosViewCell.swift */,
 				6C8BF9ED22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6CB8719322F3CC9900B6CCF2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6CB8719422F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift */,
+				6CE921AE22F3D02300C997B5 /* ZCClassifyRightCollectionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -757,6 +785,7 @@
 				6C24671622EA9E9F00A8CD19 /* ZCBaseViewController.swift in Sources */,
 				6C24684A22EAD8FB00A8CD19 /* DoubleExtensions.swift in Sources */,
 				6C24685622EAD8FB00A8CD19 /* DateExtensions.swift in Sources */,
+				6CE921AD22F3CF5500C997B5 /* ZCClassifyRightController.swift in Sources */,
 				6C24671822EA9EF700A8CD19 /* ZCBaseView.swift in Sources */,
 				6C24684422EAD8FB00A8CD19 /* UIWindowExtensions.swift in Sources */,
 				6C24684722EAD8FB00A8CD19 /* UIApplicationExtensions.swift in Sources */,
@@ -802,12 +831,14 @@
 				6CCD6C2122EE912A0037C491 /* ZCFocusTableViewCell.swift in Sources */,
 				6C24683322EAD8FB00A8CD19 /* BlockSwipe.swift in Sources */,
 				6C24683022EAD8FB00A8CD19 /* DictionaryExtensions.swift in Sources */,
+				6CB8719522F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift in Sources */,
 				6C24672222EAACEC00A8CD19 /* UIColor+WUIKit.swift in Sources */,
 				6C4EF18D22EBFA9B00E3D68B /* ZCFocusViewController.swift in Sources */,
 				6C24685B22EAD8FB00A8CD19 /* ArrayExtensions.swift in Sources */,
 				6C24684222EAD8FB00A8CD19 /* BoolExtensions.swift in Sources */,
 				6C24684522EAD8FB00A8CD19 /* BlockPinch.swift in Sources */,
 				6C8BF9EA22EFE24D00FF0698 /* ZCGirdPhotosViewCell.swift in Sources */,
+				6CE921AF22F3D02300C997B5 /* ZCClassifyRightCollectionCell.swift in Sources */,
 				6C24683A22EAD8FB00A8CD19 /* NSAttributedStringExtensions.swift in Sources */,
 				6C4EF19222EBFB1400E3D68B /* ZCMycircleViewController.swift in Sources */,
 				6C4EF19622EC033900E3D68B /* ZCCircleNavigationBarCell.swift in Sources */,
@@ -826,6 +857,7 @@
 				6C24685E22EAD8FB00A8CD19 /* UIImageViewExtensions.swift in Sources */,
 				6C24671222EA9E4600A8CD19 /* ZCBaseTabBarController.swift in Sources */,
 				6C24684922EAD8FB00A8CD19 /* UIBarButtonItemExtensions.swift in Sources */,
+				6C19456922F2CD280015B381 /* ZCMyCircleHeaderView.swift in Sources */,
 				6C24685A22EAD8FB00A8CD19 /* UITextViewExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

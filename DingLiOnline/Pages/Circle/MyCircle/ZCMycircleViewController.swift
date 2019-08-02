@@ -1,26 +1,32 @@
 //
-//  ZCCircleViewController.swift
+//  ZCMycircleViewController.swift
 //  DingLiOnline
 //
-//  Created by zchao on 2019/7/26.
-//  Copyright © 2019 zchao. All rights reserved.
+//  Created by zchao on 2019/7/27.
+//  Copyright © 2019 leyukeji. All rights reserved.
 //
 
 import UIKit
 
-class ZCCircleViewController: ZCBaseViewController {
+class ZCMycircleViewController: ZCBaseViewController {
 
+    lazy var headerView: ZCMyCircleHeaderView = {
+        let view = ZCMyCircleHeaderView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: FitWidth(110)))
+        return view
+    }()
+    
+    
     lazy var collectionView: UICollectionView = {
         let layout = ZCWaterfallFlowLayout.init()
         layout.minimumLineSpacing = FitWidth(10)
         layout.minimumInteritemSpacing = FitWidth(10)
         layout.dataSource = self
-        let collection = UICollectionView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-NavBarHeight-TabBarHeight), collectionViewLayout: layout)
+        let collection = UICollectionView(frame: CGRect(x: 0, y: FitWidth(110), w: SCREEN_WIDTH, h: SCREEN_HEIGHT-NavBarHeight-TabBarHeight-FitWidth(110)), collectionViewLayout: layout)
         collection.dataSource = self
         collection.delegate = self
-        collection.backgroundColor = UIColor.white
+        collection.backgroundColor = ScrollViewBackGroundColor
         collection.register(ZCCircleCollectionViewCell.self, forCellWithReuseIdentifier: NSStringFromClass(ZCCircleCollectionViewCell.self))
-        collection.contentInset = UIEdgeInsets(top: 0, left: FitWidth(12), bottom: 0, right: FitWidth(12))
+        collection.contentInset = UIEdgeInsets(top: FitWidth(10), left: FitWidth(12), bottom: FitWidth(10), right: FitWidth(12))
         return collection
     }()
     
@@ -29,17 +35,14 @@ class ZCCircleViewController: ZCBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.addSubview(headerView)
         self.view.addSubview(collectionView)
-    }    
-    
-    
+    }
 }
 
-extension ZCCircleViewController: ZCWaterfallFlowLayoutDataSource {
+extension ZCMycircleViewController: ZCWaterfallFlowLayoutDataSource {
     
     /// Return per section's column number(must be greater than 0).
-
     func collectionView(_ collectionView: UICollectionView, _ layout: ZCWaterfallFlowLayout, numberOfColumnInSection section: NSInteger) -> Int {
         return 2
     }
@@ -49,14 +52,14 @@ extension ZCCircleViewController: ZCWaterfallFlowLayoutDataSource {
         // 40 - 80 之间随机数
         return CGFloat(arc4random()%80 + 200)
     }
-
-}
-
-extension ZCCircleViewController: UICollectionViewDelegate {
     
 }
 
-extension ZCCircleViewController: UICollectionViewDataSource {
+extension ZCMycircleViewController: UICollectionViewDelegate {
+    
+}
+
+extension ZCMycircleViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return dataArray.count
     }
@@ -67,6 +70,6 @@ extension ZCCircleViewController: UICollectionViewDataSource {
         return cell
         
     }
-    
 }
+
 

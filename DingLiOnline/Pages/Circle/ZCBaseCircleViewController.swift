@@ -10,10 +10,23 @@ import UIKit
 
 class ZCBaseCircleViewController: ZCBaseViewController {
 
+    lazy var publishButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "circle_publish"), for: .normal)
+        button.setImage(UIImage(named: "circle_publish"), for: .highlighted)
+        return button
+    }()
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.view.addSubview(publishButton)
+        publishButton.snp.makeConstraints { (make) in
+            make.centerX.equalToSuperview()
+            make.bottom.equalToSuperview().inset(FitWidth(20))
+        }
+        
     }
     
     override func configCustomNav() {
@@ -34,8 +47,15 @@ class ZCBaseCircleViewController: ZCBaseViewController {
     @objc func rightNaviItemAction(item: UIBarButtonItem) {
         
     }
-    
-    
-    
 
 }
+
+
+extension ZCBaseCircleViewController: ZCCircleNavigationBarDelegate {
+    
+    func circleNavigationBarSelectAt(_ index: Int) {
+        publishButton.isHidden = index == 2
+    }
+    
+}
+

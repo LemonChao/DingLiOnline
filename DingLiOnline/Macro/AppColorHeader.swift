@@ -20,6 +20,9 @@ func HexColor(_ HexString: String) ->UIColor {
 /** 背景 - ffffff */
 let BackGroundColor = RGBA(255, 255, 255, 1)
 
+let ScrollViewBackGroundColor = RGBA(244, 243, 243, 1)
+
+
 /** 线条 - e5e5e5 */
 let LineColor = RGBA(229, 229, 229, 1)
 

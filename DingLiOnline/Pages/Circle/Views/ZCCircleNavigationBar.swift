@@ -8,8 +8,19 @@
 
 import UIKit
 
+@objc protocol ZCCircleNavigationBarDelegate: NSObjectProtocol {
+    @objc optional func circleNavigationBarSelectAt(_ index: Int)
+    
+}
+
+
+
+
+
 class ZCCircleNavigationBar: ZCBaseView {
 
+    var delegate: ZCCircleNavigationBarDelegate?
+    
     var titles: [String]! {
         didSet {
             self.rootScrollView.contentSize = CGSize(width: SCREEN_WIDTH*CGFloat(titles.count), height: CGFloat(contentViewHeight))
@@ -22,7 +33,6 @@ class ZCCircleNavigationBar: ZCBaseView {
     }
     var contentViewHeight: CGFloat = 0.0
     var parentViewController: ZCBaseViewController!
-    var delegate: AnyObject?
     var lineEdgeInsets = UIEdgeInsets(top: 40, left: 4, bottom: 2, right: 4)
     
     
@@ -102,7 +112,9 @@ class ZCCircleNavigationBar: ZCBaseView {
         
         self.rootScrollView.setContentOffset(CGPoint(x: startX, y: 0), animated: false)
         
-        //TODO delegate
+        if self.delegate != nil && (self.delegate?.responds(to: #selector(self.delegate?.circleNavigationBarSelectAt(_:))))! {
+            self.delegate?.circleNavigationBarSelectAt!(currentIndex)
+        }
     }
     
     /// 手动设置cursor选中item

@@ -32,13 +32,13 @@ struct GridLayoutConfig {
         case 4:
             itemSize = CGSize(width: FitWidth(130), height: FitWidth(130))
             lineSpacing = FitWidth(10)
-            interitemSpacing = FitWidth(10)
+            interitemSpacing = FitWidth(12)
             collectionFrame = CGRect(x: 0, y: 0, w: itemSize.width * 2 + interitemSpacing, h: itemSize.height * 2 + lineSpacing)
 
        default:
         itemSize = CGSize(width: FitWidth(96), height: FitWidth(96))
         lineSpacing = FitWidth(10)
-        interitemSpacing = FitWidth(10)
+        interitemSpacing = FitWidth(12)
         let line: CGFloat = CGFloat((aCount-1) / 3) + 1
         let file: CGFloat = aCount >= 3 ? 3 : 2
         

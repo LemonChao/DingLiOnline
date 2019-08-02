@@ -14,24 +14,19 @@ class ZCFocusTableViewCell: UITableViewCell {
         set {
             nameLabel.text = "星月菩提"
             levelImgView.image = UIImage(named: "circle_membership")
-            contentLabel.text = "《圣歌》在推出之后，又不少玩家表示游戏的装备系统非常不合理，希望BioWare能进行调整，今天《圣歌》的首席制作人Ben Irving在Reddit上公布了游戏的装备系统的改动计划，Ben Irving表示，调整将会在近日上线。"
+            contentLabel.text = "于是我们领教了世界是何等凶顽，同时又得知世界也可以变得温存和美好。 于是我们领教了世界是何等凶顽，同时又得知世界也可以变得温存和美好。"
             topicButton.setTitle("#笙歌爷爷", for: .normal)
             timeLabel.text = "1小时前"
             gridPictureView.photos = Array(repeating: "1", count: Int(arc4random() % 8 + 1))
             
-            
-            rewardButton.imagePosition(.Left, spacing: FitWidth(5))
-            commentButton.imagePosition(.Left, spacing: FitWidth(5))
-            zanButton.imagePosition(.Left, spacing: FitWidth(5))
-            let size = gridPictureView.config.collectionFrame.size
+            collectButton.imagePosition(.Left, spacing: FitWidth(6))
+            zanButton.imagePosition(.Left, spacing: FitWidth(6))
             
             gridPictureView.snp.updateConstraints { (make) in
-                make.size.equalTo(size)
+                make.size.equalTo(gridPictureView.config.collectionFrame.size)
             }
 
-            
             self.superview?.layoutIfNeeded()
-
         }
         get {
             return "12"
@@ -52,8 +47,8 @@ class ZCFocusTableViewCell: UITableViewCell {
         self.contentView.addSubview(shareButton)
         self.contentView.addSubview(zanButton)
         self.contentView.addSubview(collectButton)
-        self.contentView.addSubview(commentButton)
-        self.contentView.addSubview(rewardButton)
+//        self.contentView.addSubview(commentButton)
+//        self.contentView.addSubview(rewardButton)
         self.contentView.addSubview(lineView)
         
         let margin: CGFloat = 12
@@ -96,19 +91,19 @@ class ZCFocusTableViewCell: UITableViewCell {
             make.top.equalTo(topicButton.snp_bottom).offset(FitWidth(10))
         }
         
-        rewardButton.snp.makeConstraints { (make) in
-            make.right.equalToSuperview().inset(margin)
-            make.centerY.equalTo(shareButton)
-        }
-        
-        commentButton.snp.makeConstraints { (make) in
-            make.centerY.equalTo(shareButton)
-            make.right.equalTo(rewardButton.snp_left).offset(-FitWidth(24))
-        }
+//        rewardButton.snp.makeConstraints { (make) in
+//            make.right.equalToSuperview().inset(margin)
+//            make.centerY.equalTo(shareButton)
+//        }
+//
+//        commentButton.snp.makeConstraints { (make) in
+//            make.centerY.equalTo(shareButton)
+//            make.right.equalTo(rewardButton.snp_left).offset(-FitWidth(24))
+//        }
         
         collectButton.snp.makeConstraints { (make) in
+            make.right.equalToSuperview().inset(margin)
             make.centerY.equalTo(shareButton)
-            make.right.equalTo(commentButton.snp_left).offset(-FitWidth(24))
         }
 
         zanButton.snp.makeConstraints { (make) in
@@ -137,9 +132,6 @@ class ZCFocusTableViewCell: UITableViewCell {
         lineView.snp.updateConstraints { (make) in
             make.height.equalTo(FitWidth(50))
         }
-        
-//        self.superview?.layoutIfNeeded()
-        
         (self.superview as! UITableView).reloadData()
     }
     
@@ -204,9 +196,12 @@ class ZCFocusTableViewCell: UITableViewCell {
     }()
     
     lazy var collectButton: UIButton = {
-        let button = UIButton(type: .custom)
+        let button = ResizeSpacingButton(position: .Left, spacing: FitWidth(6))
         button.setImage(UIImage(named: "circle_collect_normal"), for: .normal)
         button.setImage(UIImage(named: "circle_collect_select"), for: .selected)
+        button.setTitle("收藏", for: .normal)
+        button.setTitle("收藏", for: .normal)
+        button.setTitleColor(PrimaryColor, for: .normal)
         button.addTarget(self, action: #selector(collectionButtonAction(button:)), for: .touchUpInside)
         return button
     }()

@@ -10,21 +10,52 @@ import UIKit
 
 class ZCClassifyViewController: ZCBaseViewController {
 
+    lazy var tableView: UITableView = {
+        let view = UITableView(frame: CGRect(x: 0, y: 0, w: FitWidth(84), h: SCREEN_HEIGHT-NavBarHeight-TabBarHeight), style: .plain)
+        view.backgroundColor = ScrollViewBackGroundColor
+        view.showsVerticalScrollIndicator = false
+        view.separatorStyle = UITableViewCell.SeparatorStyle.none
+        view.delegate = self
+        view.dataSource = self
+        view.register(ZCClassifyLeftCell.self, forCellReuseIdentifier: NSStringFromClass(ZCClassifyLeftCell.self))
+        return view
+    }()
+    
+    let rightController = ZCClassifyRightController()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.view.addSubview(tableView)
+        rightController.view.frame = CGRect(x: FitWidth(84), y: 0, w: SCREEN_WIDTH-FitWidth(84), h: SCREEN_HEIGHT)
+        self.addChild(rightController)
+        self.view.addSubview(rightController.view)
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
+
+
+extension ZCClassifyViewController: UITableViewDataSource,UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 20
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ZCClassifyLeftCell.self)) as! ZCClassifyLeftCell
+        
+        return cell
+        
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+    
+}
+
