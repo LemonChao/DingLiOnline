@@ -31,8 +31,6 @@ class ZCClassifyViewController: ZCBaseViewController {
         rightController.view.frame = CGRect(x: FitWidth(84), y: 0, w: SCREEN_WIDTH-FitWidth(84), h: SCREEN_HEIGHT)
         self.addChild(rightController)
         self.view.addSubview(rightController.view)
-        
-        
     }
     
 
@@ -50,6 +48,11 @@ extension ZCClassifyViewController: UITableViewDataSource,UITableViewDelegate {
         return cell
         
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return FitWidth(60)
+    }
+    
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
