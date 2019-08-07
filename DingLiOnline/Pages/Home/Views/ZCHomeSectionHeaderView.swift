@@ -21,18 +21,16 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
         self.addSubview(moreAuctionButton)
         self.addSubview(tuijianTitle)
         
-        
-        let margin: CGFloat = 12
-        
+                
         cycleScrollView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().inset(FitWidth(margin))
+            make.top.equalToSuperview().inset(FitWidth(12))
             make.left.right.equalToSuperview()
             make.height.equalTo(FitWidth(210))
         }
         
         marqueeView.snp.makeConstraints { (make) in
-            make.top.equalTo(cycleScrollView.snp_bottom).offset(FitWidth(margin))
-            make.left.right.equalToSuperview().inset(FitWidth(margin))
+            make.top.equalTo(cycleScrollView.snp_bottom).offset(FitWidth(12))
+            make.left.right.equalToSuperview()
             make.height.equalTo(FitWidth(32))
         }
         
@@ -43,20 +41,20 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
         }
         
         auctionView.snp.makeConstraints { (make) in
-            make.left.right.equalToSuperview().inset(FitWidth(margin))
+            make.left.right.equalToSuperview()
             make.top.equalTo(titleView.snp_bottom).offset(FitWidth(20))
-            make.height.equalTo(FitWidth(195))
+            make.height.equalTo(FitWidth(210))
         }
         
         auctionCollectionView.snp.makeConstraints { (make) in
-            make.top.equalTo(auctionView.snp_bottom).offset(FitWidth(margin))
-            make.left.right.equalToSuperview().inset(FitWidth(margin))
-            make.height.equalTo(FitWidth(202))
+            make.top.equalTo(auctionView.snp_bottom).offset(FitWidth(10))
+            make.left.right.equalToSuperview()
+            make.height.equalTo(FitWidth(218))
         }
         
         moreAuctionButton.snp.makeConstraints { (make) in
             make.top.equalTo(auctionCollectionView.snp_bottom).offset(FitWidth(10))
-            make.left.equalToSuperview().inset(FitWidth(margin))
+            make.left.equalToSuperview()
             make.height.equalTo(FitWidth(12))
         }
         
@@ -67,7 +65,7 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
 //            make.bottom.equalToSuperview().inset(FitWidth(20))
         }
         
-        //12 210 12 32 30 20 12 195 12 212 10 12 14 18 20 = 821
+        //12 210 12 32 30 20 12 210 12 103*2+12(212) 10 12 14 18 20 = 862
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -85,11 +83,15 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
     
     lazy var cycleScrollView: UIView = {
         let cycleView = UIView()
+        cycleView.backgroundColor = LineColor
         return cycleView
     }()
     
     lazy var marqueeView: UIView = {
         let view = UIView()
+        view.backgroundColor = RGBA(245, 245, 245, 1)
+        view.layer.cornerRadius = FitWidth(4)
+        view.clipsToBounds = true
         return view
     }()
     
@@ -101,14 +103,22 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
         return label
     }()
     
-    lazy var auctionView: UIView = {
-        let view = UIView()
+    lazy var auctionView: ZCHomeAuctionRecommendView = {
+        let view = ZCHomeAuctionRecommendView()
         return view
     }()
     
     lazy var auctionCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: (SCREEN_WIDTH-FitWidth(35))/2, height: FitWidth(103))
+        layout.minimumLineSpacing = FitWidth(12)
+        layout.minimumInteritemSpacing = FitWidth(10)
         let collection = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collection.dataSource = self
+        collection.delegate = self
+        collection.register(ZCHomeAuctionCell.self, forCellWithReuseIdentifier: "ZCHomeAuctionCell_id")
+        collection.showsVerticalScrollIndicator = false
+        collection.backgroundColor = UIColor.white
         return collection
     }()
     
@@ -128,5 +138,22 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
         return label
     }()
 
+    
+}
+
+extension ZCHomeSectionHeaderView: UICollectionViewDelegate {
+    
+}
+
+extension ZCHomeSectionHeaderView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ZCHomeAuctionCell_id", for: indexPath) as! ZCHomeAuctionCell
+        return cell
+    }
+    
     
 }

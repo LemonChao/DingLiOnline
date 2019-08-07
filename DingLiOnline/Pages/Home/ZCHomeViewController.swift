@@ -60,7 +60,7 @@ extension ZCHomeViewController: ZCWaterfallFlowLayoutDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, _ layout: ZCWaterfallFlowLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        return CGSize(width: SCREEN_WIDTH, height: FitWidth(821))
+        return CGSize(width: SCREEN_WIDTH, height: FitWidth(852))
     }
     
     func collectionView(_ collectionView: UICollectionView, _ layout: ZCWaterfallFlowLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
