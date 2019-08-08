@@ -73,11 +73,12 @@ extension UIButton {
         case .Top:
             self.imageEdgeInsets = UIEdgeInsets(top: -imageOffsetY, left: imageOffsetX, bottom: imageOffsetY, right: -imageOffsetX)
             self.titleEdgeInsets
-                = UIEdgeInsets(top: labelOffsetY, left: -labelOffsetX1, bottom: -labelOffsetY, right: -labelOffsetY)
+                = UIEdgeInsets(top: labelOffsetY, left: -labelOffsetX1, bottom: -labelOffsetY, right: labelOffsetX2)
         case .Bottom:
             self.imageEdgeInsets = UIEdgeInsets(top: imageOffsetY, left: imageOffsetX, bottom: -imageOffsetY, right: -imageOffsetX)
             self.titleEdgeInsets = UIEdgeInsets(top: -labelOffsetY, left: -labelOffsetX1, bottom: labelOffsetY, right: labelOffsetX2)
         }
+        print("imgSize:\(self.imageView?.image!.size ?? CGSize.zero) show:\(String(describing: showLabSize)) ture:\(trueSize), imgInsets:\(self.imageEdgeInsets) titleInsets:\(self.self.titleEdgeInsets)")
     }
     
     
@@ -98,7 +99,7 @@ extension UIButton {
         }else {
             let imageHeight = self.imageView?.image!.size.height ?? 0.0
             let labelHeight = self.titleLabel?.sizeThatFits(CGSize(width: CGFloat(MAXFLOAT), height: CGFloat(MAXFLOAT))).height ?? 0
-            let spacing = self.bounds.size.width - imageHeight - labelHeight - aMargin*2
+            let spacing = self.bounds.size.height - imageHeight - labelHeight - aMargin*2
             
             self.imagePosition(position, spacing: spacing)
         }
