@@ -25,12 +25,13 @@ class ZCBaseViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.view.bringSubviewToFront(customNavBar)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-//        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     
@@ -48,4 +49,10 @@ class ZCBaseViewController: UIViewController {
     override var preferredStatusBarUpdateAnimation: UIStatusBarAnimation {
         return UIStatusBarAnimation.fade
     }
+    
+    
+    let customNavBar = ZCCustomNavigationBar(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: NavBarHeight))
+    
+    
+    
 }

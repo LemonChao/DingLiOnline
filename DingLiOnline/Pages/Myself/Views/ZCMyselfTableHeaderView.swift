@@ -85,7 +85,6 @@ class ZCMyselfTableHeaderView: UIView {
         button.layer.borderWidth = FitWidth(2)
         button.layer.borderColor = GeneralRedColor.cgColor
         button.clipsToBounds = false
-        button.backgroundColor = UIColor.yellow
         button.contentMode = UIView.ContentMode.scaleAspectFill
         return button
     }()

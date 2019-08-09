@@ -11,7 +11,7 @@ import UIKit
 class ZCClassifyViewController: ZCBaseViewController {
 
     lazy var tableView: UITableView = {
-        let view = UITableView(frame: CGRect(x: 0, y: 0, w: FitWidth(84), h: SCREEN_HEIGHT-NavBarHeight-TabBarHeight), style: .plain)
+        let view = UITableView(frame: CGRect(x: 0, y: NavBarHeight, w: FitWidth(84), h: SCREEN_HEIGHT-NavBarHeight-TabBarHeight), style: .plain)
         view.backgroundColor = ScrollViewBackGroundColor
         view.showsVerticalScrollIndicator = false
         view.separatorStyle = UITableViewCell.SeparatorStyle.none
@@ -28,11 +28,14 @@ class ZCClassifyViewController: ZCBaseViewController {
         super.viewDidLoad()
 
         self.view.addSubview(tableView)
-        rightController.view.frame = CGRect(x: FitWidth(84), y: 0, w: SCREEN_WIDTH-FitWidth(84), h: SCREEN_HEIGHT)
+        rightController.view.frame = CGRect(x: FitWidth(84), y: NavBarHeight, w: SCREEN_WIDTH-FitWidth(84), h: SCREEN_HEIGHT)
         self.addChild(rightController)
         self.view.addSubview(rightController.view)
     }
     
+    override func configCustomNav() {
+        self.view.addSubview(customNavBar)
+    }
 
 }
 

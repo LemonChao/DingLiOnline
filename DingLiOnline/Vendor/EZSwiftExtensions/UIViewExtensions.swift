@@ -612,6 +612,20 @@ extension UIView {
         }
         return parentView.rootView()
     }
+    
+    func viewController() -> UIViewController? {
+        var nextRes = self.next
+        while nextRes != nil {
+            if nextRes!.isKind(of: UIViewController.self) {
+                return nextRes as? UIViewController
+            }
+            nextRes = nextRes!.next
+        }
+        return nil
+    }
+    
+    
+    
 }
 
 // MARK: Fade Extensions

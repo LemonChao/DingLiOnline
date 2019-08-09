@@ -14,6 +14,7 @@ class ZCClassifyRightController: ZCBaseViewController {
         super.viewDidLoad()
 
         self.view.addSubview(colltionView)
+        self.customNavBar.removeFromSuperview()
     }
     
 

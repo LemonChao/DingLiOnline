@@ -30,7 +30,8 @@ class ZCBaseCircleViewController: ZCBaseViewController {
     }
     
     override func configCustomNav() {
-        let cusNaviBar = ZCCircleNavigationBar(frame: CGRect(x: (SCREEN_WIDTH-182)/2, y: 0, w: 182, h: 44), parent:self)
+        self.view.addSubview(customNavBar)
+        let cusNaviBar = ZCCircleNavigationBar(frame: CGRect(x: (SCREEN_WIDTH-182)/2, y: StatusBarHeight, w: 182, h: 44), parent:self)
         cusNaviBar.contentViewHeight = SCREEN_HEIGHT - NavBarHeight - TabBarHeight
         cusNaviBar.titles = ["关注","圈子","我的"]
         cusNaviBar.viewControllers = [ZCFocusViewController(),ZCCircleViewController(),ZCMycircleViewController()]
@@ -39,8 +40,9 @@ class ZCBaseCircleViewController: ZCBaseViewController {
         cusNaviBar .reloadPages()
         
         let rightNaviItem = UIBarButtonItem.init(image: UIImage(named: "circle_topic"), style: .plain, target: self, action: #selector(rightNaviItemAction(item:)))
-        self.navigationItem.setRightBarButton(rightNaviItem, animated: false)
-        self.navigationController?.navigationBar.addSubview(cusNaviBar)
+        self.customNavBar.addSubview(cusNaviBar)
+//        self.customNavBar.addSubview(rightNaviItem)
+        
     }
 
     

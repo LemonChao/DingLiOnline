@@ -100,6 +100,7 @@
 		6CB9067522E996EE00C40C9F /* DingLiOnlineUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9067422E996EE00C40C9F /* DingLiOnlineUITests.swift */; };
 		6CCD6C2122EE912A0037C491 /* ZCFocusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD6C2022EE912A0037C491 /* ZCFocusTableViewCell.swift */; };
 		6CCD6C2322EEA7B20037C491 /* UIButton+EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD6C2222EEA7B20037C491 /* UIButton+EdgeInsets.swift */; };
+		6CD33BAA22FD27E70021FD16 /* ZCCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD33BA922FD27E70021FD16 /* ZCCustomNavigationBar.swift */; };
 		6CDD867022FAA55600EDDEE5 /* ZCHomeAuctionRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDD866F22FAA55600EDDEE5 /* ZCHomeAuctionRecommendView.swift */; };
 		6CDD867522FABF7100EDDEE5 /* ZCMyselfTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDD867422FABF7100EDDEE5 /* ZCMyselfTableHeaderView.swift */; };
 		6CDD867722FAD4BA00EDDEE5 /* ZCWordsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDD867622FAD4BA00EDDEE5 /* ZCWordsButton.swift */; };
@@ -233,6 +234,7 @@
 		6CB9067622E996EE00C40C9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6CCD6C2022EE912A0037C491 /* ZCFocusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCFocusTableViewCell.swift; sourceTree = "<group>"; };
 		6CCD6C2222EEA7B20037C491 /* UIButton+EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+EdgeInsets.swift"; sourceTree = "<group>"; };
+		6CD33BA922FD27E70021FD16 /* ZCCustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCustomNavigationBar.swift; sourceTree = "<group>"; };
 		6CDD866F22FAA55600EDDEE5 /* ZCHomeAuctionRecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHomeAuctionRecommendView.swift; sourceTree = "<group>"; };
 		6CDD867422FABF7100EDDEE5 /* ZCMyselfTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfTableHeaderView.swift; sourceTree = "<group>"; };
 		6CDD867622FAD4BA00EDDEE5 /* ZCWordsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCWordsButton.swift; sourceTree = "<group>"; };
@@ -397,6 +399,7 @@
 				6C24671322EA9E7500A8CD19 /* ZCBaseNavigationController.swift */,
 				6C24671522EA9E9F00A8CD19 /* ZCBaseViewController.swift */,
 				6C24671722EA9EF700A8CD19 /* ZCBaseView.swift */,
+				6CD33BA922FD27E70021FD16 /* ZCCustomNavigationBar.swift */,
 			);
 			path = BaseModule;
 			sourceTree = "<group>";
@@ -831,6 +834,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CD33BAA22FD27E70021FD16 /* ZCCustomNavigationBar.swift in Sources */,
 				6C4EF19022EBFAE100E3D68B /* ZCBaseCircleViewController.swift in Sources */,
 				6C24683722EAD8FB00A8CD19 /* CGRectExtensions.swift in Sources */,
 				6CDD867722FAD4BA00EDDEE5 /* ZCWordsButton.swift in Sources */,

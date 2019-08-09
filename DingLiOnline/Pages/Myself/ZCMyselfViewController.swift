@@ -19,14 +19,15 @@ class ZCMyselfViewController: ZCBaseViewController {
         self.view.addSubview(tableView)
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    override func configCustomNav() {
+        self.view.addSubview(customNavBar)
+        customNavBar.rightButton.setImage(UIImage(named: "shezhi"), for: .normal)
+        customNavBar.backgroundColor = UIColor.white.withAlphaComponent(0)
     }
-
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+    
+    
+    @objc func rightButtonAction(_ button: UIButton) {
+        print("1243676897")
     }
     
     lazy var tableView: UITableView = {
@@ -51,6 +52,9 @@ class ZCMyselfViewController: ZCBaseViewController {
 
         return view
     }()
+    
+    let colorChangePoint = FitWidth(200)-NavBarHeight*2
+    
     
 }
 
@@ -82,13 +86,30 @@ extension ZCMyselfViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ZCMyselfFeedbackCell.self)) as! ZCMyselfFeedbackCell
             return cell
         }
-    
     }
 }
 
 
 extension ZCMyselfViewController: UITableViewDelegate {
     
+    
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        let offsetY = scrollView.contentOffset.y
+        if offsetY < colorChangePoint || offsetY == 0 {
+            self.customNavBar.backgroundColor = UIColor.white.withAlphaComponent(0)
+        }else {
+            let alpha = (offsetY - colorChangePoint) / NavBarHeight;
+            self.customNavBar.backgroundColor = UIColor.white.withAlphaComponent(alpha)
+        }
+    }
 }
 
-
+//extension ZCMyselfViewController: UIScrollView {
+//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//
+//    }
+//
+//
+//}

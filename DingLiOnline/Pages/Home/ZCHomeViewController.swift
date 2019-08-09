@@ -14,7 +14,7 @@ class ZCHomeViewController: ZCBaseViewController {
         layout.minimumLineSpacing = FitWidth(10)
         layout.minimumInteritemSpacing = FitWidth(10)
         layout.dataSource = self
-        let collection = UICollectionView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-NavBarHeight-TabBarHeight), collectionViewLayout: layout)
+        let collection = UICollectionView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-TabBarHeight), collectionViewLayout: layout)
         collection.dataSource = self
         collection.delegate = self
         collection.backgroundColor = UIColor.white
@@ -30,17 +30,18 @@ class ZCHomeViewController: ZCBaseViewController {
         super.viewDidLoad()
         
         self.view.addSubview(collectionView)
-
     }
     
 
     override func configCustomNav() {
+        self.view.addSubview(customNavBar)
 //        [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
 //        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        let navigationBarView = ZCHomeNavigationBar(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: 44))
-        self.navigationController?.navigationBar.addSubview(navigationBarView)
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+        let navigationBarView = ZCHomeNavigationBar(frame: CGRect(x: 0, y: StatusBarHeight, w: SCREEN_WIDTH, h: 44))
+//        self.navigationController?.navigationBar.addSubview(navigationBarView)
+        self.customNavBar.addSubview(navigationBarView)
     }
 }
 
