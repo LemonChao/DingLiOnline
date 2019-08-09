@@ -51,16 +51,28 @@ class ZCMyselfAssetsCell: UITableViewCell {
         return view
     }()
     
-    
+    lazy var dataArray: [[String:String]] = {
+        var array = [[String:String]]()
+        let titles = ["保证金管理","我的余额","我的积分","我的会员卡","支付管理","我的委托"]
+        let imgNames = ["baozhengjinguanli","wodeyue","jifen","wodehuiyuanka","zhifuguanli","wodeweituo"]
+        for (index, value) in titles.enumerated() {
+            let item: [String: String] = ["title": titles[index], "imgName": imgNames[index]]
+            array.append(item)
+        }
+        
+        return array
+    }()
+
 }
 
 extension ZCMyselfAssetsCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return dataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ZCMyselfAssetsCollectionCell", for: indexPath) as! ZCMyselfAssetsCollectionCell
+        cell.dictionary = dataArray[indexPath.row]
         return cell
     }
     

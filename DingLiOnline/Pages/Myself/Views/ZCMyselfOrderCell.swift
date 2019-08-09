@@ -109,8 +109,8 @@ class ZCMyselfOrderCell: UITableViewCell {
     lazy var stackView: UIStackView = {
 //        let titls = ["待支付","待发货","待收货","已完成","退/换货"]
 //        let images = ["daifukuan","daifahuo","daishouhuo","yiwancheng","tuikuan"]
-        let titls = ["待支付的","待发货","待收货","已完成","退换货"]
-        let images = ["daifukuan","daifukuan","daifukuan","daifukuan","daifukuan"]
+        let titls = ["待支付","待发货","待收货","已完成","退换货"]
+        let images = ["yiwancheng","yiwancheng","yiwancheng","yiwancheng","yiwancheng"]
 
         var buttons: [ResizeSpacingButton] = []
         for (index, value) in titls.enumerated() {

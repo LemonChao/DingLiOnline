@@ -51,15 +51,29 @@ class ZCMyselfPromotionCell: UITableViewCell {
         return view
     }()
     
+    lazy var dataArray: [[String:String]] = {
+        var array = [[String:String]]()
+        let titles = ["我要推广","我要代理","我要优惠"]
+        let imgNames = ["woyaotuiguang","woyaodaili","woyaoyouhui"]
+        for (index, value) in titles.enumerated() {
+            let item: [String: String] = ["title": titles[index], "imgName": imgNames[index]]
+            array.append(item)
+        }
+        
+        return array
+    }()
+    
+    
 }
 
 extension ZCMyselfPromotionCell: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        return dataArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ZCMyselfAssetsCollectionCell", for: indexPath) as! ZCMyselfAssetsCollectionCell
+        cell.dictionary = dataArray[indexPath.row]
         return cell
     }
     
