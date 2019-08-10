@@ -9,10 +9,6 @@
 import UIKit
 
 class ZCMyselfViewController: ZCBaseViewController {
-
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,13 +17,27 @@ class ZCMyselfViewController: ZCBaseViewController {
     
     override func configCustomNav() {
         self.view.addSubview(customNavBar)
+        customNavBar.setBackButton(withImage: UIImage())
         customNavBar.rightButton.setImage(UIImage(named: "shezhi"), for: .normal)
         customNavBar.backgroundColor = UIColor.white.withAlphaComponent(0)
+        customNavBar.bottomLine.backgroundColor = LineColor.withAlphaComponent(0)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        if changeDefault {
+            return UIStatusBarStyle.default
+        }
+        return UIStatusBarStyle.lightContent
     }
     
     
     @objc func rightButtonAction(_ button: UIButton) {
-        print("1243676897")
+        let naviVC = ZCBaseNavigationController.init(rootViewController: ZCLoginViewController())
+        self.present(naviVC, animated: true) {
+            
+        }
+        
+        
     }
     
     lazy var tableView: UITableView = {
@@ -54,6 +64,7 @@ class ZCMyselfViewController: ZCBaseViewController {
     }()
     
     let colorChangePoint = FitWidth(200)-NavBarHeight*2
+    var changeDefault = false //状态栏变为default style
     
     
 }
@@ -93,23 +104,26 @@ extension ZCMyselfViewController: UITableViewDataSource {
 extension ZCMyselfViewController: UITableViewDelegate {
     
     
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
         let offsetY = scrollView.contentOffset.y
+        
+        let needUpdate: Bool = offsetY > (colorChangePoint + NavBarHeight/2)
+        if needUpdate != changeDefault {
+            changeDefault = needUpdate
+            self.setNeedsStatusBarAppearanceUpdate()
+        }
+        
+        
         if offsetY < colorChangePoint || offsetY == 0 {
-            self.customNavBar.backgroundColor = UIColor.white.withAlphaComponent(0)
+            customNavBar.backgroundColor = UIColor.white.withAlphaComponent(0)
+            customNavBar.title = ""
         }else {
             let alpha = (offsetY - colorChangePoint) / NavBarHeight;
-            self.customNavBar.backgroundColor = UIColor.white.withAlphaComponent(alpha)
+            customNavBar.backgroundColor = UIColor.white.withAlphaComponent(alpha)
+            customNavBar.bottomLine.backgroundColor = LineColor.withAlphaComponent(alpha)
+            customNavBar.title = "我的"
         }
     }
 }
 
-//extension ZCMyselfViewController: UIScrollView {
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//
-//    }
-//
-//
-//}

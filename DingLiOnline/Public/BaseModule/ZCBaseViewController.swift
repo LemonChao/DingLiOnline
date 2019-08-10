@@ -50,9 +50,10 @@ class ZCBaseViewController: UIViewController {
         return UIStatusBarAnimation.fade
     }
     
-    
-    let customNavBar = ZCCustomNavigationBar(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: NavBarHeight))
-    
-    
+    lazy var customNavBar: ZCCustomNavigationBar = {
+        let bar = ZCCustomNavigationBar(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: NavBarHeight))
+        bar.setBackButton(withImage: UIImage(named: "back_black"))
+        return bar
+    }()
     
 }

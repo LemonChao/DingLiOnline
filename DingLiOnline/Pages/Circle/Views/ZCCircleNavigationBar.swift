@@ -56,7 +56,7 @@ class ZCCircleNavigationBar: ZCBaseView {
         view.showsVerticalScrollIndicator = false
         view.showsHorizontalScrollIndicator = false
         view.register(ZCCircleNavigationBarCell.self, forCellWithReuseIdentifier: NSStringFromClass(ZCCircleNavigationBarCell.self))
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor.clear
         return view
     }()
 

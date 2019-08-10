@@ -35,12 +35,8 @@ class ZCHomeViewController: ZCBaseViewController {
 
     override func configCustomNav() {
         self.view.addSubview(customNavBar)
-//        [self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-//        [self.navigationController.navigationBar setShadowImage:[UIImage new]];
-//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
-//        self.navigationController?.navigationBar.shadowImage = UIImage()
+        customNavBar.setBackButton(withImage: UIImage())
         let navigationBarView = ZCHomeNavigationBar(frame: CGRect(x: 0, y: StatusBarHeight, w: SCREEN_WIDTH, h: 44))
-//        self.navigationController?.navigationBar.addSubview(navigationBarView)
         self.customNavBar.addSubview(navigationBarView)
     }
 }

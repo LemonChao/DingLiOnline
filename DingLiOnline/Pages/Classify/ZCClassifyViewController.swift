@@ -9,7 +9,22 @@
 import UIKit
 
 class ZCClassifyViewController: ZCBaseViewController {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
+        self.view.addSubview(tableView)
+        rightController.view.frame = CGRect(x: FitWidth(84), y: NavBarHeight, w: SCREEN_WIDTH-FitWidth(84), h: SCREEN_HEIGHT)
+        self.addChild(rightController)
+        self.view.addSubview(rightController.view)
+    }
+    
+    override func configCustomNav() {
+        self.view.addSubview(customNavBar)
+        customNavBar.setBackButton(withImage: UIImage())
+    }
+    
+    
     lazy var tableView: UITableView = {
         let view = UITableView(frame: CGRect(x: 0, y: NavBarHeight, w: FitWidth(84), h: SCREEN_HEIGHT-NavBarHeight-TabBarHeight), style: .plain)
         view.backgroundColor = ScrollViewBackGroundColor
@@ -23,19 +38,6 @@ class ZCClassifyViewController: ZCBaseViewController {
     
     let rightController = ZCClassifyRightController()
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        self.view.addSubview(tableView)
-        rightController.view.frame = CGRect(x: FitWidth(84), y: NavBarHeight, w: SCREEN_WIDTH-FitWidth(84), h: SCREEN_HEIGHT)
-        self.addChild(rightController)
-        self.view.addSubview(rightController.view)
-    }
-    
-    override func configCustomNav() {
-        self.view.addSubview(customNavBar)
-    }
 
 }
 

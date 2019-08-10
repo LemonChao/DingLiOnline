@@ -81,6 +81,9 @@
 		6C4EF19622EC033900E3D68B /* ZCCircleNavigationBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EF19522EC033900E3D68B /* ZCCircleNavigationBarCell.swift */; };
 		6C5B036D22EEDF8A00C8756C /* ResizeSpacingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B036C22EEDF8A00C8756C /* ResizeSpacingButton.swift */; };
 		6C5B036F22EEE9D100C8756C /* ContentInsetButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B036E22EEE9D100C8756C /* ContentInsetButton.swift */; };
+		6C7C2B5822FE614B00B5AE0A /* ZCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C2B5722FE614B00B5AE0A /* ZCLoginViewController.swift */; };
+		6C7C2B5A22FE726600B5AE0A /* ZCLoginInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C2B5922FE726600B5AE0A /* ZCLoginInputView.swift */; };
+		6C7C2B5C22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C2B5B22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift */; };
 		6C88BCEE22FBCAF800E5B2F3 /* ZCMyselfOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88BCED22FBCAF800E5B2F3 /* ZCMyselfOrderCell.swift */; };
 		6C88BCF022FBCBFC00E5B2F3 /* ZCMyselfAssetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88BCEF22FBCBFC00E5B2F3 /* ZCMyselfAssetsCell.swift */; };
 		6C88BCF222FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88BCF122FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift */; };
@@ -209,6 +212,9 @@
 		6C4EF19522EC033900E3D68B /* ZCCircleNavigationBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCircleNavigationBarCell.swift; sourceTree = "<group>"; };
 		6C5B036C22EEDF8A00C8756C /* ResizeSpacingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeSpacingButton.swift; sourceTree = "<group>"; };
 		6C5B036E22EEE9D100C8756C /* ContentInsetButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentInsetButton.swift; sourceTree = "<group>"; };
+		6C7C2B5722FE614B00B5AE0A /* ZCLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLoginViewController.swift; sourceTree = "<group>"; };
+		6C7C2B5922FE726600B5AE0A /* ZCLoginInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLoginInputView.swift; sourceTree = "<group>"; };
+		6C7C2B5B22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBindPhoneNumberVC.swift; sourceTree = "<group>"; };
 		6C88BCED22FBCAF800E5B2F3 /* ZCMyselfOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfOrderCell.swift; sourceTree = "<group>"; };
 		6C88BCEF22FBCBFC00E5B2F3 /* ZCMyselfAssetsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfAssetsCell.swift; sourceTree = "<group>"; };
 		6C88BCF122FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfPromotionCell.swift; sourceTree = "<group>"; };
@@ -337,6 +343,7 @@
 				6C24670B22EA9CA100A8CD19 /* Classify */,
 				6C24670A22EA9C9200A8CD19 /* Circle */,
 				6C24670922EA9C1B00A8CD19 /* Myself */,
+				6C7C2B5622FE610E00B5AE0A /* Login */,
 			);
 			path = Pages;
 			sourceTree = "<group>";
@@ -498,6 +505,16 @@
 				6C8BF9ED22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		6C7C2B5622FE610E00B5AE0A /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6C7C2B5722FE614B00B5AE0A /* ZCLoginViewController.swift */,
+				6C7C2B5922FE726600B5AE0A /* ZCLoginInputView.swift */,
+				6C7C2B5B22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		6CB8719322F3CC9900B6CCF2 /* Views */ = {
@@ -844,6 +861,7 @@
 				6C24684322EAD8FB00A8CD19 /* TimerExtensions.swift in Sources */,
 				6C24671622EA9E9F00A8CD19 /* ZCBaseViewController.swift in Sources */,
 				6C24684A22EAD8FB00A8CD19 /* DoubleExtensions.swift in Sources */,
+				6C7C2B5C22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift in Sources */,
 				6C24685622EAD8FB00A8CD19 /* DateExtensions.swift in Sources */,
 				6CE921AD22F3CF5500C997B5 /* ZCClassifyRightController.swift in Sources */,
 				6C24671822EA9EF700A8CD19 /* ZCBaseView.swift in Sources */,
@@ -868,6 +886,7 @@
 				6C24683B22EAD8FB00A8CD19 /* BlockPan.swift in Sources */,
 				6C24683522EAD8FB00A8CD19 /* UIUserInterfaceSizeClassExtensions.swift in Sources */,
 				6C24683F22EAD8FB00A8CD19 /* CollectionsExtension.swift in Sources */,
+				6C7C2B5A22FE726600B5AE0A /* ZCLoginInputView.swift in Sources */,
 				6C88BCF222FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift in Sources */,
 				6C24672022EAA74400A8CD19 /* ZCMyselfViewController.swift in Sources */,
 				6C24683C22EAD8FB00A8CD19 /* UIDeviceExtensions.swift in Sources */,
@@ -879,6 +898,7 @@
 				6C24671C22EAA72800A8CD19 /* ZCClassifyViewController.swift in Sources */,
 				6C24685022EAD8FB00A8CD19 /* CGPointExtensions.swift in Sources */,
 				6C24684D22EAD8FB00A8CD19 /* UIAlertControllerExtensions.swift in Sources */,
+				6C7C2B5822FE614B00B5AE0A /* ZCLoginViewController.swift in Sources */,
 				6C5B036D22EEDF8A00C8756C /* ResizeSpacingButton.swift in Sources */,
 				6C24684622EAD8FB00A8CD19 /* UISliderExtensions.swift in Sources */,
 				6C24684E22EAD8FB00A8CD19 /* UILabelExtensions.swift in Sources */,

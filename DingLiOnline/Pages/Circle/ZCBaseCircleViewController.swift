@@ -10,12 +10,6 @@ import UIKit
 
 class ZCBaseCircleViewController: ZCBaseViewController {
 
-    lazy var publishButton: UIButton = {
-        let button = UIButton(type: .custom)
-        button.setImage(UIImage(named: "circle_publish"), for: .normal)
-        button.setImage(UIImage(named: "circle_publish"), for: .highlighted)
-        return button
-    }()
     
 
     
@@ -31,6 +25,9 @@ class ZCBaseCircleViewController: ZCBaseViewController {
     
     override func configCustomNav() {
         self.view.addSubview(customNavBar)
+        customNavBar.setBackButton(withImage: UIImage())
+        customNavBar.setRightButton(withImage: UIImage(named: "circle_topic"))
+        
         let cusNaviBar = ZCCircleNavigationBar(frame: CGRect(x: (SCREEN_WIDTH-182)/2, y: StatusBarHeight, w: 182, h: 44), parent:self)
         cusNaviBar.contentViewHeight = SCREEN_HEIGHT - NavBarHeight - TabBarHeight
         cusNaviBar.titles = ["关注","圈子","我的"]
@@ -38,18 +35,24 @@ class ZCBaseCircleViewController: ZCBaseViewController {
         cusNaviBar.parentViewController = self
         cusNaviBar.delegate = self
         cusNaviBar .reloadPages()
-        
-        let rightNaviItem = UIBarButtonItem.init(image: UIImage(named: "circle_topic"), style: .plain, target: self, action: #selector(rightNaviItemAction(item:)))
+
         self.customNavBar.addSubview(cusNaviBar)
-//        self.customNavBar.addSubview(rightNaviItem)
         
     }
 
     
-    @objc func rightNaviItemAction(item: UIBarButtonItem) {
+    @objc func rightButtonAction(button: UIButton) {
         
     }
+    
+    lazy var publishButton: UIButton = {
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(named: "circle_publish"), for: .normal)
+        button.setImage(UIImage(named: "circle_publish"), for: .highlighted)
+        return button
+    }()
 
+    
 }
 
 

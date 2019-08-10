@@ -78,7 +78,7 @@ extension UIButton {
             self.imageEdgeInsets = UIEdgeInsets(top: imageOffsetY, left: imageOffsetX, bottom: -imageOffsetY, right: -imageOffsetX)
             self.titleEdgeInsets = UIEdgeInsets(top: -labelOffsetY, left: -labelOffsetX1, bottom: labelOffsetY, right: labelOffsetX2)
         }
-        print("imgSize:\(self.imageView?.image?.size ?? CGSize.zero) show:\(String(describing: showLabSize)) ture:\(trueSize), imgInsets:\(self.imageEdgeInsets) titleInsets:\(self.self.titleEdgeInsets)")
+//        print("imgSize:\(self.imageView?.image?.size ?? CGSize.zero) show:\(String(describing: showLabSize)) ture:\(trueSize), imgInsets:\(self.imageEdgeInsets) titleInsets:\(self.self.titleEdgeInsets)")
     }
     
     
