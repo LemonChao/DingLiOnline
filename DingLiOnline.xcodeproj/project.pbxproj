@@ -21,7 +21,7 @@
 		6C24672222EAACEC00A8CD19 /* UIColor+WUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24672122EAACEC00A8CD19 /* UIColor+WUIKit.swift */; };
 		6C24672522EAAD2400A8CD19 /* InterfaceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24672322EAAD2300A8CD19 /* InterfaceHeader.swift */; };
 		6C24672622EAAD2400A8CD19 /* SystemHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24672422EAAD2300A8CD19 /* SystemHeader.swift */; };
-		6C24672822EAADC100A8CD19 /* AppColorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24672722EAADC100A8CD19 /* AppColorHeader.swift */; };
+		6C24672822EAADC100A8CD19 /* AppKeyAndColorHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24672722EAADC100A8CD19 /* AppKeyAndColorHeader.swift */; };
 		6C24682F22EAD8FB00A8CD19 /* EZSwiftFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2467FC22EAD8F400A8CD19 /* EZSwiftFunctions.swift */; };
 		6C24683022EAD8FB00A8CD19 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2467FD22EAD8F400A8CD19 /* DictionaryExtensions.swift */; };
 		6C24683122EAD8FB00A8CD19 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2467FE22EAD8F500A8CD19 /* BundleExtensions.swift */; };
@@ -84,6 +84,7 @@
 		6C7C2B5822FE614B00B5AE0A /* ZCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C2B5722FE614B00B5AE0A /* ZCLoginViewController.swift */; };
 		6C7C2B5A22FE726600B5AE0A /* ZCLoginInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C2B5922FE726600B5AE0A /* ZCLoginInputView.swift */; };
 		6C7C2B5C22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C2B5B22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift */; };
+		6C7C2B5F22FECD8600B5AE0A /* ZCCountDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C2B5E22FECD8600B5AE0A /* ZCCountDownButton.swift */; };
 		6C88BCEE22FBCAF800E5B2F3 /* ZCMyselfOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88BCED22FBCAF800E5B2F3 /* ZCMyselfOrderCell.swift */; };
 		6C88BCF022FBCBFC00E5B2F3 /* ZCMyselfAssetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88BCEF22FBCBFC00E5B2F3 /* ZCMyselfAssetsCell.swift */; };
 		6C88BCF222FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88BCF122FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift */; };
@@ -93,6 +94,9 @@
 		6C8BF9EA22EFE24D00FF0698 /* ZCGirdPhotosViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BF9E922EFE24D00FF0698 /* ZCGirdPhotosViewCell.swift */; };
 		6C8BF9EC22EFF55A00FF0698 /* ZCCollectionViewWaterfallFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BF9EB22EFF55A00FF0698 /* ZCCollectionViewWaterfallFlowLayout.swift */; };
 		6C8BF9EE22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BF9ED22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift */; };
+		6CA0A1DC2301154800DD774A /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA0A1DB2301154800DD774A /* NetworkHelper.swift */; };
+		6CA0A1DF230143A100DD774A /* ZCFocusListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA0A1DE230143A100DD774A /* ZCFocusListModel.swift */; };
+		6CA0A1E1230150A100DD774A /* ZCBaseStructModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA0A1E0230150A100DD774A /* ZCBaseStructModel.swift */; };
 		6CB8719522F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8719422F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift */; };
 		6CB9065222E996ED00C40C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9065122E996ED00C40C9F /* AppDelegate.swift */; };
 		6CB9065722E996ED00C40C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB9065522E996ED00C40C9F /* Main.storyboard */; };
@@ -152,7 +156,7 @@
 		6C24672122EAACEC00A8CD19 /* UIColor+WUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+WUIKit.swift"; sourceTree = "<group>"; };
 		6C24672322EAAD2300A8CD19 /* InterfaceHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceHeader.swift; sourceTree = "<group>"; };
 		6C24672422EAAD2300A8CD19 /* SystemHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SystemHeader.swift; sourceTree = "<group>"; };
-		6C24672722EAADC100A8CD19 /* AppColorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColorHeader.swift; sourceTree = "<group>"; };
+		6C24672722EAADC100A8CD19 /* AppKeyAndColorHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppKeyAndColorHeader.swift; sourceTree = "<group>"; };
 		6C2467FC22EAD8F400A8CD19 /* EZSwiftFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZSwiftFunctions.swift; sourceTree = "<group>"; };
 		6C2467FD22EAD8F400A8CD19 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
 		6C2467FE22EAD8F500A8CD19 /* BundleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
@@ -215,6 +219,7 @@
 		6C7C2B5722FE614B00B5AE0A /* ZCLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLoginViewController.swift; sourceTree = "<group>"; };
 		6C7C2B5922FE726600B5AE0A /* ZCLoginInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLoginInputView.swift; sourceTree = "<group>"; };
 		6C7C2B5B22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBindPhoneNumberVC.swift; sourceTree = "<group>"; };
+		6C7C2B5E22FECD8600B5AE0A /* ZCCountDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCountDownButton.swift; sourceTree = "<group>"; };
 		6C88BCED22FBCAF800E5B2F3 /* ZCMyselfOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfOrderCell.swift; sourceTree = "<group>"; };
 		6C88BCEF22FBCBFC00E5B2F3 /* ZCMyselfAssetsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfAssetsCell.swift; sourceTree = "<group>"; };
 		6C88BCF122FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfPromotionCell.swift; sourceTree = "<group>"; };
@@ -224,6 +229,9 @@
 		6C8BF9E922EFE24D00FF0698 /* ZCGirdPhotosViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGirdPhotosViewCell.swift; sourceTree = "<group>"; };
 		6C8BF9EB22EFF55A00FF0698 /* ZCCollectionViewWaterfallFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCollectionViewWaterfallFlowLayout.swift; sourceTree = "<group>"; };
 		6C8BF9ED22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCircleCollectionViewCell.swift; sourceTree = "<group>"; };
+		6CA0A1DB2301154800DD774A /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		6CA0A1DE230143A100DD774A /* ZCFocusListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCFocusListModel.swift; sourceTree = "<group>"; };
+		6CA0A1E0230150A100DD774A /* ZCBaseStructModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseStructModel.swift; sourceTree = "<group>"; };
 		6CB8719422F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCClassifyLeftCell.swift; sourceTree = "<group>"; };
 		6CB9064E22E996ED00C40C9F /* DingLiOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingLiOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB9065122E996ED00C40C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -331,7 +339,7 @@
 			children = (
 				6C24672322EAAD2300A8CD19 /* InterfaceHeader.swift */,
 				6C24672422EAAD2300A8CD19 /* SystemHeader.swift */,
-				6C24672722EAADC100A8CD19 /* AppColorHeader.swift */,
+				6C24672722EAADC100A8CD19 /* AppKeyAndColorHeader.swift */,
 			);
 			path = Macro;
 			sourceTree = "<group>";
@@ -371,7 +379,7 @@
 			children = (
 				6C4EF18F22EBFAE100E3D68B /* ZCBaseCircleViewController.swift */,
 				6C19456522F2CC540015B381 /* MyCircle */,
-				6C4EF18C22EBFA9B00E3D68B /* ZCFocusViewController.swift */,
+				6CA0A1DD230142D400DD774A /* MyFocus */,
 				6C24671D22EAA73500A8CD19 /* ZCCircleViewController.swift */,
 				6C4EF19322EBFB4900E3D68B /* ZCTopicListViewController.swift */,
 				6C4EF18922EBECA900E3D68B /* Views */,
@@ -395,6 +403,7 @@
 				6C24670E22EA9D1700A8CD19 /* Manager */,
 				6C24670D22EA9CD900A8CD19 /* BaseModule */,
 				6C24670F22EA9D2E00A8CD19 /* Helper */,
+				6C7C2B5D22FECD2100B5AE0A /* Views */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -407,6 +416,7 @@
 				6C24671522EA9E9F00A8CD19 /* ZCBaseViewController.swift */,
 				6C24671722EA9EF700A8CD19 /* ZCBaseView.swift */,
 				6CD33BA922FD27E70021FD16 /* ZCCustomNavigationBar.swift */,
+				6CA0A1E0230150A100DD774A /* ZCBaseStructModel.swift */,
 			);
 			path = BaseModule;
 			sourceTree = "<group>";
@@ -421,6 +431,7 @@
 		6C24670F22EA9D2E00A8CD19 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				6CA0A1DB2301154800DD774A /* NetworkHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -498,8 +509,6 @@
 				6C4EF18A22EBEDE500E3D68B /* ZCCircleNavigationBar.swift */,
 				6C4EF19522EC033900E3D68B /* ZCCircleNavigationBarCell.swift */,
 				6CCD6C2022EE912A0037C491 /* ZCFocusTableViewCell.swift */,
-				6C5B036C22EEDF8A00C8756C /* ResizeSpacingButton.swift */,
-				6C5B036E22EEE9D100C8756C /* ContentInsetButton.swift */,
 				6C8BF9E722EFDC9E00FF0698 /* ZCGridPictureView.swift */,
 				6C8BF9E922EFE24D00FF0698 /* ZCGirdPhotosViewCell.swift */,
 				6C8BF9ED22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift */,
@@ -515,6 +524,25 @@
 				6C7C2B5B22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		6C7C2B5D22FECD2100B5AE0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C7C2B5E22FECD8600B5AE0A /* ZCCountDownButton.swift */,
+				6C5B036C22EEDF8A00C8756C /* ResizeSpacingButton.swift */,
+				6C5B036E22EEE9D100C8756C /* ContentInsetButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6CA0A1DD230142D400DD774A /* MyFocus */ = {
+			isa = PBXGroup;
+			children = (
+				6C4EF18C22EBFA9B00E3D68B /* ZCFocusViewController.swift */,
+				6CA0A1DE230143A100DD774A /* ZCFocusListModel.swift */,
+			);
+			path = MyFocus;
 			sourceTree = "<group>";
 		};
 		6CB8719322F3CC9900B6CCF2 /* Views */ = {
@@ -860,6 +888,8 @@
 				6C24686122EAD8FB00A8CD19 /* UIFontExtensions.swift in Sources */,
 				6C24684322EAD8FB00A8CD19 /* TimerExtensions.swift in Sources */,
 				6C24671622EA9E9F00A8CD19 /* ZCBaseViewController.swift in Sources */,
+				6C7C2B5F22FECD8600B5AE0A /* ZCCountDownButton.swift in Sources */,
+				6CA0A1DC2301154800DD774A /* NetworkHelper.swift in Sources */,
 				6C24684A22EAD8FB00A8CD19 /* DoubleExtensions.swift in Sources */,
 				6C7C2B5C22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift in Sources */,
 				6C24685622EAD8FB00A8CD19 /* DateExtensions.swift in Sources */,
@@ -876,7 +906,7 @@
 				6CCD6C2322EEA7B20037C491 /* UIButton+EdgeInsets.swift in Sources */,
 				6CDD867522FABF7100EDDEE5 /* ZCMyselfTableHeaderView.swift in Sources */,
 				6CEE7AA322F97452000B147E /* ZCHomeAuctionCell.swift in Sources */,
-				6C24672822EAADC100A8CD19 /* AppColorHeader.swift in Sources */,
+				6C24672822EAADC100A8CD19 /* AppKeyAndColorHeader.swift in Sources */,
 				6C24685F22EAD8FB00A8CD19 /* BlockTap.swift in Sources */,
 				6C5B036F22EEE9D100C8756C /* ContentInsetButton.swift in Sources */,
 				6C24685722EAD8FB00A8CD19 /* UIImageExtensions.swift in Sources */,
@@ -910,6 +940,7 @@
 				6C24683122EAD8FB00A8CD19 /* BundleExtensions.swift in Sources */,
 				6C8BF9E822EFDC9E00FF0698 /* ZCGridPictureView.swift in Sources */,
 				6C24672522EAAD2400A8CD19 /* InterfaceHeader.swift in Sources */,
+				6CA0A1DF230143A100DD774A /* ZCFocusListModel.swift in Sources */,
 				6C24671A22EAA71400A8CD19 /* ZCHomeViewController.swift in Sources */,
 				6C24685C22EAD8FB00A8CD19 /* URLExtensions.swift in Sources */,
 				6CB9065A22E996ED00C40C9F /* DingLiOnline.xcdatamodeld in Sources */,
@@ -920,6 +951,7 @@
 				6C24672222EAACEC00A8CD19 /* UIColor+WUIKit.swift in Sources */,
 				6C4EF18D22EBFA9B00E3D68B /* ZCFocusViewController.swift in Sources */,
 				6C24685B22EAD8FB00A8CD19 /* ArrayExtensions.swift in Sources */,
+				6CA0A1E1230150A100DD774A /* ZCBaseStructModel.swift in Sources */,
 				6C24684222EAD8FB00A8CD19 /* BoolExtensions.swift in Sources */,
 				6C24684522EAD8FB00A8CD19 /* BlockPinch.swift in Sources */,
 				6CEE7AA122F95E00000B147E /* ZCHomeCollectionViewCell.swift in Sources */,

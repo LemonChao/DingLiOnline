@@ -12,6 +12,7 @@ class ZCFocusTableViewCell: UITableViewCell {
 
     var model: Any {
         set {
+            avatarImgView.image = UIImage(named: "portrait_placeholder_normal")
             nameLabel.text = "星月菩提"
             levelImgView.image = UIImage(named: "circle_membership")
             contentLabel.text = "于是我们领教了世界是何等凶顽，同时又得知世界也可以变得温存和美好。 于是我们领教了世界是何等凶顽，同时又得知世界也可以变得温存和美好。"
@@ -29,7 +30,7 @@ class ZCFocusTableViewCell: UITableViewCell {
             self.superview?.layoutIfNeeded()
         }
         get {
-            return "12"
+            return ""
         }
     }
     

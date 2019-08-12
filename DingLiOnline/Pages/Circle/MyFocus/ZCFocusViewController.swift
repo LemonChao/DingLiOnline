@@ -29,6 +29,18 @@ class ZCFocusViewController: ZCBaseViewController {
         self.view.backgroundColor = UIColor.red
         
         self.view.addSubview(tableView)
+        
+        NetworkHelper.postRequestWith(url: kcircleList, params: ["condition": "0","pn":"1","num":"10"], success: { (respons) in
+            let data = ZCFocusDataModel(jsonData: respons["data"])
+
+            
+            print("data:\(data)")
+        }) { (error) in
+            
+        }
+        
+        
+        
     }
     
 

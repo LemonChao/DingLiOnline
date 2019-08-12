@@ -9,7 +9,7 @@
 import UIKit
 
 
-// button重排，自适应大小，带有图文间隔
+/// button重排，自适应大小，带有图文间隔
 class ResizeSpacingButton: UIButton {
 
     var position = ImagePosition.Left
