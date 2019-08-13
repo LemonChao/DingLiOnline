@@ -7,18 +7,24 @@
 //
 
 import UIKit
+//import Kingfisher
 
 class ZCFocusTableViewCell: UITableViewCell {
 
-    var model: Any {
-        set {
-            avatarImgView.image = UIImage(named: "portrait_placeholder_normal")
-            nameLabel.text = "星月菩提"
-            levelImgView.image = UIImage(named: "circle_membership")
-            contentLabel.text = "于是我们领教了世界是何等凶顽，同时又得知世界也可以变得温存和美好。 于是我们领教了世界是何等凶顽，同时又得知世界也可以变得温存和美好。"
-            topicButton.setTitle("#笙歌爷爷", for: .normal)
-            timeLabel.text = "1小时前"
-            gridPictureView.photos = Array(repeating: "1", count: Int(arc4random() % 8 + 1))
+    var model: ZCFocusListModel = ZCFocusListModel(jsonData: ""){
+        willSet {
+            
+            avatarImgView.kf.setImage(with: URL(string: newValue.litpic),placeholder: UIImage(named: "portrait_placeholder_normal"))
+            nameLabel.text = newValue.vxName
+            levelImgView.image = UIImage(named: "circle_memship1")
+            contentLabel.text = newValue.content
+            topicButton.setTitle(newValue.gambit, for: .normal)
+            timeLabel.text = newValue.addTime
+            gridPictureView.photos = newValue.imagess
+            zanButton.setTitle(String(newValue.likeCount), for: .normal)
+            zanButton.setTitle(String(newValue.likeCount), for: .selected)
+            zanButton.isSelected = newValue.likeState
+            collectButton.isSelected = newValue.collectState
             
             collectButton.imagePosition(.Left, spacing: FitWidth(6))
             zanButton.imagePosition(.Left, spacing: FitWidth(6))
@@ -26,11 +32,7 @@ class ZCFocusTableViewCell: UITableViewCell {
             gridPictureView.snp.updateConstraints { (make) in
                 make.size.equalTo(gridPictureView.config.collectionFrame.size)
             }
-
             self.superview?.layoutIfNeeded()
-        }
-        get {
-            return ""
         }
     }
     
@@ -48,8 +50,6 @@ class ZCFocusTableViewCell: UITableViewCell {
         self.contentView.addSubview(shareButton)
         self.contentView.addSubview(zanButton)
         self.contentView.addSubview(collectButton)
-//        self.contentView.addSubview(commentButton)
-//        self.contentView.addSubview(rewardButton)
         self.contentView.addSubview(lineView)
         
         let margin: CGFloat = 12
@@ -92,16 +92,6 @@ class ZCFocusTableViewCell: UITableViewCell {
             make.top.equalTo(topicButton.snp_bottom).offset(FitWidth(10))
         }
         
-//        rewardButton.snp.makeConstraints { (make) in
-//            make.right.equalToSuperview().inset(margin)
-//            make.centerY.equalTo(shareButton)
-//        }
-//
-//        commentButton.snp.makeConstraints { (make) in
-//            make.centerY.equalTo(shareButton)
-//            make.right.equalTo(rewardButton.snp_left).offset(-FitWidth(24))
-//        }
-        
         collectButton.snp.makeConstraints { (make) in
             make.right.equalToSuperview().inset(margin)
             make.centerY.equalTo(shareButton)
@@ -111,7 +101,6 @@ class ZCFocusTableViewCell: UITableViewCell {
             make.centerY.equalTo(shareButton)
             make.right.equalTo(collectButton.snp_left).offset(-FitWidth(24))
         }
-
         
         lineView.snp.makeConstraints { (make) in
             make.left.right.bottom.equalToSuperview()
@@ -137,17 +126,46 @@ class ZCFocusTableViewCell: UITableViewCell {
     }
     
     @objc func zanButtonAction(button: UIButton) {
+        if model.likeState {
+            NetworkHelper.postRequestWith(url: kdelUserLike, params: ["likeId":model.id!, "type":"0"], success: { (response) in
+                self.model.likeState = !self.model.likeState
+                self.model.likeCount -= 1
+                button.setTitle(String(self.model.likeCount), for: .normal)
+                button.setTitle(String(self.model.likeCount), for: .selected)
+                button.isSelected = self.model.likeState
+            })
+        }else {
+            NetworkHelper.postRequestWith(url: kaddUserLike, params: ["likeId":model.id!, "type":"0"], success: { (response) in
+                self.model.likeState = !self.model.likeState
+                self.model.likeCount += 1
+                button.setTitle(String(self.model.likeCount), for: .normal)
+                button.setTitle(String(self.model.likeCount), for: .selected)
+                button.isSelected = self.model.likeState
+            })
+        }
+        
         
     }
     @objc func collectionButtonAction(button: UIButton) {
+        if model.collectState {
+            NetworkHelper.postRequestWith(url: kdelUserCollect, params: ["circleId":model.id!], success: { (response) in
+                self.model.collectState = !self.model.collectState
+                self.collectButton.isSelected = self.model.collectState
+                self.collectButton.imagePosition(.Left, spacing: FitWidth(6))
+            })
+            
+        }else {
+            NetworkHelper.postRequestWith(url: kaddUserCollect, params: ["circleId":model.id!], success: { (response) in
+                self.model.collectState = !self.model.collectState
+                self.collectButton.isSelected = self.model.collectState
+                self.collectButton.imagePosition(.Left, spacing: FitWidth(6))
+            })
+        }
+        
+        
         
     }
 
-    @objc func rewardButtonAction(button: UIButton) {
-        
-    }
-
-    
     
     lazy var avatarImgView: UIImageView = {
         let view = UIImageView()
@@ -178,31 +196,14 @@ class ZCFocusTableViewCell: UITableViewCell {
         return view
     }()
     
-    lazy var rewardButton: UIButton = {
-        let button = ResizeSpacingButton(position: .Left, spacing: FitWidth(6))
-        button.setImage(UIImage(named: "circle_reward"), for: .normal)
-        button.setTitle("打赏", for: .normal)
-        button.setTitleColor(PrimaryColor, for: .normal)
-        button.addTarget(self, action: #selector(rewardButtonAction(button:)), for: .touchUpInside)
-        return button
-    }()
-    
-    lazy var commentButton: UIButton = {
-        let button = ResizeSpacingButton(position: .Left, spacing: FitWidth(6))
-        button.setImage(UIImage(named: "circle_comment"), for: .normal)
-        button.setTitle("0", for: .normal)
-        button.setTitleColor(PrimaryColor, for: .normal)
-        button.addTarget(self, action: #selector(commentButtonAction(button:)), for: .touchUpInside)
-        return button
-    }()
-    
-    lazy var collectButton: UIButton = {
+    lazy var collectButton: ResizeSpacingButton = {
         let button = ResizeSpacingButton(position: .Left, spacing: FitWidth(6))
         button.setImage(UIImage(named: "circle_collect_normal"), for: .normal)
         button.setImage(UIImage(named: "circle_collect_select"), for: .selected)
         button.setTitle("收藏", for: .normal)
-        button.setTitle("收藏", for: .normal)
+        button.setTitle("", for: .selected)
         button.setTitleColor(PrimaryColor, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: FontSize(12))
         button.addTarget(self, action: #selector(collectionButtonAction(button:)), for: .touchUpInside)
         return button
     }()
@@ -213,9 +214,11 @@ class ZCFocusTableViewCell: UITableViewCell {
         button.setImage(UIImage(named: "circle_zan_select"), for: .selected)
         button.setTitle("0", for: .normal)
         button.setTitleColor(PrimaryColor, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: FontSize(12))
         button.addTarget(self, action: #selector(zanButtonAction(button:)), for: .touchUpInside)
         return button
     }()
+    
     
     lazy var shareButton: UIButton = {
         let button = UIButton(type: .custom)

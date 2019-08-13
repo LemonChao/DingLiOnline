@@ -21,7 +21,7 @@ class NetworkHelper: NSObject {
             if let value = UserDefaults.standard.object(forKey: UserToken) {
                 return value as! String
             }
-            return "123456"
+            return "1234567"
         }
     }
     
@@ -34,45 +34,67 @@ class NetworkHelper: NSObject {
         }
     }
     
-    
+    class func postRequestWith(url: String, params: [String: Any], success: @escaping (_ response: JSON) -> Void, failed: ((_ error: Error?) -> Void)? = nil) {
+        
+        Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { (response) in
+            
+            print("URL:\(url) params:\(params)===")
+            
+            switch response.result {
+            case .success(let value):
+                print("Value:\(String(describing: value))")
+                success(JSON(value))
+                
+            case .failure(let error):
+                print("ERROR: \(String(describing: error))")
+                if let failedBlock = failed { failedBlock(error) }
+            }
+            
+        }
+        
+    }
+
     
     class func postRequestWith(url: String, params: [String: Any], success: @escaping (_ response: JSON) -> Void, failed: @escaping (_ error: Error?) -> Void) {
         
         Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { (response) in
             
-            print("URL:\(url) params:\(params)===Value:\(String(describing: response.result.value))")
+            print("URL:\(url) params:\(params)===")
+            
+            switch response.result {
+            case .success(let value):
+                print("Value:\(String(describing: value))")
+                success(JSON(value))
 
-            guard response.result.isSuccess else {
-                print("ERROR: \(String(describing: response.error))")
-                failed(response.result.error)
-                return
+            case .failure(let error):
+                print("ERROR: \(String(describing: error))")
+                failed(error)
             }
             
-            if let json = response.result.value {
-                let data = JSON(json)
-                success(data)
-            }
         }
         
     }
     
-    
-    class func getRequestWith(url: String, params: [String: Any], success: @escaping (_ response: JSON) -> Void, failed: @escaping (_ error: Any) -> Void) {
+    class func getRequestWith(url: String, params: [String: Any], success: @escaping (_ response: JSON) -> Void, failed: ((_ error: Error?) -> Void)? = nil) {
         
         Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { (response) in
             
-            print("value:\(String(describing: response.result.value))==\(AppName)==\(AppVersion)")
+            print("URL:\(url) params:\(params)===")
             
-            guard response.result.isSuccess else {
-                print("ERROR: \(String(describing: response.error))")
-                failed(response.result.error as Any)
-                return
+            switch response.result {
+            case .success(let value):
+                print("Value:\(String(describing: value))")
+                success(JSON(value))
+                
+            case .failure(let error):
+                print("ERROR: \(String(describing: error))")
+                if let failedBlock = failed {
+                    failedBlock(error)
+                }
+                
             }
+
             
-            if let json = response.result.value {
-                let data = JSON(json)
-                success(data)
-            }
         }
         
     }

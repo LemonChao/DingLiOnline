@@ -55,7 +55,7 @@ struct GridLayoutConfig {
 class ZCGridPictureView: UIView {
     
     var config = GridLayoutConfig(0)
-    var photos: [Any] = [] {
+    var photos: [String] = [] {
         willSet {
             config = GridLayoutConfig(newValue.count)
         }
@@ -110,7 +110,7 @@ extension ZCGridPictureView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NSStringFromClass(ZCGirdPhotosViewCell.self), for: indexPath) as! ZCGirdPhotosViewCell
-        
+        cell.setImage(urlStr: photos[indexPath.row])
         return cell
     }
     

@@ -8,6 +8,8 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
+
 
 //获取沙盒Document路径
 let kDocumentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first

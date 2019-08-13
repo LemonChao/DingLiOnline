@@ -9,20 +9,27 @@
 import UIKit
 
 class ZCGirdPhotosViewCell: UICollectionViewCell {
-    lazy var imgView: UIImageView = {
-        let view = UIImageView()
-        view.contentMode = UIView.ContentMode.scaleAspectFill
-        return view
-    }()
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.contentView.addSubview(imgView)
-        self.contentView.backgroundColor = UIColor.random()
+        imgView.snp.makeConstraints { (make) in
+            make.edges.equalTo(UIEdgeInsets.zero)
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    func setImage(urlStr url: String) {
+        imgView.kf.setImage(with: URL(string: url))
+    }
+    
+    lazy var imgView: UIImageView = {
+        let view = UIImageView()
+        view.contentMode = UIView.ContentMode.scaleAspectFill
+        return view
+    }()
+
 }
