@@ -73,6 +73,7 @@
 		6C24685F22EAD8FB00A8CD19 /* BlockTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24682C22EAD8FA00A8CD19 /* BlockTap.swift */; };
 		6C24686022EAD8FB00A8CD19 /* CharacterExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24682D22EAD8FA00A8CD19 /* CharacterExtensions.swift */; };
 		6C24686122EAD8FB00A8CD19 /* UIFontExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24682E22EAD8FB00A8CD19 /* UIFontExtensions.swift */; };
+		6C2D566A2302B64F00506714 /* ZCSubmitCircleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2D56692302B64F00506714 /* ZCSubmitCircleVC.swift */; };
 		6C4EF18B22EBEDE500E3D68B /* ZCCircleNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EF18A22EBEDE500E3D68B /* ZCCircleNavigationBar.swift */; };
 		6C4EF18D22EBFA9B00E3D68B /* ZCFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EF18C22EBFA9B00E3D68B /* ZCFocusViewController.swift */; };
 		6C4EF19022EBFAE100E3D68B /* ZCBaseCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EF18F22EBFAE100E3D68B /* ZCBaseCircleViewController.swift */; };
@@ -209,6 +210,7 @@
 		6C24682C22EAD8FA00A8CD19 /* BlockTap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockTap.swift; sourceTree = "<group>"; };
 		6C24682D22EAD8FA00A8CD19 /* CharacterExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterExtensions.swift; sourceTree = "<group>"; };
 		6C24682E22EAD8FB00A8CD19 /* UIFontExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIFontExtensions.swift; sourceTree = "<group>"; };
+		6C2D56692302B64F00506714 /* ZCSubmitCircleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCSubmitCircleVC.swift; sourceTree = "<group>"; };
 		6C4EF18A22EBEDE500E3D68B /* ZCCircleNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCircleNavigationBar.swift; sourceTree = "<group>"; };
 		6C4EF18C22EBFA9B00E3D68B /* ZCFocusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCFocusViewController.swift; sourceTree = "<group>"; };
 		6C4EF18F22EBFAE100E3D68B /* ZCBaseCircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseCircleViewController.swift; sourceTree = "<group>"; };
@@ -384,6 +386,7 @@
 				6CA0A1DD230142D400DD774A /* MyFocus */,
 				6C24671D22EAA73500A8CD19 /* ZCCircleViewController.swift */,
 				6C4EF19322EBFB4900E3D68B /* ZCTopicListViewController.swift */,
+				6C2D56692302B64F00506714 /* ZCSubmitCircleVC.swift */,
 				6C4EF18922EBECA900E3D68B /* Views */,
 			);
 			path = Circle;
@@ -921,6 +924,7 @@
 				6C24683522EAD8FB00A8CD19 /* UIUserInterfaceSizeClassExtensions.swift in Sources */,
 				6C24683F22EAD8FB00A8CD19 /* CollectionsExtension.swift in Sources */,
 				6C7C2B5A22FE726600B5AE0A /* ZCLoginInputView.swift in Sources */,
+				6C2D566A2302B64F00506714 /* ZCSubmitCircleVC.swift in Sources */,
 				6C88BCF222FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift in Sources */,
 				6C24672022EAA74400A8CD19 /* ZCMyselfViewController.swift in Sources */,
 				6C24683C22EAD8FB00A8CD19 /* UIDeviceExtensions.swift in Sources */,

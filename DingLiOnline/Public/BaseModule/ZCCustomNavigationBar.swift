@@ -130,7 +130,7 @@ class ZCCustomNavigationBar: UIView {
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: FontSize(18), weight: .medium)
+        label.font = UIFont.systemFont(ofSize: FontSize(18), weight: .regular)
         label.textColor = PrimaryColor
         label.textAlignment = NSTextAlignment.center
         return label

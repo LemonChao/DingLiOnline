@@ -30,6 +30,8 @@ let kdelUserLike = AppBaseUrl + "/circle/delUserLike"
 let kaddUserCollect = AppBaseUrl + "/circle/addUserCollect"
 /// 用户取消收藏圈子
 let kdelUserCollect = AppBaseUrl + "/circle/delUserCollect"
+/// 发布圈子
+let kaddCircle = AppBaseUrl + "/circle/addCircle"
 
 
 

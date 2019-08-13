@@ -42,13 +42,18 @@ class ZCBaseCircleViewController: ZCBaseViewController {
 
     
     @objc func rightButtonAction(button: UIButton) {
-        
     }
+    
+    @objc func publishButtonAction(button: UIButton) {
+        self.navigationController?.pushViewController(ZCSubmitCircleVC(), animated: true)
+    }
+    
     
     lazy var publishButton: UIButton = {
         let button = UIButton(type: .custom)
         button.setImage(UIImage(named: "circle_publish"), for: .normal)
         button.setImage(UIImage(named: "circle_publish"), for: .highlighted)
+        button.addTarget(self, action: #selector(publishButtonAction(button:)), for: .touchUpInside)
         return button
     }()
 
