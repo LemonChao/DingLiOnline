@@ -30,6 +30,8 @@ class ZCHomeViewController: ZCBaseViewController {
         super.viewDidLoad()
         
         self.view.addSubview(collectionView)
+        
+        ZCPageGuideView.addPageGuideView()
     }
     
 

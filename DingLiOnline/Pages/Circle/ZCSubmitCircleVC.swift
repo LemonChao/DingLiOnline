@@ -23,15 +23,20 @@ class ZCSubmitCircleVC: ZCBaseViewController {
     
     @objc func rightButtonAction(_ button: UIButton) {
         
-        let image = UIImage(named: "IMG_2852")
+        let image = UIImage(named: "IMG_3254.jpg")
         
+        QiniuTools.sharedInstance.uploadImageData(image: (image?.pngData())!) { (progress, imageKey) in
+            print("progress:\(String(describing: progress))  key:\(imageKey)")
+        }
         
+//        QiniuTools.uploadVideoData(<#T##QiniuTools#>)
         
         NetworkHelper.postRequestWith(url: kaddCircle, params: ["":""], success: { (response) in
-            
+
         }) { (error) in
-            
+
         }
+        
     }
     
     
