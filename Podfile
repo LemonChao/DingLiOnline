@@ -16,6 +16,9 @@ target 'DingLiOnline' do
   pod 'Qiniu', '~> 7.1'
   pod 'AFNetworking', '~> 3.2.1'
   
+  # OC库
+  pod 'YYKit', '~> 1.0.9'
+  
   target 'DingLiOnlineTests' do
     inherit! :search_paths
     # Pods for testing

@@ -31,22 +31,17 @@ import UIKit
 
 
 class ZCWaterfallFlowLayout: UICollectionViewLayout {
-    var minimumLineSpacing: CGFloat = 0
-    var minimumInteritemSpacing: CGFloat = 0
-    var sectionHeadersPinToVisibleBounds: Bool = false
-    var dataSource: ZCWaterfallFlowLayoutDataSource?
+    public var minimumLineSpacing: CGFloat = 0
+    public var minimumInteritemSpacing: CGFloat = 0
+    public var sectionHeadersPinToVisibleBounds: Bool = false
+    public var dataSource: ZCWaterfallFlowLayoutDataSource?
     
     // privete instance
-    var itemLayoutAttributes: [[UICollectionViewLayoutAttributes]] = []
-    var headerLayoutAttributes: [UICollectionViewLayoutAttributes] = []
-    var footerLayoutAttributes: [UICollectionViewLayoutAttributes] = []
-    var heightOfSections: [CGFloat] = []
-    var contentHeight: CGFloat = 0
-    
-    
-    
-    
-    
+    private var itemLayoutAttributes: [[UICollectionViewLayoutAttributes]] = []
+    private var headerLayoutAttributes: [UICollectionViewLayoutAttributes] = []
+    private var footerLayoutAttributes: [UICollectionViewLayoutAttributes] = []
+    private var heightOfSections: [CGFloat] = []
+    private var contentHeight: CGFloat = 0
     
     override func prepare() {
         super.prepare()

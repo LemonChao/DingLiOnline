@@ -7,3 +7,5 @@
 #import "HappyDNS/HappyDNS.h"
 /// swift实现sha1加密算法
 #import <CommonCrypto/CommonHMAC.h>
+
+#import <YYKit/YYKit.h>

@@ -24,9 +24,9 @@ class ZCPageGuideView: UIView {
         
         //skipButton
         let skipButton = UIButton(type: .custom)
-        skipButton.frame = CGRect(x:frame.maxX-FitWidth(70), y:StatusBarHeight+FitWidth(10) , w: FitWidth(60), h: FitWidth(25))
+        skipButton.frame = CGRect(x:frame.maxX-FitWidth(60), y:StatusBarHeight+FitWidth(10) , w: FitWidth(50), h: FitWidth(25))
         skipButton.layer.cornerRadius = skipButton.h/2
-        skipButton.setTitle("5  跳过", for: .normal)
+        skipButton.setTitle("跳过", for: .normal)
         skipButton.setTitleColor(UIColor.white, for: .normal)
         skipButton.titleLabel?.font = UIFont.systemFont(ofSize: FontSize(14))
         skipButton.backgroundColor = UIColor.lightGray
@@ -65,13 +65,27 @@ class ZCPageGuideView: UIView {
     
     
     @objc func dissmissGuideView()  {
-        UIView.animate(withDuration: 0.6, animations: {
-            self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
-            self.backgroundColor = UIColor.clear
-            self.alpha = 0
-        }) { (finished) in
+        //过渡动画
+        let transition = CATransition()
+        transition.duration = 1
+        transition.type = CATransitionType(rawValue: "rippleEffect")
+        transition.subtype = CATransitionSubtype.fromRight
+        self.layer.add(transition, forKey: nil)
+        
+        UIView.animate(withDuration: 0.8, delay: 1, options: UIView.AnimationOptions.curveEaseOut, animations: {
+            self.x = -SCREEN_WIDTH
+        }) { (finish) in
             self.removeFromSuperview()
         }
+
+//        UIView.animate(withDuration: 0.6, animations: {
+//            self.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+//            self.backgroundColor = UIColor.clear
+//            self.alpha = 0
+//        }) { (finished) in
+//            self.removeFromSuperview()
+//        }
+        
     }
 
     
@@ -80,7 +94,6 @@ class ZCPageGuideView: UIView {
 extension ZCPageGuideView: UIScrollViewDelegate {
     
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        let index = scrollView.contentOffset.y / scrollView.w
         
         
     }

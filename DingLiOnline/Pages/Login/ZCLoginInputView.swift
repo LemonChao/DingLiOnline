@@ -53,6 +53,15 @@ class ZCLoginInputView: UIView {
         }
     }
     
+    @objc func codeButtonAction(_ button: ZCCountDownButton) {
+        
+        button.startButtonWith(second: 10, timeChanging: { (countButton, second) -> String in
+            return "\(second)s重新获取"
+        }, finished: { (countButton) -> String in
+            return "获取验证码"
+        })
+    }
+    
     @objc func okButtonAction(_ button: UIButton)  {
         if let vc = self.viewController() {
             if vc.responds(to: #selector(okButtonAction(_:))) {
@@ -86,12 +95,21 @@ class ZCLoginInputView: UIView {
         return field
     }()
     let codeLine = UIView(color: LineColor)
-
-    lazy var codeButton: UIButton = {
-        let button = UIButton(type: .custom)
-        button.backgroundColor = UIColor.random()
+    
+    lazy var codeButton: ZCCountDownButton = {
+        let button = ZCCountDownButton(type: .custom)
+        button.setTitle("获取验证码", for: .normal)
+        button.setTitle("获取验证码", for: .disabled)
+        button.layer.cornerRadius = FitWidth(4)
+        button.layer.borderColor = TertiaryColor.cgColor
+        button.layer.borderWidth = 1
+        button.clipsToBounds = true
+        button.setTitleColor(TertiaryColor, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: FontSize(15))
+        button.addTarget(self, action: #selector(codeButtonAction(_:)), for: .touchUpInside)
         return button
     }()
+
     
     lazy var okButton: UIButton = {
         let button = UIButton(type: .custom)

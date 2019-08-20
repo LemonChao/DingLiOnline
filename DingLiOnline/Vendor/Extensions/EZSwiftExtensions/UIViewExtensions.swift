@@ -27,12 +27,6 @@ extension UIView {
         self.init(frame: CGRect(origin: CGPoint.zero, size: superView.size))
     }
     
-    /// EZSwiftExtensions - Copies size of superview
-    public convenience init(color: UIColor) {
-        self.init(frame: CGRect.zero)
-        self.backgroundColor = color
-    }
-
 }
 
 // MARK: Frame Extensions

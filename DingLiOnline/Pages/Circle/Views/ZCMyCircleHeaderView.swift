@@ -8,11 +8,11 @@
 
 import UIKit
 
-class ZCMyCircleHeaderView: UIView {
+class ZCMyCircleHeaderView: UICollectionReusableView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
+        self.backgroundColor = UIColor.white
         avatarImgView.image = UIImage(named: "avatar_default")
         nameLabel.text = "星月菩提"
         levelImgView.image = UIImage(named: "circle_memship1")

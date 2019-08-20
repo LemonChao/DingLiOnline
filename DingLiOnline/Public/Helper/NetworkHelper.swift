@@ -26,9 +26,7 @@ class NetworkHelper: NSObject {
     }
     
     static var header: [String: String] {
-        set{
-            
-        }
+        set{}
         get{
             return ["Content-Type":"application/x-www-form-urlencoded","token": userToken]
         }
@@ -49,31 +47,10 @@ class NetworkHelper: NSObject {
                 print("ERROR: \(String(describing: error))")
                 if let failedBlock = failed { failedBlock(error) }
             }
-            
         }
         
     }
 
-    
-    class func postRequestWith(url: String, params: [String: Any], success: @escaping (_ response: JSON) -> Void, failed: @escaping (_ error: Error?) -> Void) {
-        
-        Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { (response) in
-            
-            print("URL:\(url) params:\(params)===")
-            
-            switch response.result {
-            case .success(let value):
-                print("Value:\(String(describing: value))")
-                success(JSON(value))
-
-            case .failure(let error):
-                print("ERROR: \(String(describing: error))")
-                failed(error)
-            }
-            
-        }
-        
-    }
     
     class func getRequestWith(url: String, params: [String: Any], success: @escaping (_ response: JSON) -> Void, failed: ((_ error: Error?) -> Void)? = nil) {
         
