@@ -25,6 +25,7 @@ class QiniuTools {
     
     func token() -> String {
         return self.createQiniuToken(fileName: kQiniuBucket)
+//        return "RSQ3PQW6-75ny9E_vGzpWSHlCAo6G0tExWGFGYH8:nlWvbxx3JRyIgOOofVXZff5gQyE=:eyJzY29wZSI6Im9yZGVyIiwiZGVhZGxpbmUiOjE1NjYzODU3Njl9"
     }
     
     func hmacsha1WithString(str: String, secretKey: String) -> NSData {
