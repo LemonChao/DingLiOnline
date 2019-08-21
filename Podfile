@@ -18,7 +18,7 @@ target 'DingLiOnline' do
   
   # OC库
   pod 'YYKit', '~> 1.0.9'
-  
+  pod 'HXPhotoPicker', '~> 2.3.1'
   target 'DingLiOnlineTests' do
     inherit! :search_paths
     # Pods for testing

@@ -9,3 +9,4 @@
 #import <CommonCrypto/CommonHMAC.h>
 
 #import <YYKit/YYKit.h>
+#import <HXPhotoPicker/HXPhotoPicker.h>

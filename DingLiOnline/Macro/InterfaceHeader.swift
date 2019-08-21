@@ -9,13 +9,16 @@
 import Foundation
 
 #if DEBUG
-let AppBaseUrl = "http://47.108.67.205:8082"
+let AppBaseUrl = "http://47.105.60.77:8080"
 let WebBaseUrl = "http://192.168.0.222:8080/#"
-//let WebBaseUrl = "http://xoj.rzl8y.com/web"
+/// 七牛云上传图片域名 / 不能省略
+let QiniuHostImg = "http://pvhxdhli0.bkt.clouddn.com/"
 
 #else
-let AppBaseUrl = "http://47.108.67.205:8082"
+let AppBaseUrl = "http://47.105.60.77:8080"
 let WebBaseUrl = "http://192.168.0.222:8080/#"
+/// 七牛云上传图片域名 / 不能省略
+let QiniuHostImg = "http://pvhxdhli0.bkt.clouddn.com/"
 
 #endif
 

@@ -102,10 +102,18 @@ class ZCCustomNavigationBar: UIView {
     
     
     @objc func backButtonAction(_ button: UIButton) {
-//        self.viewController()?.goBack()
         
-        let currentVC = UIViewController.currentViewController()
-        currentVC.goBack()
+//        let currentVC = UIViewController.currentViewController()
+//        currentVC.goBack()
+        
+        if let vc = self.viewController() {
+            if vc.responds(to: #selector(backButtonAction(_:))) {
+                vc.perform(#selector(backButtonAction(_:)), with: button)
+            }else {
+                vc.goBack()
+            }
+        }
+        
     }
     
     

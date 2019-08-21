@@ -98,10 +98,13 @@
 		6C8BF9EE22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8BF9ED22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift */; };
 		6C8F0464230502DD00F7DDAD /* ZCCountDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8F0463230502DD00F7DDAD /* ZCCountDownButton.swift */; };
 		6C8F046823054FCC00F7DDAD /* ConvenienceInitViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8F046723054FCC00F7DDAD /* ConvenienceInitViewExtension.swift */; };
+		6C97B99A230BFB4000C0D754 /* ZCSubmitBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C97B999230BFB4000C0D754 /* ZCSubmitBottomView.swift */; };
 		6CA0A1DC2301154800DD774A /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA0A1DB2301154800DD774A /* NetworkHelper.swift */; };
 		6CA0A1DF230143A100DD774A /* ZCFocusListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA0A1DE230143A100DD774A /* ZCFocusListModel.swift */; };
 		6CA0A1E1230150A100DD774A /* ZCBaseStructModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA0A1E0230150A100DD774A /* ZCBaseStructModel.swift */; };
 		6CA25D33230261B2000FA30D /* ZCStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA25D32230261B2000FA30D /* ZCStringExtension.swift */; };
+		6CA6F857230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6F856230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift */; };
+		6CA6F85B230CE517007BE125 /* ZCSubmitHuatiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6F85A230CE517007BE125 /* ZCSubmitHuatiVC.swift */; };
 		6CB8719522F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8719422F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift */; };
 		6CB9065222E996ED00C40C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9065122E996ED00C40C9F /* AppDelegate.swift */; };
 		6CB9065722E996ED00C40C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB9065522E996ED00C40C9F /* Main.storyboard */; };
@@ -242,10 +245,13 @@
 		6C8BF9ED22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCircleCollectionViewCell.swift; sourceTree = "<group>"; };
 		6C8F0463230502DD00F7DDAD /* ZCCountDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCountDownButton.swift; sourceTree = "<group>"; };
 		6C8F046723054FCC00F7DDAD /* ConvenienceInitViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceInitViewExtension.swift; sourceTree = "<group>"; };
+		6C97B999230BFB4000C0D754 /* ZCSubmitBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCSubmitBottomView.swift; sourceTree = "<group>"; };
 		6CA0A1DB2301154800DD774A /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		6CA0A1DE230143A100DD774A /* ZCFocusListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCFocusListModel.swift; sourceTree = "<group>"; };
 		6CA0A1E0230150A100DD774A /* ZCBaseStructModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseStructModel.swift; sourceTree = "<group>"; };
 		6CA25D32230261B2000FA30D /* ZCStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCStringExtension.swift; sourceTree = "<group>"; };
+		6CA6F856230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCSubmitQuanxianVC.swift; sourceTree = "<group>"; };
+		6CA6F85A230CE517007BE125 /* ZCSubmitHuatiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCSubmitHuatiVC.swift; sourceTree = "<group>"; };
 		6CB8719422F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCClassifyLeftCell.swift; sourceTree = "<group>"; };
 		6CB9064E22E996ED00C40C9F /* DingLiOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingLiOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB9065122E996ED00C40C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -401,6 +407,8 @@
 				6C24671D22EAA73500A8CD19 /* ZCCircleViewController.swift */,
 				6C4EF19322EBFB4900E3D68B /* ZCTopicListViewController.swift */,
 				6C2D56692302B64F00506714 /* ZCSubmitCircleVC.swift */,
+				6CA6F856230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift */,
+				6CA6F85A230CE517007BE125 /* ZCSubmitHuatiVC.swift */,
 				6C4EF18922EBECA900E3D68B /* Views */,
 			);
 			path = Circle;
@@ -526,6 +534,7 @@
 				6C8BF9ED22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift */,
 				6CC010FE23063DCC00D14250 /* ZCMycircleCollectionCell.swift */,
 				6C19456822F2CD280015B381 /* ZCMyCircleHeaderView.swift */,
+				6C97B999230BFB4000C0D754 /* ZCSubmitBottomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -898,6 +907,7 @@
 				"${PODS_ROOT}/Target Support Files/Pods-DingLiOnline/Pods-DingLiOnline-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/HXPhotoPicker/HXPhotoPicker.framework",
 				"${BUILT_PRODUCTS_DIR}/HappyDNS/HappyDNS.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Qiniu/Qiniu.framework",
@@ -914,6 +924,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HXPhotoPicker.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HappyDNS.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Qiniu.framework",
@@ -967,6 +978,7 @@
 				6C24672822EAADC100A8CD19 /* AppKeyAndColorHeader.swift in Sources */,
 				6C24685F22EAD8FB00A8CD19 /* BlockTap.swift in Sources */,
 				6C5B036F22EEE9D100C8756C /* ContentInsetButton.swift in Sources */,
+				6C97B99A230BFB4000C0D754 /* ZCSubmitBottomView.swift in Sources */,
 				6C24685722EAD8FB00A8CD19 /* UIImageExtensions.swift in Sources */,
 				6C24683822EAD8FB00A8CD19 /* UIStoryboardExtensions.swift in Sources */,
 				6C24683422EAD8FB00A8CD19 /* FileManagerExtension.swift in Sources */,
@@ -986,6 +998,7 @@
 				6C24683E22EAD8FB00A8CD19 /* IntExtensions.swift in Sources */,
 				6C24685322EAD8FB00A8CD19 /* UISwitchExtensions.swift in Sources */,
 				6C24671C22EAA72800A8CD19 /* ZCClassifyViewController.swift in Sources */,
+				6CA6F85B230CE517007BE125 /* ZCSubmitHuatiVC.swift in Sources */,
 				6C24685022EAD8FB00A8CD19 /* CGPointExtensions.swift in Sources */,
 				6C24684D22EAD8FB00A8CD19 /* UIAlertControllerExtensions.swift in Sources */,
 				6C7C2B5822FE614B00B5AE0A /* ZCLoginViewController.swift in Sources */,
@@ -1013,6 +1026,7 @@
 				6C8F046823054FCC00F7DDAD /* ConvenienceInitViewExtension.swift in Sources */,
 				6C24672222EAACEC00A8CD19 /* UIColor+WUIKit.swift in Sources */,
 				6C4EF18D22EBFA9B00E3D68B /* ZCFocusViewController.swift in Sources */,
+				6CA6F857230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift in Sources */,
 				6C24685B22EAD8FB00A8CD19 /* ArrayExtensions.swift in Sources */,
 				6CA0A1E1230150A100DD774A /* ZCBaseStructModel.swift in Sources */,
 				6C24684222EAD8FB00A8CD19 /* BoolExtensions.swift in Sources */,
@@ -1225,13 +1239,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TYVC4FRF5U;
 				INFOPLIST_FILE = DingLiOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.leyukeji.DingLiOnline;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengchao.TestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DingLiOnline/Macro/DingLiOnline-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1247,13 +1262,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TYVC4FRF5U;
 				INFOPLIST_FILE = DingLiOnline/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.leyukeji.DingLiOnline;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhengchao.TestProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "DingLiOnline/Macro/DingLiOnline-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

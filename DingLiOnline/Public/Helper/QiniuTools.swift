@@ -52,7 +52,12 @@ class QiniuTools {
         return kQiniuAccessKey + ":" + encodedSign! + ":" + encodedPutPolicy!
     }
     
-    func uploadImageData(image:Data , result: @escaping (_ progress: Float? , _ imageKey:String? ) -> ()) {
+    /// progrressHandler‘s key一直和 manager.put(key:)中key值相等，如果manager.put(key: nil) progrressHandler‘s key 一直为nil，上传成功 complete返回七牛云生成的key(图片名称)
+    ///
+    /// - Parameters:
+    ///   - image: 上传时指定图片七牛云存储名称
+    ///   - result: 上传结果反馈 result(<1, nil)上传中，result(1.0,imageKey)上传成功，
+    func uploadImageData(image:Data , result: @escaping (_ progress: Float? , _ imageKey:String? ) -> Void, failed: @escaping (_ errorInfo: QNResponseInfo) -> Void) {
         
         
         let token = self.token()
@@ -73,18 +78,21 @@ class QiniuTools {
             cutdownData = nowImage.jpegData(compressionQuality: 0.6)
         }
         
+        // 上传失败 resp = nil，可据此判断上传成败
         if let manager = QNUploadManager() {
-            manager.put(cutdownData, key: "chicken_bbq.jpg", token: token, complete: { (Info, key, resp) in
+            manager.put(cutdownData, key: nil, token: token, complete: { (Info, key, resp) in
                 print("Info:\(String(describing: Info))  resp:\(String(describing: resp))")
                 if (Info?.isConnectionBroken)! {
                     print("网络连接错误")
                     return
                 }
                 
-                if let imageKey = resp?["key"] as? String {
-                    result(nil, imageKey)
+                if let response = resp {
+                    let imageKey = response["key"] as! String
+                    result(1.0, imageKey)
+                }else {
+                    failed(Info!)
                 }
-                
             }, option: opt)
         }
         
@@ -119,13 +127,14 @@ class QiniuTools {
         
     }
     
+    /// 根据数组顺序，一个一个上传
     func upVideoDatas(videos:[Data] , result: @escaping (_ progress: Float? , _ imageKey:String? ) -> (),allTasksCompletion:@escaping () -> () ) {
         
         if (Index < videos.count) {
             
             uploadVideoData(video: videos[Index], result: { (progres, imageKey) in
                 
-                if (imageKey != nil) {
+                if (imageKey != nil) {// 本次上传完成(成功)imageKey才有值,进行下一张上传
                     
                     result(progres, imageKey)
                     
@@ -133,6 +142,8 @@ class QiniuTools {
                     
                     self.upVideoDatas(videos: videos, result: result, allTasksCompletion: allTasksCompletion)
                 }
+                
+                
             })
         }else{
             allTasksCompletion()
@@ -141,18 +152,23 @@ class QiniuTools {
         
     }
     
-    
-    func upImageDatas(images:[Data] , result: @escaping (_ progress: Float? , _ imageKey:String? ) -> (),allTasksCompletion:@escaping () -> () ) {
+    /// 根据数组顺序，一个一个上传
+    func upImageDatas(images:[Data] , result: @escaping (_ progress: Float? , _ imageKey:String ) -> Void,allTasksCompletion:@escaping () -> Void ) {
         
         if (Index < images.count) {
+            
             uploadImageData(image: images[Index], result: { (progres, imageKey) in
-                
-                if (imageKey != nil) {
-                    result(progres, imageKey)
+                if (imageKey != nil) {// 本次上传完成(成功)imageKey才有值,进行下一张上传
                     self.Index += 1
+                    result(Float(self.Index/images.count), QiniuHostImg+imageKey!)
                     self.upImageDatas(images: images, result: result, allTasksCompletion: allTasksCompletion)
                 }
-            })
+
+            }) { (errorInfo) in
+                self.Index += 1
+                self.upImageDatas(images: images, result: result, allTasksCompletion: allTasksCompletion)
+            }
+            
         }else{
             allTasksCompletion()
             Index = 0

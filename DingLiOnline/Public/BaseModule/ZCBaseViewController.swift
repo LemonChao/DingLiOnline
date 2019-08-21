@@ -56,4 +56,8 @@ class ZCBaseViewController: UIViewController {
         return bar
     }()
     
+    
+    deinit {
+        print("\(String(describing: self)) deinit complete")
+    }
 }
