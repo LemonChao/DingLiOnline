@@ -308,10 +308,10 @@ extension ZCSubmitCircleVC: YYTextViewDelegate {
     func textView(_ textView: YYTextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
         
         let fullString: String = textView.text + text
-        if fullString.count <= 60 || text == ""{
+        if fullString.count <= 600 || text == ""{
             return true
         }else {
-            textView.text = String(fullString.prefix(60))
+            textView.text = String(fullString.prefix(600))
             return false
         }
     }
