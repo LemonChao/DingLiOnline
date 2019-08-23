@@ -87,6 +87,10 @@
 		6C7C2B5822FE614B00B5AE0A /* ZCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C2B5722FE614B00B5AE0A /* ZCLoginViewController.swift */; };
 		6C7C2B5A22FE726600B5AE0A /* ZCLoginInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C2B5922FE726600B5AE0A /* ZCLoginInputView.swift */; };
 		6C7C2B5C22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C2B5B22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift */; };
+		6C810378230E3CED002B4116 /* ZCGoodsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C810377230E3CED002B4116 /* ZCGoodsDetailViewController.swift */; };
+		6C81037A230E3E79002B4116 /* ZCGoodsDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C810379230E3E79002B4116 /* ZCGoodsDetailBottomView.swift */; };
+		6C81037E230E9539002B4116 /* ZCGoodsDetailTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C81037D230E9539002B4116 /* ZCGoodsDetailTableHeaderView.swift */; };
+		6C810380230E962B002B4116 /* ZCGoodsAuctionRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C81037F230E962B002B4116 /* ZCGoodsAuctionRecordCell.swift */; };
 		6C88BCEE22FBCAF800E5B2F3 /* ZCMyselfOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88BCED22FBCAF800E5B2F3 /* ZCMyselfOrderCell.swift */; };
 		6C88BCF022FBCBFC00E5B2F3 /* ZCMyselfAssetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88BCEF22FBCBFC00E5B2F3 /* ZCMyselfAssetsCell.swift */; };
 		6C88BCF222FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88BCF122FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift */; };
@@ -119,6 +123,12 @@
 		6CC011032306652F00D14250 /* ZCMycircleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC011022306652F00D14250 /* ZCMycircleVM.swift */; };
 		6CCD6C2122EE912A0037C491 /* ZCFocusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD6C2022EE912A0037C491 /* ZCFocusTableViewCell.swift */; };
 		6CCD6C2322EEA7B20037C491 /* UIButton+EdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCD6C2222EEA7B20037C491 /* UIButton+EdgeInsets.swift */; };
+		6CCECDAD230FE11500BFB1FD /* ZCGoodDetailServiceHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCECDAC230FE11500BFB1FD /* ZCGoodDetailServiceHeader.swift */; };
+		6CCECDAF230FE83200BFB1FD /* ZCGoodsAuctionRecordHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCECDAE230FE83200BFB1FD /* ZCGoodsAuctionRecordHeader.swift */; };
+		6CCECDB1230FFAE500BFB1FD /* ZCGoodsAuctionInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCECDB0230FFAE500BFB1FD /* ZCGoodsAuctionInfoHeader.swift */; };
+		6CCECDB3231000A800BFB1FD /* ZCGoodsAuctionInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCECDB2231000A800BFB1FD /* ZCGoodsAuctionInfoCell.swift */; };
+		6CCECDB523100E1100BFB1FD /* ZCGoodsAuctionRecommendHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCECDB423100E1100BFB1FD /* ZCGoodsAuctionRecommendHeader.swift */; };
+		6CCECDB723100E6300BFB1FD /* ZCGoodsAuctionRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CCECDB623100E6300BFB1FD /* ZCGoodsAuctionRecommendCell.swift */; };
 		6CD33BAA22FD27E70021FD16 /* ZCCustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD33BA922FD27E70021FD16 /* ZCCustomNavigationBar.swift */; };
 		6CDD867022FAA55600EDDEE5 /* ZCHomeAuctionRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDD866F22FAA55600EDDEE5 /* ZCHomeAuctionRecommendView.swift */; };
 		6CDD867522FABF7100EDDEE5 /* ZCMyselfTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CDD867422FABF7100EDDEE5 /* ZCMyselfTableHeaderView.swift */; };
@@ -235,6 +245,10 @@
 		6C7C2B5722FE614B00B5AE0A /* ZCLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLoginViewController.swift; sourceTree = "<group>"; };
 		6C7C2B5922FE726600B5AE0A /* ZCLoginInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCLoginInputView.swift; sourceTree = "<group>"; };
 		6C7C2B5B22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBindPhoneNumberVC.swift; sourceTree = "<group>"; };
+		6C810377230E3CED002B4116 /* ZCGoodsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGoodsDetailViewController.swift; sourceTree = "<group>"; };
+		6C810379230E3E79002B4116 /* ZCGoodsDetailBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGoodsDetailBottomView.swift; sourceTree = "<group>"; };
+		6C81037D230E9539002B4116 /* ZCGoodsDetailTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGoodsDetailTableHeaderView.swift; sourceTree = "<group>"; };
+		6C81037F230E962B002B4116 /* ZCGoodsAuctionRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGoodsAuctionRecordCell.swift; sourceTree = "<group>"; };
 		6C88BCED22FBCAF800E5B2F3 /* ZCMyselfOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfOrderCell.swift; sourceTree = "<group>"; };
 		6C88BCEF22FBCBFC00E5B2F3 /* ZCMyselfAssetsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfAssetsCell.swift; sourceTree = "<group>"; };
 		6C88BCF122FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfPromotionCell.swift; sourceTree = "<group>"; };
@@ -273,6 +287,12 @@
 		6CC011022306652F00D14250 /* ZCMycircleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMycircleVM.swift; sourceTree = "<group>"; };
 		6CCD6C2022EE912A0037C491 /* ZCFocusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCFocusTableViewCell.swift; sourceTree = "<group>"; };
 		6CCD6C2222EEA7B20037C491 /* UIButton+EdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+EdgeInsets.swift"; sourceTree = "<group>"; };
+		6CCECDAC230FE11500BFB1FD /* ZCGoodDetailServiceHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGoodDetailServiceHeader.swift; sourceTree = "<group>"; };
+		6CCECDAE230FE83200BFB1FD /* ZCGoodsAuctionRecordHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGoodsAuctionRecordHeader.swift; sourceTree = "<group>"; };
+		6CCECDB0230FFAE500BFB1FD /* ZCGoodsAuctionInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGoodsAuctionInfoHeader.swift; sourceTree = "<group>"; };
+		6CCECDB2231000A800BFB1FD /* ZCGoodsAuctionInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGoodsAuctionInfoCell.swift; sourceTree = "<group>"; };
+		6CCECDB423100E1100BFB1FD /* ZCGoodsAuctionRecommendHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGoodsAuctionRecommendHeader.swift; sourceTree = "<group>"; };
+		6CCECDB623100E6300BFB1FD /* ZCGoodsAuctionRecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGoodsAuctionRecommendCell.swift; sourceTree = "<group>"; };
 		6CD33BA922FD27E70021FD16 /* ZCCustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCustomNavigationBar.swift; sourceTree = "<group>"; };
 		6CDD866F22FAA55600EDDEE5 /* ZCHomeAuctionRecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHomeAuctionRecommendView.swift; sourceTree = "<group>"; };
 		6CDD867422FABF7100EDDEE5 /* ZCMyselfTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfTableHeaderView.swift; sourceTree = "<group>"; };
@@ -387,6 +407,7 @@
 			isa = PBXGroup;
 			children = (
 				6C24671922EAA71400A8CD19 /* ZCHomeViewController.swift */,
+				6C810377230E3CED002B4116 /* ZCGoodsDetailViewController.swift */,
 				6CEE7A9B22F9271A000B147E /* Views */,
 			);
 			path = Home;
@@ -684,6 +705,15 @@
 				6CEE7AA022F95E00000B147E /* ZCHomeCollectionViewCell.swift */,
 				6CEE7AA222F97452000B147E /* ZCHomeAuctionCell.swift */,
 				6CDD866F22FAA55600EDDEE5 /* ZCHomeAuctionRecommendView.swift */,
+				6C810379230E3E79002B4116 /* ZCGoodsDetailBottomView.swift */,
+				6C81037D230E9539002B4116 /* ZCGoodsDetailTableHeaderView.swift */,
+				6C81037F230E962B002B4116 /* ZCGoodsAuctionRecordCell.swift */,
+				6CCECDAC230FE11500BFB1FD /* ZCGoodDetailServiceHeader.swift */,
+				6CCECDAE230FE83200BFB1FD /* ZCGoodsAuctionRecordHeader.swift */,
+				6CCECDB0230FFAE500BFB1FD /* ZCGoodsAuctionInfoHeader.swift */,
+				6CCECDB2231000A800BFB1FD /* ZCGoodsAuctionInfoCell.swift */,
+				6CCECDB423100E1100BFB1FD /* ZCGoodsAuctionRecommendHeader.swift */,
+				6CCECDB623100E6300BFB1FD /* ZCGoodsAuctionRecommendCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -917,6 +947,8 @@
 				"${BUILT_PRODUCTS_DIR}/ReactiveCocoa/ReactiveCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveSwift/ReactiveSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SDCycleScrollView/SDCycleScrollView.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
@@ -934,6 +966,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDCycleScrollView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
@@ -974,6 +1008,7 @@
 				6C88BCF022FBCBFC00E5B2F3 /* ZCMyselfAssetsCell.swift in Sources */,
 				6CB9065222E996ED00C40C9F /* AppDelegate.swift in Sources */,
 				6CA25D33230261B2000FA30D /* ZCStringExtension.swift in Sources */,
+				6CCECDB723100E6300BFB1FD /* ZCGoodsAuctionRecommendCell.swift in Sources */,
 				6C24685D22EAD8FB00A8CD19 /* UIColorExtensions.swift in Sources */,
 				6CCD6C2322EEA7B20037C491 /* UIButton+EdgeInsets.swift in Sources */,
 				6CDD867522FABF7100EDDEE5 /* ZCMyselfTableHeaderView.swift in Sources */,
@@ -1010,6 +1045,7 @@
 				6C24684622EAD8FB00A8CD19 /* UISliderExtensions.swift in Sources */,
 				6C24684E22EAD8FB00A8CD19 /* UILabelExtensions.swift in Sources */,
 				6CA6F85D230D4EF1007BE125 /* ZCAlertTools.swift in Sources */,
+				6C810380230E962B002B4116 /* ZCGoodsAuctionRecordCell.swift in Sources */,
 				6C24685822EAD8FB00A8CD19 /* FloatingPointExtensions.swift in Sources */,
 				6C24685122EAD8FB00A8CD19 /* UITextFieldExtensions.swift in Sources */,
 				6C8BF9EE22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift in Sources */,
@@ -1019,13 +1055,17 @@
 				6C8BF9E822EFDC9E00FF0698 /* ZCGridPictureView.swift in Sources */,
 				6C24672522EAAD2400A8CD19 /* InterfaceHeader.swift in Sources */,
 				6CA0A1DF230143A100DD774A /* ZCFocusListModel.swift in Sources */,
+				6CCECDAF230FE83200BFB1FD /* ZCGoodsAuctionRecordHeader.swift in Sources */,
 				6C24671A22EAA71400A8CD19 /* ZCHomeViewController.swift in Sources */,
 				6C24685C22EAD8FB00A8CD19 /* URLExtensions.swift in Sources */,
 				6CB9065A22E996ED00C40C9F /* DingLiOnline.xcdatamodeld in Sources */,
+				6C81037A230E3E79002B4116 /* ZCGoodsDetailBottomView.swift in Sources */,
 				6CCD6C2122EE912A0037C491 /* ZCFocusTableViewCell.swift in Sources */,
 				6C8F0464230502DD00F7DDAD /* ZCCountDownButton.swift in Sources */,
 				6C24683322EAD8FB00A8CD19 /* BlockSwipe.swift in Sources */,
+				6CCECDB523100E1100BFB1FD /* ZCGoodsAuctionRecommendHeader.swift in Sources */,
 				6C24683022EAD8FB00A8CD19 /* DictionaryExtensions.swift in Sources */,
+				6CCECDB3231000A800BFB1FD /* ZCGoodsAuctionInfoCell.swift in Sources */,
 				6CB8719522F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift in Sources */,
 				6C8F046823054FCC00F7DDAD /* ConvenienceInitViewExtension.swift in Sources */,
 				6C24672222EAACEC00A8CD19 /* UIColor+WUIKit.swift in Sources */,
@@ -1038,7 +1078,9 @@
 				6CEE7AA122F95E00000B147E /* ZCHomeCollectionViewCell.swift in Sources */,
 				6C8BF9EA22EFE24D00FF0698 /* ZCGirdPhotosViewCell.swift in Sources */,
 				6CE921AF22F3D02300C997B5 /* ZCClassifyRightCollectionCell.swift in Sources */,
+				6C81037E230E9539002B4116 /* ZCGoodsDetailTableHeaderView.swift in Sources */,
 				6C88BCF422FBCD0C00E5B2F3 /* ZCMyselfFeedbackCell.swift in Sources */,
+				6C810378230E3CED002B4116 /* ZCGoodsDetailViewController.swift in Sources */,
 				6CC011032306652F00D14250 /* ZCMycircleVM.swift in Sources */,
 				6CE921D122F420A300C997B5 /* ZCClassifyCollectionSectionHeader.swift in Sources */,
 				6C24683A22EAD8FB00A8CD19 /* NSAttributedStringExtensions.swift in Sources */,
@@ -1046,6 +1088,8 @@
 				6C4EF19622EC033900E3D68B /* ZCCircleNavigationBarCell.swift in Sources */,
 				6CEE7A9D22F92757000B147E /* ZCHomeNavigationBar.swift in Sources */,
 				6C24684B22EAD8FB00A8CD19 /* NSDictionaryExtensions.swift in Sources */,
+				6CCECDB1230FFAE500BFB1FD /* ZCGoodsAuctionInfoHeader.swift in Sources */,
+				6CCECDAD230FE11500BFB1FD /* ZCGoodDetailServiceHeader.swift in Sources */,
 				6C88BCF622FC319600E5B2F3 /* ZCMyselfAssetsCollectionCell.swift in Sources */,
 				6C24686022EAD8FB00A8CD19 /* CharacterExtensions.swift in Sources */,
 				6C24685522EAD8FB00A8CD19 /* StringExtensions.swift in Sources */,

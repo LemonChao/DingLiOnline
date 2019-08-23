@@ -10,3 +10,4 @@
 
 #import <YYKit/YYKit.h>
 #import <HXPhotoPicker/HXPhotoPicker.h>
+#import <SDCycleScrollView/SDCycleScrollView.h>

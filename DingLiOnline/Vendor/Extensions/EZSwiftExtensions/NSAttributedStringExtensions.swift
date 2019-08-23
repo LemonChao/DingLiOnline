@@ -82,4 +82,68 @@ public func + (left: NSAttributedString, right: NSAttributedString) -> NSAttribu
     return ns
 }
 
+
+extension NSMutableAttributedString {
+    
+    
+    /// 创建多种显示效果字符串
+    ///
+    /// - Parameters:
+    ///   - full: 全部完整的字符串，以及富文本样式效果
+    ///   - specials: 特殊样式的字符串，["特殊显示字符串": [Attributed.Key: 值]]可变参数
+    /// - Returns: NSMutableAttributedString
+    static public func colorfully(full: [String: [NSAttributedString.Key : Any]], specials:[String: [NSAttributedString.Key : Any]]...) -> NSAttributedString {
+        
+        var mAttString = NSMutableAttributedString()
+        
+        if let fKey = full.keys.first, let fAtts = full.values.first {
+            mAttString = NSMutableAttributedString(string: fKey, attributes: fAtts)
+            
+            for item in specials {
+                if let key = item.keys.first, let atts = item.values.first {
+                    
+                    var nsRange = NSRange(location: 0, length: 0)
+                    if let range = fKey.range(of: key) {
+                        let location = fKey.distance(from: fKey.startIndex, to: range.lowerBound)
+                        let length  = fKey.distance(from: range.lowerBound, to: range.upperBound)
+                        nsRange = NSRange(location: location, length: length)
+                    }
+                    
+                    mAttString.addAttributes(atts, range: nsRange)
+                }
+            }
+        }
+        return mAttString
+    }
+
+    
+    /// 创建多种显示效果字符串
+    ///
+    /// - Parameter specials: 特殊样式的字符串，["特殊显示字符串": [Attributed.Key: 值]]可变参数
+    /// - Returns: NSMutableAttributedString
+    public func colorfully(specials:[String: [NSAttributedString.Key : Any]]...) {
+        for item in specials {
+            
+            if let key = item.keys.first, let atts = item.values.first {
+                
+                var nsRange = NSRange(location: 0, length: 0)
+                if let range = string.range(of: key) {
+                    let location = string.distance(from: string.startIndex, to: range.lowerBound)
+                    let length  = string.distance(from: range.lowerBound, to: range.upperBound)
+                    nsRange = NSRange(location: location, length: length)
+                }
+                
+                self.addAttributes(atts, range: nsRange)
+            }
+        }
+    }
+    
+    
+    
+    
+    
+
+}
+
+
 #endif

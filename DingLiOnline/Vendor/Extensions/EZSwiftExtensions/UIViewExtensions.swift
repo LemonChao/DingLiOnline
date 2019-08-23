@@ -318,6 +318,17 @@ extension UIView {
         self.layer.cornerRadius = radius
         self.layer.masksToBounds = true
     }
+    
+    /// EZSwiftExtensions//UIRectCorner(rawValue: UIRectCorner.topLeft.rawValue|UIRectCorner.bottomLeft.rawValue)
+    public func addCorner(roundedRect: CGRect, roundingCorners: UIRectCorner, cornerRadii: CGSize) {
+        let maskPath = UIBezierPath(roundedRect: roundedRect, byRoundingCorners: roundingCorners, cornerRadii: cornerRadii)
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = roundedRect
+        maskLayer.path = maskPath.cgPath
+        layer.mask = maskLayer
+    }
+
+    
     /// add shadow to View
     ///
     /// - Parameters:

@@ -51,7 +51,7 @@ class ZCHomeNavigationBar: UIView {
     
     
     @objc func searchButtonAction(_ button: UIButton)  {
-        
+        self.viewController?.navigationController?.pushViewController(ZCGoodsDetailViewController(), animated: true)
     }
     
     @objc func signInButtonAction(_ button: UIButton)  {

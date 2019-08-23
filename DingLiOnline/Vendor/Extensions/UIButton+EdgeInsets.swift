@@ -17,6 +17,10 @@ enum ImagePosition {
 
 
 /**
+ 新问题：此方法在OC版本已经验证过没任何问题，用swift实现b一遍发现，水平方向排列没有任何问题，在竖直方向 inset计算结果是正确的，但是在重排的时候总是出现异常(如果titleEdginset.lef < 5 )
+ 
+ 
+ 
  默认情况下，imageEdgeInsets和titleEdgeInsets都是0。先不考虑height,
  
  if (button.width小于imageView上image的width){图像会被压缩，文字不显示}
@@ -78,7 +82,10 @@ extension UIButton {
             self.imageEdgeInsets = UIEdgeInsets(top: imageOffsetY, left: imageOffsetX, bottom: -imageOffsetY, right: -imageOffsetX)
             self.titleEdgeInsets = UIEdgeInsets(top: -labelOffsetY, left: -labelOffsetX1, bottom: labelOffsetY, right: labelOffsetX2)
         }
+        
 //        print("imgSize:\(self.imageView?.image?.size ?? CGSize.zero) show:\(String(describing: showLabSize)) ture:\(trueSize), imgInsets:\(self.imageEdgeInsets) titleInsets:\(self.self.titleEdgeInsets)")
+//        self.setNeedsLayout()
+
     }
     
     
@@ -104,6 +111,7 @@ extension UIButton {
             self.imagePosition(position, spacing: spacing)
         }
     }
+    
 }
 
 

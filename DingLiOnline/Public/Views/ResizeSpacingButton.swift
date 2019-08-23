@@ -33,11 +33,15 @@ class ResizeSpacingButton: UIButton {
     override var intrinsicContentSize: CGSize {
         get {
             let size = super.intrinsicContentSize
+            
 
             if position == ImagePosition.Left || position == ImagePosition.Right {
                 return CGSize(width: size.width + spacing, height: size.height)
             }else {
-                return CGSize(width: size.width, height: size.height + spacing)
+                let imageSize = self.imageView?.image!.size ?? CGSize.zero
+                let labelSize = self.titleLabel?.sizeThatFits(CGSize(width: CGFloat(MAXFLOAT), height: CGFloat(MAXFLOAT))) ?? CGSize.zero
+
+                return CGSize(width: max(imageSize.width, labelSize.width), height: imageSize.height+labelSize.height+spacing)
             }
             
         }

@@ -258,6 +258,22 @@ extension String {
         return (regex?.numberOfMatches(in: str, options: NSRegularExpression.MatchingOptions(), range: NSRange(location: 0, length: str.length)) ?? -1) + 1
     }
     
+    /// range转换为NSRange
+    ///
+    /// - Parameter searchString: 被查找的字符串
+    /// - Returns: NSRange,, 没有查到返回NSRange(0,0)
+    func nsrange(of searchString: String) -> NSRange {
+        if let range = self.range(of: searchString) {
+            let location = self.distance(from: self.startIndex, to: range.lowerBound)
+            let length  = self.distance(from: range.lowerBound, to: range.upperBound)
+            return NSRange(location: location, length: length)
+        }
+        return NSRange(location: 0, length: 0)
+    }
+
+
+
+    /// NSRange转为range
     internal func rangeFromNSRange(_ nsRange: NSRange) -> Range<String.Index>? {
         
         let from16 = utf16.index(utf16.startIndex, offsetBy: nsRange.location)
