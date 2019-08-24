@@ -72,10 +72,30 @@ extension UILabel {
 
 extension UIButton {
     
+    
+    public convenience init(title: String?, titleColor: UIColor?, font:UIFont, bgColor:UIColor?) {
+        self.init(frame:CGRect.zero)
+        self.setTitle(title, for: .normal)
+        self.setTitleColor(titleColor, for: .normal)
+        self.titleLabel!.font = font
+        self.backgroundColor = bgColor
+        
+    }
+    
+    
+    
+    
 }
 
 
 extension UIImageView {
+    
+    public convenience init(contentMode: UIView.ContentMode,image: UIImage?) {
+        self.init(image:image)
+        self.contentMode = contentMode
+    }
+    
+    
     
 }
 
