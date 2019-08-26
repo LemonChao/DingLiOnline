@@ -27,8 +27,8 @@ class ZCGoodsDetailViewController: ZCBaseViewController {
     }
 
     
-    lazy var tableView: UITableView = {
-        let table = UITableView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-FitWidth(49)-IndicatorHomeHeight), style: .grouped)
+    lazy var tableView: ZCSimultaneouslyTableView = {
+        let table = ZCSimultaneouslyTableView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-FitWidth(49)-IndicatorHomeHeight), style: .grouped)
         table.delegate = self
         table.dataSource = self
         table.estimatedRowHeight = FitWidth(34)
@@ -37,7 +37,6 @@ class ZCGoodsDetailViewController: ZCBaseViewController {
         table.tableHeaderView = tableHeaderView
         table.tableFooterView = tableFooterView
         table.backgroundColor = UIColor.red
-        table.bounces = false
         if #available(iOS 11.0, *) {
             table.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
         } else {
@@ -57,6 +56,7 @@ class ZCGoodsDetailViewController: ZCBaseViewController {
     let bottomView = ZCGoodsDetailBottomView(frame: CGRect(x: 0, y: SCREEN_HEIGHT-FitWidth(49)-IndicatorHomeHeight, w: SCREEN_WIDTH, h: FitWidth(49)))
     let tableHeaderView = ZCGoodsDetailTableHeaderView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: FitWidth(485)))
     let tableFooterView = ZCGoodsDetailTableFooter(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-TabBarHeight))
+    var canScall = false
     
     
 }
@@ -109,9 +109,16 @@ extension ZCGoodsDetailViewController: UITableViewDataSource {
 extension ZCGoodsDetailViewController: UITableViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
+        /// 当 底层滚动式图滚动到指定位置时， 停止滚动，开始滚动子视图
+
         let offsetY = scrollView.contentOffset.y
         if offsetY >= tableFooterView.y { //tableFooter 驻留
             scrollView.setContentOffset(CGPoint(x: 0, y: tableFooterView.y), animated: false)
+            
+            if self.canScall {
+                canScall = false
+            }
+            
         }
         
         

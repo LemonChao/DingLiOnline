@@ -153,4 +153,7 @@ class ZCGoodsNoteVC: ZCBaseViewController {
         return view
     }()
     
+    
+    var noteScoll = true
+    
 }

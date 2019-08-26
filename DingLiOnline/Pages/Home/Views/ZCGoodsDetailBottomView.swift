@@ -69,6 +69,10 @@ class ZCGoodsDetailBottomView: ZCBaseView {
         }
     }
     
+    @objc func buyButtonAction(_ button: UIButton) {
+        self.viewController?.navigationController?.pushViewController(ZCPayMarginVC(), animated: true)
+    }
+    
     
     lazy var kefuButton: UIButton = {
         let button = UIButton(type: .custom)
@@ -92,6 +96,7 @@ class ZCGoodsDetailBottomView: ZCBaseView {
         let button = UIButton(type: .custom)
         button.backgroundColor = AssistBlue
         button.addCorner(roundedRect: CGRect(x: 0, y: 0, w: FitWidth(208), h: FitWidth(49)), roundingCorners: UIRectCorner(rawValue: UIRectCorner.topLeft.rawValue|UIRectCorner.bottomLeft.rawValue), cornerRadii: CGSize(width: FitWidth(24.5), height: FitWidth(24.5)))
+        button.addTarget(self, action: #selector(buyButtonAction(_:)), for: .touchUpInside)
         button.addSubview(buyLabel)
         button.addSubview(marginLabel)
         button.addSubview(overLabel)
