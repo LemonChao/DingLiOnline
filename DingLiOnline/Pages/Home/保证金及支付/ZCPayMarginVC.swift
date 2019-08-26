@@ -77,12 +77,25 @@ class ZCPayMarginVC: ZCBaseViewController {
         
     }
     
+    /// 添加收货地址
     @objc func addAddressButtonAction(_ button: UIButton) {
+        let vc = ZCAddressAddVC()
+        vc.backCompleteEnclosure = {(name: String) in
+            self.addressInfoView.isHidden = name.isEmpty
+        }
         
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    
     @objc func addressMoreButtonAction(_ button: UIButton) {
+        let vc = ZCAddressAddVC()
+        vc.backCompleteEnclosure = {(name: String) in
+            self.addressInfoView.isHidden = name.isEmpty
+        }
         
+        self.navigationController?.pushViewController(vc, animated: true)
+
     }
     
     lazy var marginBG: UIView = {
@@ -217,6 +230,7 @@ class ZCPayMarginVC: ZCBaseViewController {
     
     lazy var addressInfoView: UIView = {
         let view = UIView(color: UIColor.white)
+        view.isHidden = true
         view.frame = CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: FitWidth(90))
         
         let receiver = UILabel(text: "收货人", textColor: PrimaryColor, font: UIFont.systemFont(ofSize: FontSize(15)))
