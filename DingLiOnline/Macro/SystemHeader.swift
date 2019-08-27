@@ -9,7 +9,8 @@
 import UIKit
 import SnapKit
 import Kingfisher
-
+import ReactiveCocoa
+import ReactiveSwift
 
 //获取沙盒Document路径
 let kDocumentPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first

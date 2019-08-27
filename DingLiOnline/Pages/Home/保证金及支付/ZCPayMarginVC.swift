@@ -95,7 +95,6 @@ class ZCPayMarginVC: ZCBaseViewController {
         }
         
         self.navigationController?.pushViewController(vc, animated: true)
-
     }
     
     lazy var marginBG: UIView = {

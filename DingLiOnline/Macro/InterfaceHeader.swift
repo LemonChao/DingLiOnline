@@ -9,13 +9,15 @@
 import Foundation
 
 #if DEBUG
-let AppBaseUrl = "http://47.105.60.77:8080"
+let AppBaseUrl = "http://47.105.60.77:8080"//sale.dlpm.net.cn
+let AppBaseUrl_php = "http://auction.dlpm.net.cn"
 let WebBaseUrl = "http://192.168.0.222:8080/#"
 /// 七牛云上传图片域名 / 不能省略
 let QiniuHostImg = "http://pvhxdhli0.bkt.clouddn.com/"
 
 #else
-let AppBaseUrl = "http://47.105.60.77:8080"
+let AppBaseUrl = "http://47.105.60.77:8080"//sale.dlpm.net.cn
+let AppBaseUrl_php = "http://auction.dlpm.net.cn"
 let WebBaseUrl = "http://192.168.0.222:8080/#"
 /// 七牛云上传图片域名 / 不能省略
 let QiniuHostImg = "http://pvhxdhli0.bkt.clouddn.com/"
@@ -23,6 +25,12 @@ let QiniuHostImg = "http://pvhxdhli0.bkt.clouddn.com/"
 #endif
 
 let updateVersion = AppBaseUrl + "/api/version/getVersion"
+
+/// 分类模块
+/// 一二级分类
+let kselectClassify = AppBaseUrl + "/classify/selectClassify"
+
+
 /// 获取圈子列表
 let kcircleList = AppBaseUrl + "/circle/circleList"
 /// 用户0：圈子点赞 1：评论点赞
@@ -36,5 +44,8 @@ let kdelUserCollect = AppBaseUrl + "/circle/delUserCollect"
 /// 发布圈子
 let kaddCircle = AppBaseUrl + "/circle/addCircle"
 
+
+/// 个人中心
+let kuserInfo = AppBaseUrl_php + "/api/user/userinfo"
 
 

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ZCMyselfViewController: ZCBaseViewController {
     override func viewDidLoad() {
@@ -28,6 +29,18 @@ class ZCMyselfViewController: ZCBaseViewController {
             return UIStatusBarStyle.default
         }
         return UIStatusBarStyle.lightContent
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        NetworkHelper.postRequestWith(url: kuserInfo, params: nil, success: { (response) in
+            if response["result"].intValue == 1 {
+                self.userInfo = response["data"].dictionaryValue
+                (self.tableView.tableHeaderView as! ZCMyselfTableHeaderView).userInfo = self.userInfo
+            }
+
+        })
     }
     
     
@@ -63,6 +76,8 @@ class ZCMyselfViewController: ZCBaseViewController {
         return view
     }()
     
+    
+    var userInfo:[String:JSON]!      // 用户信息
     let colorChangePoint = FitWidth(200)-NavBarHeight*2
     var changeDefault = false //状态栏变为default style
     
@@ -109,7 +124,7 @@ extension ZCMyselfViewController: UITableViewDelegate {
         let offsetY = scrollView.contentOffset.y
         
         let needUpdate: Bool = offsetY > (colorChangePoint + NavBarHeight/2)
-        if needUpdate != changeDefault {
+        if needUpdate != changeDefault { /// 减少刷新频率，需要时再刷新
             changeDefault = needUpdate
             self.setNeedsStatusBarAppearanceUpdate()
         }

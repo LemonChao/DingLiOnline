@@ -32,6 +32,14 @@ class ZCClassifyRightCollectionCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    var model: ZCClassifySubModel = ZCClassifySubModel(jsonData: "") {
+        willSet {
+            nameLabel.text = newValue.name
+            imageView.kf.setImage(with: URL(string: newValue.smallimage))
+        }
+    }
+    
+    
     lazy var imageView: UIImageView = {
         let view = UIImageView()
         view.contentMode = UIView.ContentMode.scaleAspectFit

@@ -7,16 +7,13 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ZCMyselfTableHeaderView: UIView {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        portraitButton.setImage(UIImage(named: "portrait_placeholder_normal"), for: .normal)
-        nameButton.setTitle("一篇冰心在玉壶", for: .normal)
-        nameButton.setImage(UIImage(named: "circle_daili1"), for: .normal)
-        
+                
         self.addSubview(backgroundImgView)
         self.addSubview(contentView)
         contentView.addSubview(portraitButton)
@@ -68,6 +65,32 @@ class ZCMyselfTableHeaderView: UIView {
         
     }
 
+    var userInfo:[String: JSON] = ["":""] {
+        willSet {
+            portraitButton.kf.setImage(with: URL(string: newValue["litpic"]!.stringValue), for: .normal)
+            nameButton.setTitle(newValue["vx_name"]!.stringValue, for: .normal)
+            
+            let medalName = newValue["agent_level_id"]!.stringValue.medal(compare: newValue["member_grade_id"]!.stringValue)
+            nameButton.setImage(UIImage(named: medalName), for: .normal)
+            nameButton.imagePosition(.Right, spacing: FitWidth(10))
+            
+            for (button) in subButtons{
+                switch button.bottomString {
+                case "参拍":
+                    button.topString = newValue["partake"]!.stringValue
+                case "收藏":
+                    button.topString = newValue["collect"]!.stringValue
+                case "足迹":
+                    button.topString = newValue["trace"]!.stringValue
+                default:
+                    print("")
+                }
+            }
+
+            
+            
+        }
+    }
     
     
     let backgroundImgView = UIImageView(image: UIImage(named: "myself_headerBG"))
@@ -84,8 +107,9 @@ class ZCMyselfTableHeaderView: UIView {
         button.layer.cornerRadius = FitWidth(42)
         button.layer.borderWidth = FitWidth(2)
         button.layer.borderColor = GeneralRedColor.cgColor
-        button.clipsToBounds = false
+        button.clipsToBounds = true
         button.contentMode = UIView.ContentMode.scaleAspectFill
+        button.setImage(UIImage(named: "portrait_placeholder_normal"), for: .normal)
         return button
     }()
     

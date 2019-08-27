@@ -17,8 +17,6 @@ class ZCClassifyLeftCell: UITableViewCell {
         self.contentView.addSubview(titleButton)
         self.contentView.addSubview(lineView)
         
-        titleButton.setTitle("玉翠珠宝", for: .normal)
-        
         titleButton.snp.makeConstraints { (make) in
             make.centerY.equalToSuperview()
             make.left.right.equalToSuperview().inset(FitWidth(5))
@@ -44,6 +42,13 @@ class ZCClassifyLeftCell: UITableViewCell {
         lineView.isHidden = !selected
         self.backgroundColor = selected ? UIColor.white : UIColor.clear
     }
+    
+    var model: ZCClassifyModel = ZCClassifyModel(jsonData: "") {
+        willSet {
+            titleButton.setTitle(newValue.name, for: .normal)
+        }
+    }
+    
     
     
     

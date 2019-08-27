@@ -17,6 +17,33 @@ class ZCClassifyViewController: ZCBaseViewController {
         rightController.view.frame = CGRect(x: FitWidth(84), y: NavBarHeight, w: SCREEN_WIDTH-FitWidth(84), h: SCREEN_HEIGHT)
         self.addChild(rightController)
         self.view.addSubview(rightController.view)
+        
+        
+        NetworkHelper.postRequestWith(url: kselectClassify, params: nil, success: { (response) in
+            
+            if response["result"].intValue == 1 {
+                
+                var tempArray:[ZCClassifyModel] = []
+                
+                for item in response["data"].arrayValue {
+                    let model = ZCClassifyModel(jsonData: item)
+                    tempArray.append(model)
+                }
+                self.dataArray = tempArray
+                self.tableView.reloadData()
+            }
+            
+            
+            
+            
+            
+            
+        }) { (error) in
+            
+        }
+        
+        
+        
     }
     
     override func configCustomNav() {
@@ -37,6 +64,7 @@ class ZCClassifyViewController: ZCBaseViewController {
     }()
     
     let rightController = ZCClassifyRightController()
+    var dataArray:[ZCClassifyModel] = []
     
 
 }
@@ -44,11 +72,12 @@ class ZCClassifyViewController: ZCBaseViewController {
 
 extension ZCClassifyViewController: UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return dataArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ZCClassifyLeftCell.self)) as! ZCClassifyLeftCell
+        cell.model = dataArray[indexPath.row]
         
         return cell
         
@@ -61,7 +90,8 @@ extension ZCClassifyViewController: UITableViewDataSource,UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let model = dataArray[indexPath.row]
+        rightController.dataArray = model.auctionMateriaList
     }
     
     

@@ -516,6 +516,26 @@ extension String {
     }
 }
 
+
+/// 业务相关的extension
+extension String {
+    
+    /// 根据代理等级，会员等级确定会员徽章
+    func medal(compare member: String) -> String {
+        
+        if Int(self)! >= Int(member)! {//代理商徽章
+            return "circle_daili" + self
+        }else { // 普通会员等级徽章
+            return "circle_memship" + self
+        }
+    }
+    
+    
+}
+
+
+
+
 /// EZSE: Pattern matching of strings via defined functions
 public func ~=<T> (pattern: ((T) -> Bool), value: T) -> Bool {
     return pattern(value)

@@ -21,7 +21,7 @@ class NetworkHelper: NSObject {
             if let value = UserDefaults.standard.object(forKey: UserToken) {
                 return value as! String
             }
-            return "1234567"
+            return "d7f16ab1-b364-463c-88e7-8df2638ef238"
         }
     }
     
@@ -32,11 +32,11 @@ class NetworkHelper: NSObject {
         }
     }
     
-    class func postRequestWith(url: String, params: [String: Any], success: @escaping (_ response: JSON) -> Void, failed: ((_ error: Error?) -> Void)? = nil) {
+    class func postRequestWith(url: String, params: [String: Any]? = nil, success: @escaping (_ response: JSON) -> Void, failed: ((_ error: Error?) -> Void)? = nil) {
         
         Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { (response) in
             
-            print("URL:\(url) params:\(params)===")
+            print("URL:\(url) params:\(String(describing: params))===")
             
             switch response.result {
             case .success(let value):
@@ -52,11 +52,11 @@ class NetworkHelper: NSObject {
     }
 
     
-    class func getRequestWith(url: String, params: [String: Any], success: @escaping (_ response: JSON) -> Void, failed: ((_ error: Error?) -> Void)? = nil) {
+    class func getRequestWith(url: String, params: [String: Any]? = nil, success: @escaping (_ response: JSON) -> Void, failed: ((_ error: Error?) -> Void)? = nil) {
         
         Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { (response) in
             
-            print("URL:\(url) params:\(params)===")
+            print("URL:\(url) params:\(String(describing: params))===")
             
             switch response.result {
             case .success(let value):

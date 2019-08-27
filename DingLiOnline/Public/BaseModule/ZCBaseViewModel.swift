@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import ReactiveSwift
+import ReactiveCocoa
+
 
 class ZCBaseViewModel: NSObject {
 
