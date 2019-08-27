@@ -8,6 +8,10 @@
 
 import UIKit
 
+import ReactiveCocoa
+import ReactiveSwift
+import Result
+
 class ZCLoginInputView: UIView {
 
     
@@ -51,7 +55,38 @@ class ZCLoginInputView: UIView {
             make.height.equalTo(FitWidth(44))
             make.bottom.equalToSuperview()
         }
+        
+        
+        bindViewModel()
     }
+    
+    func bindViewModel() {
+        
+        let viewModel = ZCLoginInputVM.init(phoneNumberField.reactive.continuousTextValues, codeField.reactive.continuousTextValues)
+//        let viewModel = ZCLoginInputVM.init(phoneNumberField.reactive.continuousTextValues, <#T##codesignal: Signal<String?, NoError>##Signal<String?, NoError>#>)
+        
+        
+        
+        
+        okButton.reactive.isEnabled <~ viewModel.validSignal
+        //通过CocoaAction实现button的点击
+        okButton.reactive.pressed = CocoaAction<UIButton>(viewModel.loginAction){
+            _ in
+            return (self.phoneNumberField.text!, self.codeField.text!)
+        }
+
+        
+        //观察登录是否成功
+        viewModel.loginAction.values.observeValues({ success in
+            if success {
+                print("login : \(success)" )
+                //VC跳转
+            }
+        })
+
+        
+    }
+    
     
     @objc func codeButtonAction(_ button: ZCCountDownButton) {
         
