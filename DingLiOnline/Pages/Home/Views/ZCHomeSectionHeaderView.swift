@@ -14,7 +14,9 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
         super.init(frame: frame)
         
         self.addSubview(cycleScrollView)
-        self.addSubview(marqueeView)
+        self.addSubview(marqueeBG)
+        marqueeBG.addSubview(noticeButton)
+        marqueeBG.addSubview(marqueeView)
         self.addSubview(titleView)
         self.addSubview(auctionView)
         self.addSubview(auctionCollectionView)
@@ -28,10 +30,23 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
             make.height.equalTo(FitWidth(210))
         }
         
-        marqueeView.snp.makeConstraints { (make) in
+        marqueeBG.snp.makeConstraints { (make) in
             make.top.equalTo(cycleScrollView.snp_bottom).offset(FitWidth(12))
             make.left.right.equalToSuperview()
             make.height.equalTo(FitWidth(32))
+        }
+        
+        noticeButton.snp.makeConstraints { (make) in
+            make.centerY.equalToSuperview()
+            make.left.equalToSuperview().inset(FitWidth(12))
+            make.width.equalTo(FitWidth(44))
+        }
+        
+        marqueeView.snp.makeConstraints { (make) in
+            make.left.equalTo(noticeButton.snp_right).offset(FitWidth(6))
+            make.centerY.equalToSuperview()
+            make.right.equalToSuperview().inset(FitWidth(12))
+            make.height.equalTo(FitWidth(25))
         }
         
         titleView.snp.makeConstraints { (make) in
@@ -65,6 +80,7 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
 //            make.bottom.equalToSuperview().inset(FitWidth(20))
         }
         
+        noticeButton.imagePosition(.Left, margin: 0)
         //12 210 12 32 30 20 12 210 12 103*2+12(212) 10 12 14 18 20 = 862
     }
     
@@ -74,24 +90,33 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
     
     
     
-    
-    
-    
-    
-    
-
-    
     lazy var cycleScrollView: UIView = {
         let cycleView = UIView()
         cycleView.backgroundColor = LineColor
         return cycleView
     }()
     
-    lazy var marqueeView: UIView = {
-        let view = UIView()
-        view.backgroundColor = RGBA(245, 245, 245, 1)
-        view.layer.cornerRadius = FitWidth(4)
-        view.clipsToBounds = true
+    lazy var noticeButton: ResizeSpacingButton = {
+        let button = ResizeSpacingButton(position: .Left, spacing: FitWidth(5))
+        button.setImage(UIImage(named: "home_noteNews"), for: .normal)
+        button.setTitle("喜讯", for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: FontSize(12))
+        button.setTitleColor(PrimaryColor, for: .normal)
+        return button
+    }()
+    
+    lazy var marqueeBG: UIView = {
+        let marqueeBG = UIView(color: RGBA(245, 245, 245, 1))
+        marqueeBG.layer.cornerRadius = FitWidth(4)
+        marqueeBG.clipsToBounds = true
+        return marqueeBG
+    }()
+    
+    lazy var marqueeView: ZCMarqueeView = {
+        let view = ZCMarqueeView(cellSize:CGSize(width: SCREEN_WIDTH-FitWidth(98), height: FitWidth(25)), titles: ["1.swift中常用的正则表达式","2.听我想听的歌","3.想不起灵魂深处到底发生了什么"])
+        view.scrollDirection = ZCMarqueeView.ScrollDirection.up
+        view.scrollStyle = ZCMarqueeView.ScrollStyle.intermittent
+        view.timeInterval = 4
         return view
     }()
     

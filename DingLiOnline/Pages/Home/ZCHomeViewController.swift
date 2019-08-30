@@ -14,7 +14,7 @@ class ZCHomeViewController: ZCBaseViewController {
         layout.minimumLineSpacing = FitWidth(10)
         layout.minimumInteritemSpacing = FitWidth(10)
         layout.dataSource = self
-        let collection = UICollectionView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-TabBarHeight), collectionViewLayout: layout)
+        let collection = UICollectionView(frame: CGRect(x: 0, y: NavBarHeight, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-TabBarHeight-NavBarHeight), collectionViewLayout: layout)
         collection.dataSource = self
         collection.delegate = self
         collection.backgroundColor = UIColor.white

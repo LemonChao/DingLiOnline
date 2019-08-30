@@ -303,7 +303,23 @@ extension String {
     public func isNumber() -> Bool {
         return NumberFormatter().number(from: self) != nil ? true : false
     }
-    
+    /// EZSE: Checks if String vaild phone number
+    public var isPhone: Bool {
+        
+        do {
+            // 正则规则字符串 以 1 开头 11位的数字
+            let pattern = "^(1|[0-9])\\d{10}$"
+            /// 正则规则
+            let regex = try NSRegularExpression(pattern: pattern, options: [])
+            /// 进行正则匹配 results 的类型是 NSTextCheckingResult 的数组
+            let results = regex.matches(in: self, options: [], range: NSRange(location: 0, length: self.count))
+            return !results.isEmpty
+        } catch {
+            print(error.localizedDescription)
+            return false
+        }
+    }
+
     /// EZSE: Extracts URLS from String
     public var extractURLs: [URL] {
         var urls: [URL] = []

@@ -9,14 +9,14 @@
 import Foundation
 
 #if DEBUG
-let AppBaseUrl = "http://47.105.60.77:8080"//sale.dlpm.net.cn
+let AppBaseUrl = "http://sale.dlpm.net.cn"//sale.dlpm.net.cn
 let AppBaseUrl_php = "http://auction.dlpm.net.cn"
 let WebBaseUrl = "http://192.168.0.222:8080/#"
 /// 七牛云上传图片域名 / 不能省略
 let QiniuHostImg = "http://pvhxdhli0.bkt.clouddn.com/"
 
 #else
-let AppBaseUrl = "http://47.105.60.77:8080"//sale.dlpm.net.cn
+let AppBaseUrl = "http://sale.dlpm.net.cn"//47.105.60.77:8080
 let AppBaseUrl_php = "http://auction.dlpm.net.cn"
 let WebBaseUrl = "http://192.168.0.222:8080/#"
 /// 七牛云上传图片域名 / 不能省略

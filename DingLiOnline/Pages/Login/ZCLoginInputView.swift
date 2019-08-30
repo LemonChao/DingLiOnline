@@ -63,19 +63,14 @@ class ZCLoginInputView: UIView {
     func bindViewModel() {
         
         let viewModel = ZCLoginInputVM.init(phoneNumberField.reactive.continuousTextValues, codeField.reactive.continuousTextValues)
-//        let viewModel = ZCLoginInputVM.init(phoneNumberField.reactive.continuousTextValues, <#T##codesignal: Signal<String?, NoError>##Signal<String?, NoError>#>)
         
-        
-        
-        
-        okButton.reactive.isEnabled <~ viewModel.validSignal
+//        okButton.reactive.isEnabled <~ viewModel.validSignal
         //通过CocoaAction实现button的点击
         okButton.reactive.pressed = CocoaAction<UIButton>(viewModel.loginAction){
             _ in
             return (self.phoneNumberField.text!, self.codeField.text!)
         }
 
-        
         //观察登录是否成功
         viewModel.loginAction.values.observeValues({ success in
             if success {
@@ -83,7 +78,6 @@ class ZCLoginInputView: UIView {
                 //VC跳转
             }
         })
-
         
     }
     
@@ -117,7 +111,7 @@ class ZCLoginInputView: UIView {
         field.placeholder = "请输入手机号"
         field.textColor = TertiaryColor
         field.font = UIFont.systemFont(ofSize: FontSize(18))
-        
+        field.keyboardType = UIKeyboardType.numberPad
         return field
     }()
     let phoneLine = UIView(color: LineColor)
@@ -127,6 +121,7 @@ class ZCLoginInputView: UIView {
         field.placeholder = "请输入验证码"
         field.textColor = TertiaryColor
         field.font = UIFont.systemFont(ofSize: FontSize(18))
+        field.keyboardType = UIKeyboardType.asciiCapableNumberPad
         return field
     }()
     let codeLine = UIView(color: LineColor)
@@ -152,7 +147,7 @@ class ZCLoginInputView: UIView {
         button.clipsToBounds = true
         button.titleLabel?.font = UIFont.systemFont(ofSize: FontSize(18))
         button.setBackgroundImage(UIImage.imageColor(PrimaryColor), for: .normal)
-        button.addTarget(self, action: #selector(okButtonAction(_:)), for: .touchUpInside)
+//        button.addTarget(self, action: #selector(okButtonAction(_:)), for: .touchUpInside)
         return button
     }()
 }

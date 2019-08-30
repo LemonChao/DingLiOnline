@@ -22,10 +22,9 @@ class ZCLoginInputVM: NSObject {
         codeSignal = codesignal
         
         //合并信号
-        validSignal = Signal.combineLatest(phoneNumSignal, codeSignal).map{$0.count >= 5 && $1.count >= 6}
+        validSignal = Signal.combineLatest(phoneNumSignal, codeSignal).map{$0.isPhone && $1.count >= 4}
         
-        //Property(首先接收一个初始的值)
-        //根据合并的信号，创建控制登录按钮enable的属性
+        //Property(首先接收一个初始的值) 根据合并的信号，创建控制登录按钮enable的属性
         let loginEnable = Property(initial: false, then: validSignal)
         
         // 登陆button状态和时间

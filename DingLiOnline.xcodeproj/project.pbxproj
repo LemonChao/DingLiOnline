@@ -112,6 +112,7 @@
 		6CA6F857230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6F856230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift */; };
 		6CA6F85B230CE517007BE125 /* ZCSubmitHuatiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6F85A230CE517007BE125 /* ZCSubmitHuatiVC.swift */; };
 		6CA6F85D230D4EF1007BE125 /* ZCAlertTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6F85C230D4EF1007BE125 /* ZCAlertTools.swift */; };
+		6CB5BFA52316647700AC3C69 /* ZCMarqueeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB5BFA42316647700AC3C69 /* ZCMarqueeView.swift */; };
 		6CB8719522F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB8719422F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift */; };
 		6CB9065222E996ED00C40C9F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB9065122E996ED00C40C9F /* AppDelegate.swift */; };
 		6CB9065722E996ED00C40C9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6CB9065522E996ED00C40C9F /* Main.storyboard */; };
@@ -281,6 +282,7 @@
 		6CA6F856230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCSubmitQuanxianVC.swift; sourceTree = "<group>"; };
 		6CA6F85A230CE517007BE125 /* ZCSubmitHuatiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCSubmitHuatiVC.swift; sourceTree = "<group>"; };
 		6CA6F85C230D4EF1007BE125 /* ZCAlertTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCAlertTools.swift; sourceTree = "<group>"; };
+		6CB5BFA42316647700AC3C69 /* ZCMarqueeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMarqueeView.swift; sourceTree = "<group>"; };
 		6CB8719422F3CCC500B6CCF2 /* ZCClassifyLeftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCClassifyLeftCell.swift; sourceTree = "<group>"; };
 		6CB9064E22E996ED00C40C9F /* DingLiOnline.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DingLiOnline.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CB9065122E996ED00C40C9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -655,6 +657,7 @@
 				6C5B036E22EEE9D100C8756C /* ContentInsetButton.swift */,
 				6CD9193923112AB9007FC84F /* ZCSimultaneouslyScrollView.swift */,
 				6CD9193B2311454C007FC84F /* ZCSimultaneouslyTableView.swift */,
+				6CB5BFA42316647700AC3C69 /* ZCMarqueeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1147,6 +1150,7 @@
 				6C4EF19622EC033900E3D68B /* ZCCircleNavigationBarCell.swift in Sources */,
 				6CEE7A9D22F92757000B147E /* ZCHomeNavigationBar.swift in Sources */,
 				6C24684B22EAD8FB00A8CD19 /* NSDictionaryExtensions.swift in Sources */,
+				6CB5BFA52316647700AC3C69 /* ZCMarqueeView.swift in Sources */,
 				6CCECDB1230FFAE500BFB1FD /* ZCGoodsAuctionInfoHeader.swift in Sources */,
 				6CCECDAD230FE11500BFB1FD /* ZCGoodDetailServiceHeader.swift in Sources */,
 				6C88BCF622FC319600E5B2F3 /* ZCMyselfAssetsCollectionCell.swift in Sources */,

@@ -200,10 +200,7 @@ extension ZCCircleNavigationBar: UICollectionViewDelegate {
         self.selectItemAtIndex(currentIndex)
     }
     
-}
-
-
-extension ZCCircleNavigationBar: UIScrollViewDelegate {
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         if self.rootScrollView.isEqual(scrollView) {
             let offsetX = scrollView.contentOffset.x
@@ -216,8 +213,6 @@ extension ZCCircleNavigationBar: UIScrollViewDelegate {
             }
         }
     }
-    
-    
-    
+
 }
 
