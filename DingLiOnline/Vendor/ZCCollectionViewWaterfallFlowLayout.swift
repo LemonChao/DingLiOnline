@@ -12,7 +12,7 @@ import UIKit
     
     func collectionView(_ collectionView: UICollectionView, _ layout: ZCWaterfallFlowLayout, numberOfColumnInSection section: NSInteger) -> Int
     
-    func collectionView(_ collectionView: UICollectionView, _ layout: ZCWaterfallFlowLayout, _ itemWidth: CGFloat,  heightForItemAtIndexPath: IndexPath) -> CGFloat
+    func collectionView(_ collectionView: UICollectionView, _ layout: ZCWaterfallFlowLayout, _ itemWidth: CGFloat,  heightForItemAt indexPath: IndexPath) -> CGFloat
     
     /// Column spacing between columns
     @objc optional func collectionView(_ collectionView: UICollectionView, _ layout: ZCWaterfallFlowLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat
@@ -102,7 +102,7 @@ class ZCWaterfallFlowLayout: UICollectionViewLayout {
                 }
                 
                 let indexPath: IndexPath = IndexPath(item: item, section: section)
-                let itemHeight = self.dataSource?.collectionView(collectionView, self, itemWidth, heightForItemAtIndexPath: indexPath)
+                let itemHeight = self.dataSource?.collectionView(collectionView, self, itemWidth, heightForItemAt: indexPath)
                 let x = contentInsetOfSection.left + itemWidth * CGFloat(currentColumn) + minimumInteritemSpacing * CGFloat(currentColumn)
                 let y = offsetOfColumns[currentColumn] + (item >= columnOfSection ? minimumLineSpacing : 0.0)
                 let layoutAttbiture = UICollectionViewLayoutAttributes(forCellWith: indexPath)

@@ -146,7 +146,7 @@ extension ZCGridPictureView: ZCWaterfallFlowLayoutDataSource {
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, _ layout: ZCWaterfallFlowLayout, _ itemWidth: CGFloat, heightForItemAtIndexPath: IndexPath) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, _ layout: ZCWaterfallFlowLayout, _ itemWidth: CGFloat, heightForItemAt indexPath: IndexPath) -> CGFloat {
         return config.itemSize.height
     }
     

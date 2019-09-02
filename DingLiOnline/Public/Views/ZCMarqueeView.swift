@@ -15,7 +15,7 @@ class ZCMarqueeView: UIView {
     init(frame: CGRect, titles:[String]) {
         super.init(frame: frame)
         titleArray = titles
-        cellCount = titles.count * 10
+        cellCount = titles.count * 100
         itemSize = frame.size
         layout.itemSize = frame.size
 
@@ -34,7 +34,7 @@ class ZCMarqueeView: UIView {
     init(cellSize: CGSize, titles:[String]) {
         super.init(frame: CGRect.zero)
         titleArray = titles
-        cellCount = titles.count * 10
+        cellCount = titles.count * 100
         itemSize = cellSize
         layout.itemSize = cellSize
         
@@ -64,6 +64,9 @@ class ZCMarqueeView: UIView {
     
     
     func automaticScroll() {
+        if cellCount <= 0 {
+            return
+        }
         
         let index = self.currentIndex()
         
@@ -155,9 +158,9 @@ class ZCMarqueeView: UIView {
         }else {
         }
     }
-    override func didMoveToSuperview() {
-        print(self.collectionView.bounds)
-    }
+//    override func didMoveToSuperview() {
+//        print(self.collectionView.bounds)
+//    }
     func continuityScroll() {
         
 //
@@ -220,12 +223,42 @@ class ZCMarqueeView: UIView {
 //        return max(0, index)
         
         let index = collectionView.indexPathForItem(at: collectionView.contentOffset) ?? IndexPath(item: 0, section: 0)
-        print("current: \(index.item) = (\(collectionView.contentOffset.y) + \(layout.itemSize.height * 0.5) / \(layout.itemSize.height))")
+//        print("current: \(index.item) = (\(collectionView.contentOffset.y) + \(layout.itemSize.height * 0.5) / \(layout.itemSize.height))")
 
         return index.row
         
         
     }
+    
+    
+    /// -1:invalidate, 0:stop, 1:resume(start)
+    func setupTime(state: Int) {
+        
+        switch state {
+        case -1:
+            self.timer.invalidate()
+        case 0:
+            self.timer.fireDate = Date.distantFuture
+        case 1:
+            if self.timer.isValid {
+//                RunLoop.current.add(timer, forMode: .common)
+//                self.timer.fireDate = Date.distantPast   //timer 立即启动
+            }else {
+                let timer = Timer.init(timeInterval: timeInterval, repeats: true) { (newTimer) in
+                    self.automaticScroll()
+                }
+//                timer.fireDate = Date.distantPast   //timer 立即启动
+                RunLoop.current.add(timer, forMode: .common)
+                self.timer = timer
+
+            }
+
+            self.timer.fireDate = Date.distantPast
+       default:
+            self.timer.invalidate()
+        }
+    }
+    
     
     
     lazy var layout: UICollectionViewFlowLayout = {
@@ -256,8 +289,16 @@ class ZCMarqueeView: UIView {
         return collection
     }()
     var titleArray: [String] = [] {
+        willSet {
+            //timer 停止，设置参数
+            self.setupTime(state: 0)
+            cellCount = newValue.count * 100
+        }
+        
         didSet {
-            cellCount = oldValue.count * 10
+            // timer 启动
+            self.collectionView.reloadData()
+            self.setupTime(state: 1)
         }
     }
     var font: UIFont = UIFont.systemFont(ofSize: 12)
@@ -276,7 +317,7 @@ class ZCMarqueeView: UIView {
         didSet {
 
             self.timer.invalidate()
-            let timer = Timer.init(timeInterval: oldValue, repeats: true) { (newTimer) in
+            let timer = Timer.init(timeInterval: timeInterval, repeats: true) { (newTimer) in
                 self.automaticScroll()
             }
             timer.fireDate = Date.distantPast   //timer 立即启动
@@ -353,11 +394,11 @@ extension ZCMarqueeView: UICollectionViewDelegate {
     
     /// 用户拖动触发，代码设置滚动不触发
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        print("DidEndDecelerating \(scrollView.contentOffset)")
+//        print("DidEndDecelerating \(scrollView.contentOffset)")
     }
     
     func scrollViewDidEndScrollingAnimation(_ scrollView: UIScrollView) {
-        print("DidEndScrollingAnimation \(scrollView.contentOffset)")
+//        print("DidEndScrollingAnimation \(scrollView.contentOffset)")
 
     }
 }

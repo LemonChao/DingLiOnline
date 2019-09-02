@@ -52,7 +52,7 @@ extension ZCMycircleViewController: ZCWaterfallFlowLayoutDataSource {
     }
     
     /// Return per item's height
-    func collectionView(_ collectionView: UICollectionView, _ layout: ZCWaterfallFlowLayout, _ itemWidth: CGFloat, heightForItemAtIndexPath: IndexPath) -> CGFloat {
+    func collectionView(_ collectionView: UICollectionView, _ layout: ZCWaterfallFlowLayout, _ itemWidth: CGFloat, heightForItemAt indexPath: IndexPath) -> CGFloat {
         // 40 - 80 之间随机数
         return CGFloat(arc4random()%80 + 200)
     }

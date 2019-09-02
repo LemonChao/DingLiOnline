@@ -13,15 +13,6 @@ class ZCHomeAuctionRecommendView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        let attString = NSMutableAttributedString(string: "99元起", attributes: [.foregroundColor: UIColor.white,.font: UIFont.systemFont(ofSize: FontSize(18))])
-        attString.addAttributes([.font: UIFont.systemFont(ofSize: FontSize(12))], range: NSRange(location: attString.length-1, length: 1))
-        priceLabel.attributedText = attString
-        weekLabel.text = "星期一"
-        auctionTitleLab.text = "精选专场拍卖会"
-        begainTimeLabel.text = "开始时间:06月26号 21:00 (星期一)"
-        endTimeLabel.text = "开始时间:06月26号 21:00 (星期三)"
-        statusLabel.text = "热拍中"
-        
         self.addSubview(leftImgView)
         self.addSubview(weekLabel)
         self.addSubview(priceLabel)
@@ -69,6 +60,19 @@ class ZCHomeAuctionRecommendView: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    var model: AucModel! {
+        willSet {
+            leftImgView.kf.setImage(with: URL(string: newValue.smallimage), placeholder: UIImage(named: "home_auction_sepcial"), options: nil, progressBlock: nil, completionHandler: nil)
+            weekLabel.text = newValue.weekday
+            auctionTitleLab.text = newValue.name
+            begainTimeLabel.text = newValue.starttime
+            endTimeLabel.text = newValue.endtime
+            statusLabel.text = newValue.state.introduce().title
+            statusLabel.backgroundColor = newValue.state.introduce().color
+        }
+    }
+
     
     let leftImgView: UIImageView = UIImageView(image: UIImage(named: "home_auction_sepcial"))
     lazy var weekLabel: UILabel = {

@@ -25,7 +25,7 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
         
                 
         cycleScrollView.snp.makeConstraints { (make) in
-            make.top.equalToSuperview().inset(FitWidth(12))
+            make.top.equalToSuperview()
             make.left.right.equalToSuperview()
             make.height.equalTo(FitWidth(210))
         }
@@ -88,14 +88,36 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    var model: ZCHomeModel! {
+        didSet {
+            marqueeView.titleArray = model.messageList
+            
+            var imgArray: [String] = []
+            for admodel in model.adlist {
+                imgArray.append(admodel.image)
+            }
+            cycleScrollView.imageURLStringsGroup = imgArray
+            
+            auctionView.model = model.aucList.first
+            auctionCollectionView.reloadData()
+            
+        }
+    }
     
     
-    lazy var cycleScrollView: UIView = {
-        let cycleView = UIView()
-        cycleView.backgroundColor = LineColor
-        return cycleView
+    
+    
+    
+    
+    lazy var cycleScrollView: SDCycleScrollView = {
+        let cycle = SDCycleScrollView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: FitWidth(210)), delegate: self, placeholderImage: nil)!
+        cycle.autoScrollTimeInterval = 4
+        cycle.backgroundColor = LineColor
+        cycle.bannerImageViewContentMode = UIView.ContentMode.scaleAspectFill
+        cycle.showPageControl = false
+        return cycle
     }()
-    
+
     lazy var noticeButton: ResizeSpacingButton = {
         let button = ResizeSpacingButton(position: .Left, spacing: FitWidth(5))
         button.setImage(UIImage(named: "home_noteNews"), for: .normal)
@@ -113,8 +135,8 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
     }()
     
     lazy var marqueeView: ZCMarqueeView = {
-        let view = ZCMarqueeView(cellSize:CGSize(width: SCREEN_WIDTH-FitWidth(98), height: FitWidth(25)), titles: ["1.swift中常用的正则表达式","2.听我想听的歌","3.想不起灵魂深处到底发生了什么"])
-        view.scrollDirection = ZCMarqueeView.ScrollDirection.up
+        let view = ZCMarqueeView(cellSize:CGSize(width: SCREEN_WIDTH-FitWidth(98), height: FitWidth(25)), titles: [])
+        view.scrollDirection = ZCMarqueeView.ScrollDirection.down
         view.scrollStyle = ZCMarqueeView.ScrollStyle.intermittent
         view.timeInterval = 4
         return view
@@ -172,13 +194,37 @@ extension ZCHomeSectionHeaderView: UICollectionViewDelegate {
 
 extension ZCHomeSectionHeaderView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        if self.model != nil {
+            return self.model.aucList.count
+        }
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ZCHomeAuctionCell_id", for: indexPath) as! ZCHomeAuctionCell
+        cell.model = model.aucList[indexPath.row]
         return cell
     }
     
+}
+
+extension ZCHomeSectionHeaderView: SDCycleScrollViewDelegate {
     
 }
+
+
+class ZCHomeSectionFooterView: UICollectionReusableView {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        
+        let label = UILabel(text: "我是有底线的呦~", textColor: TertiaryColor, font: UIFont.systemFont(ofSize: FontSize(15)), aligment: .center, lines: 1, backgroundColor: UIColor.clear)
+        label.frame = CGRect(x: 0, y: 0, w: frame.width, h: frame.height)
+        self.addSubview(label)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+

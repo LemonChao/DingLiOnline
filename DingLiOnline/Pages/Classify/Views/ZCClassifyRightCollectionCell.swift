@@ -12,8 +12,6 @@ class ZCClassifyRightCollectionCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.backgroundColor = UIColor.random()
-        nameLabel.text = "水电费"
         self.contentView.addSubview(imageView)
         self.contentView.addSubview(nameLabel)
         

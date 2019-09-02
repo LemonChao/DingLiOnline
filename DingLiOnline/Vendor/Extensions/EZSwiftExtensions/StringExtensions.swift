@@ -442,6 +442,25 @@ extension String {
         return ceil((self as NSString).boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attrib, context: nil).height)
     }
     
+    ///EZSE: Returns hight of rendered string
+    public func height(_ width: CGFloat, font: UIFont, lineBreakMode: NSLineBreakMode?, lines: Int?) -> CGFloat {
+//        var attrib: [NSAttributedString.Key: Any] = [NSAttributedString.Key.font: font]
+//        if lineBreakMode != nil {
+//            let paragraphStyle = NSMutableParagraphStyle()
+//            paragraphStyle.lineBreakMode = lineBreakMode!
+//            attrib.updateValue(paragraphStyle, forKey: NSAttributedString.Key.paragraphStyle)
+//        }
+//        let size = CGSize(width: width, height: CGFloat(Double.greatestFiniteMagnitude))
+//        return ceil((self as NSString).boundingRect(with: size, options: NSStringDrawingOptions.usesLineFragmentOrigin, attributes: attrib, context: nil).height)
+        let label = UILabel()
+        label.text = self
+        label.font = font
+        label.lineBreakMode = lineBreakMode ?? NSLineBreakMode.byTruncatingTail
+        label.numberOfLines = lines ?? 0
+        
+        return label.sizeThatFits(CGSize(width: width, height: CGFloat(Double.greatestFiniteMagnitude))).height
+    }
+
     #endif
     
     #if os(iOS) || os(tvOS)

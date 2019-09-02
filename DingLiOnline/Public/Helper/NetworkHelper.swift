@@ -32,7 +32,7 @@ class NetworkHelper: NSObject {
         }
     }
     
-    class func postRequestWith(url: String, params: [String: Any]? = nil, success: @escaping (_ response: JSON) -> Void, failed: ((_ error: Error?) -> Void)? = nil) {
+    class func postRequestWith(url: String, params: [String: Any]? = nil, success: @escaping (_ response: JSON) -> Void, failed: ((_ error: Error) -> Void)? = nil) {
         
         Alamofire.request(url, method: .post, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { (response) in
             
@@ -52,7 +52,7 @@ class NetworkHelper: NSObject {
     }
 
     
-    class func getRequestWith(url: String, params: [String: Any]? = nil, success: @escaping (_ response: JSON) -> Void, failed: ((_ error: Error?) -> Void)? = nil) {
+    class func getRequestWith(url: String, params: [String: Any]? = nil, success: @escaping (_ response: JSON) -> Void, failed: ((_ error: Error) -> Void)? = nil) {
         
         Alamofire.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: header).responseJSON { (response) in
             

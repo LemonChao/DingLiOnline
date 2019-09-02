@@ -26,6 +26,11 @@ let QiniuHostImg = "http://pvhxdhli0.bkt.clouddn.com/"
 
 let updateVersion = AppBaseUrl + "/api/version/getVersion"
 
+/// 首页
+/// 首页内容
+let khomeIndex = AppBaseUrl_php + "/api/index"
+
+
 /// 分类模块
 /// 一二级分类
 let kselectClassify = AppBaseUrl + "/classify/selectClassify"

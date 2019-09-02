@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		383BDC14FD97DC358339BAD0 /* Pods_DingLiOnlineUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F4B33BDBC04046F08D03D4 /* Pods_DingLiOnlineUITests.framework */; };
 		639E0697888F8A291FD61F77 /* Pods_DingLiOnlineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B53910849BAFED252DF560F /* Pods_DingLiOnlineTests.framework */; };
+		6C0DCC3B2318BB1C00BCCE20 /* ZCHomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0DCC3A2318BB1C00BCCE20 /* ZCHomeViewModel.swift */; };
+		6C0DCC3D2318F94900BCCE20 /* ZCHomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C0DCC3C2318F94900BCCE20 /* ZCHomeModel.swift */; };
 		6C19456922F2CD280015B381 /* ZCMyCircleHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C19456822F2CD280015B381 /* ZCMyCircleHeaderView.swift */; };
 		6C24671222EA9E4600A8CD19 /* ZCBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24671122EA9E4600A8CD19 /* ZCBaseTabBarController.swift */; };
 		6C24671422EA9E7500A8CD19 /* ZCBaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C24671322EA9E7500A8CD19 /* ZCBaseNavigationController.swift */; };
@@ -178,6 +180,8 @@
 		50CE9FC9CD6CD52D8E750138 /* Pods_DingLiOnline.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DingLiOnline.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B53910849BAFED252DF560F /* Pods_DingLiOnlineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DingLiOnlineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A6A8D143B891FD30FA9FC4C /* Pods-DingLiOnlineUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DingLiOnlineUITests.debug.xcconfig"; path = "Target Support Files/Pods-DingLiOnlineUITests/Pods-DingLiOnlineUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C0DCC3A2318BB1C00BCCE20 /* ZCHomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHomeViewModel.swift; sourceTree = "<group>"; };
+		6C0DCC3C2318F94900BCCE20 /* ZCHomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCHomeModel.swift; sourceTree = "<group>"; };
 		6C19456822F2CD280015B381 /* ZCMyCircleHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyCircleHeaderView.swift; sourceTree = "<group>"; };
 		6C24671122EA9E4600A8CD19 /* ZCBaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseTabBarController.swift; sourceTree = "<group>"; };
 		6C24671322EA9E7500A8CD19 /* ZCBaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseNavigationController.swift; sourceTree = "<group>"; };
@@ -372,6 +376,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6C0DCC392318BADE00BCCE20 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6C0DCC3A2318BB1C00BCCE20 /* ZCHomeViewModel.swift */,
+				6C0DCC3C2318F94900BCCE20 /* ZCHomeModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		6C19456522F2CC540015B381 /* MyCircle */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +447,7 @@
 				6C810377230E3CED002B4116 /* ZCGoodsDetailViewController.swift */,
 				6CD919352310D589007FC84F /* ZCGoodsDescriptVC.swift */,
 				6CD919372310D5D1007FC84F /* ZCGoodsNoteVC.swift */,
+				6C0DCC392318BADE00BCCE20 /* ViewModels */,
 				6CEE7A9B22F9271A000B147E /* Views */,
 				6C3598BD231384300095D76D /* 保证金及支付 */,
 			);
@@ -1144,6 +1158,7 @@
 				6C810378230E3CED002B4116 /* ZCGoodsDetailViewController.swift in Sources */,
 				6CD919362310D589007FC84F /* ZCGoodsDescriptVC.swift in Sources */,
 				6CC011032306652F00D14250 /* ZCMycircleVM.swift in Sources */,
+				6C0DCC3B2318BB1C00BCCE20 /* ZCHomeViewModel.swift in Sources */,
 				6CE921D122F420A300C997B5 /* ZCClassifyCollectionSectionHeader.swift in Sources */,
 				6C24683A22EAD8FB00A8CD19 /* NSAttributedStringExtensions.swift in Sources */,
 				6C4EF19222EBFB1400E3D68B /* ZCMycircleViewController.swift in Sources */,
@@ -1158,6 +1173,7 @@
 				6C24685522EAD8FB00A8CD19 /* StringExtensions.swift in Sources */,
 				6C24684822EAD8FB00A8CD19 /* UIViewControllerExtensions.swift in Sources */,
 				6C24685222EAD8FB00A8CD19 /* UserDefaultsExtension.swift in Sources */,
+				6C0DCC3D2318F94900BCCE20 /* ZCHomeModel.swift in Sources */,
 				6C24682F22EAD8FB00A8CD19 /* EZSwiftFunctions.swift in Sources */,
 				6C88BCEE22FBCAF800E5B2F3 /* ZCMyselfOrderCell.swift in Sources */,
 				6C24684F22EAD8FB00A8CD19 /* UIEdgeInsets.swift in Sources */,

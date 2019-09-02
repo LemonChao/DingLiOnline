@@ -14,8 +14,8 @@ class ZCCircleCollectionViewCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: frame)
         titleLabel.numberOfLines = 2
-        titleLabel.text = "大家给掌掌眼，看看怎么 样，刚从鬼市淘回来的..."
-        nameLabel.text = "铁树开花"
+//        titleLabel.text = "大家给掌掌眼，看看怎么 样，刚从鬼市淘回来的..."
+//        nameLabel.text = "铁树开花"
         self.contentView.backgroundColor = UIColor.random()
         self.contentView.addSubview(imgView)
         self.contentView.addSubview(titleLabel)
