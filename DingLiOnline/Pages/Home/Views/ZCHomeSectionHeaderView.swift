@@ -98,7 +98,7 @@ class ZCHomeSectionHeaderView: UICollectionReusableView {
             }
             cycleScrollView.imageURLStringsGroup = imgArray
             
-            auctionView.model = model.aucList.first
+//            auctionView.model = model.aucList.first
             auctionCollectionView.reloadData()
             
         }

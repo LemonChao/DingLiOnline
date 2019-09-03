@@ -72,17 +72,44 @@ extension UILabel {
 
 extension UIButton {
     
-    
+    /// word button
     public convenience init(title: String?, titleColor: UIColor?, font:UIFont, bgColor:UIColor?) {
         self.init(frame:CGRect.zero)
         self.setTitle(title, for: .normal)
         self.setTitleColor(titleColor, for: .normal)
         self.titleLabel!.font = font
         self.backgroundColor = bgColor
-        
     }
     
+    public convenience init(title: String?, titleColor: UIColor?, font:UIFont, bgColor:UIColor?, target: Any?, action: Selector) {
+        self.init(frame:CGRect.zero)
+        self.setTitle(title, for: .normal)
+        self.setTitleColor(titleColor, for: .normal)
+        self.titleLabel!.font = font
+        self.backgroundColor = bgColor
+        addTarget(target, action: action, for: .touchUpInside)
+    }
+
+    public convenience init(title: String?, titleColor: UIColor?, font:UIFont, bgColor:UIColor?, radius: CGFloat, target: Any?, action: Selector) {
+        self.init(frame:CGRect.zero)
+        self.setTitle(title, for: .normal)
+        self.setTitleColor(titleColor, for: .normal)
+        self.titleLabel!.font = font
+        self.backgroundColor = bgColor
+        addTarget(target, action: action, for: .touchUpInside)
+        
+        layer.cornerRadius = radius
+        self.clipsToBounds = true
+    }
     
+    public convenience init(normal: UIImage?, selected: UIImage?) {
+        self.init(frame: CGRect.zero)
+        
+        self.setImage(normal, for: .normal)
+        self.setImage(selected, for: .selected)
+
+    }
+
     
     
 }

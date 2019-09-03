@@ -79,7 +79,7 @@ class ZCPayMarginVC: ZCBaseViewController {
     
     /// 添加收货地址
     @objc func addAddressButtonAction(_ button: UIButton) {
-        let vc = ZCAddressAddVC()
+        let vc = ZCAddressListVC()
         vc.backCompleteEnclosure = {(name: String) in
             self.addressInfoView.isHidden = name.isEmpty
         }
@@ -89,7 +89,7 @@ class ZCPayMarginVC: ZCBaseViewController {
     
     
     @objc func addressMoreButtonAction(_ button: UIButton) {
-        let vc = ZCAddressAddVC()
+        let vc = ZCAddressListVC()
         vc.backCompleteEnclosure = {(name: String) in
             self.addressInfoView.isHidden = name.isEmpty
         }

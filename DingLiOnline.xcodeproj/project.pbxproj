@@ -111,6 +111,8 @@
 		6CA0A1DF230143A100DD774A /* ZCFocusListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA0A1DE230143A100DD774A /* ZCFocusListModel.swift */; };
 		6CA0A1E1230150A100DD774A /* ZCBaseStructModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA0A1E0230150A100DD774A /* ZCBaseStructModel.swift */; };
 		6CA25D33230261B2000FA30D /* ZCStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA25D32230261B2000FA30D /* ZCStringExtension.swift */; };
+		6CA5C820231E016D001FB71A /* ZCAddressListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5C81F231E016D001FB71A /* ZCAddressListVC.swift */; };
+		6CA5C824231E06C8001FB71A /* ZCAddressListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5C823231E06C8001FB71A /* ZCAddressListCell.swift */; };
 		6CA6F857230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6F856230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift */; };
 		6CA6F85B230CE517007BE125 /* ZCSubmitHuatiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6F85A230CE517007BE125 /* ZCSubmitHuatiVC.swift */; };
 		6CA6F85D230D4EF1007BE125 /* ZCAlertTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6F85C230D4EF1007BE125 /* ZCAlertTools.swift */; };
@@ -283,6 +285,8 @@
 		6CA0A1DE230143A100DD774A /* ZCFocusListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCFocusListModel.swift; sourceTree = "<group>"; };
 		6CA0A1E0230150A100DD774A /* ZCBaseStructModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseStructModel.swift; sourceTree = "<group>"; };
 		6CA25D32230261B2000FA30D /* ZCStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCStringExtension.swift; sourceTree = "<group>"; };
+		6CA5C81F231E016D001FB71A /* ZCAddressListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCAddressListVC.swift; sourceTree = "<group>"; };
+		6CA5C823231E06C8001FB71A /* ZCAddressListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCAddressListCell.swift; sourceTree = "<group>"; };
 		6CA6F856230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCSubmitQuanxianVC.swift; sourceTree = "<group>"; };
 		6CA6F85A230CE517007BE125 /* ZCSubmitHuatiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCSubmitHuatiVC.swift; sourceTree = "<group>"; };
 		6CA6F85C230D4EF1007BE125 /* ZCAlertTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCAlertTools.swift; sourceTree = "<group>"; };
@@ -597,6 +601,8 @@
 				6C3598BE2313844B0095D76D /* Views */,
 				6C3598BF231384F80095D76D /* ZCPayMarginVC.swift */,
 				6C3598C12313E6300095D76D /* ZCAddressAddVC.swift */,
+				6CA5C81F231E016D001FB71A /* ZCAddressListVC.swift */,
+				6CA5C823231E06C8001FB71A /* ZCAddressListCell.swift */,
 			);
 			path = "保证金及支付";
 			sourceTree = "<group>";
@@ -1082,6 +1088,7 @@
 				6CD9193A23112AB9007FC84F /* ZCSimultaneouslyScrollView.swift in Sources */,
 				6CCD6C2322EEA7B20037C491 /* UIButton+EdgeInsets.swift in Sources */,
 				6CDD867522FABF7100EDDEE5 /* ZCMyselfTableHeaderView.swift in Sources */,
+				6CA5C820231E016D001FB71A /* ZCAddressListVC.swift in Sources */,
 				6CEE7AA322F97452000B147E /* ZCHomeAuctionCell.swift in Sources */,
 				6C24672822EAADC100A8CD19 /* AppKeyAndColorHeader.swift in Sources */,
 				6C24685F22EAD8FB00A8CD19 /* BlockTap.swift in Sources */,
@@ -1118,6 +1125,7 @@
 				6C24684E22EAD8FB00A8CD19 /* UILabelExtensions.swift in Sources */,
 				6CA6F85D230D4EF1007BE125 /* ZCAlertTools.swift in Sources */,
 				6C810380230E962B002B4116 /* ZCGoodsAuctionRecordCell.swift in Sources */,
+				6CA5C824231E06C8001FB71A /* ZCAddressListCell.swift in Sources */,
 				6C24685822EAD8FB00A8CD19 /* FloatingPointExtensions.swift in Sources */,
 				6C24685122EAD8FB00A8CD19 /* UITextFieldExtensions.swift in Sources */,
 				6CD4D47A23150845007A880A /* ZCBaseModel.swift in Sources */,
