@@ -89,6 +89,22 @@ class ZCAddressAddVC: ZCBaseViewController {
     
     @objc func areaButtonAction(_ button: UIButton) {
         
+        
+        var titleArray = button.currentTitle?.components(separatedBy: " ")
+        if titleArray!.count < 3{
+            titleArray = [nil,nil,nil] as? [String]
+        }
+        
+        
+        let address = ZCCityPickerView()
+        
+        address.areaPickerViewWithProvince(province: titleArray?[0], city: titleArray?[1], area: titleArray?[2]) { (province, city, area) in
+            let title = province + " " + city + " " + area
+            
+            button.setTitle(title, for: .normal)
+            button.setTitleColor(PrimaryColor, for: .normal)
+        }
+        
     }
     
     @objc func saveButtonAction(_ button: UIButton) {
@@ -101,7 +117,6 @@ class ZCAddressAddVC: ZCBaseViewController {
         let view = UIView(color: UIColor.white)
         if placeholder == "所在地区" {
             let button = UIButton(title: placeholder, titleColor: NormalColor, font: UIFont.systemFont(ofSize: FontSize(15)), bgColor: nil, target: self, action: #selector(areaButtonAction(_:)))
-            button.setTitleColor(PrimaryColor, for: .selected)
             button.contentHorizontalAlignment = UIControl.ContentHorizontalAlignment.left
             view.addSubview(button)
             button.snp.makeConstraints { (make) in

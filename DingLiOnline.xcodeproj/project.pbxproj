@@ -113,6 +113,8 @@
 		6CA25D33230261B2000FA30D /* ZCStringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA25D32230261B2000FA30D /* ZCStringExtension.swift */; };
 		6CA5C820231E016D001FB71A /* ZCAddressListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5C81F231E016D001FB71A /* ZCAddressListVC.swift */; };
 		6CA5C824231E06C8001FB71A /* ZCAddressListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5C823231E06C8001FB71A /* ZCAddressListCell.swift */; };
+		6CA5C826231E5CE5001FB71A /* ZCCityPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA5C825231E5CE5001FB71A /* ZCCityPickerView.swift */; };
+		6CA5C828231E621A001FB71A /* Dingli_city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6CA5C827231E6219001FB71A /* Dingli_city.plist */; };
 		6CA6F857230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6F856230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift */; };
 		6CA6F85B230CE517007BE125 /* ZCSubmitHuatiVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6F85A230CE517007BE125 /* ZCSubmitHuatiVC.swift */; };
 		6CA6F85D230D4EF1007BE125 /* ZCAlertTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA6F85C230D4EF1007BE125 /* ZCAlertTools.swift */; };
@@ -287,6 +289,8 @@
 		6CA25D32230261B2000FA30D /* ZCStringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCStringExtension.swift; sourceTree = "<group>"; };
 		6CA5C81F231E016D001FB71A /* ZCAddressListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCAddressListVC.swift; sourceTree = "<group>"; };
 		6CA5C823231E06C8001FB71A /* ZCAddressListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCAddressListCell.swift; sourceTree = "<group>"; };
+		6CA5C825231E5CE5001FB71A /* ZCCityPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCityPickerView.swift; sourceTree = "<group>"; };
+		6CA5C827231E6219001FB71A /* Dingli_city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dingli_city.plist; sourceTree = "<group>"; };
 		6CA6F856230CD5F4007BE125 /* ZCSubmitQuanxianVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCSubmitQuanxianVC.swift; sourceTree = "<group>"; };
 		6CA6F85A230CE517007BE125 /* ZCSubmitHuatiVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCSubmitHuatiVC.swift; sourceTree = "<group>"; };
 		6CA6F85C230D4EF1007BE125 /* ZCAlertTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCAlertTools.swift; sourceTree = "<group>"; };
@@ -635,6 +639,7 @@
 			children = (
 				6C673616230407FA0028202E /* ZCPageGuideView */,
 				6C8F0463230502DD00F7DDAD /* ZCCountDownButton.swift */,
+				6CA5C827231E6219001FB71A /* Dingli_city.plist */,
 			);
 			path = "Toos(项目使用)";
 			sourceTree = "<group>";
@@ -678,6 +683,7 @@
 				6CD9193923112AB9007FC84F /* ZCSimultaneouslyScrollView.swift */,
 				6CD9193B2311454C007FC84F /* ZCSimultaneouslyTableView.swift */,
 				6CB5BFA42316647700AC3C69 /* ZCMarqueeView.swift */,
+				6CA5C825231E5CE5001FB71A /* ZCCityPickerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -914,6 +920,7 @@
 			files = (
 				6CB9065F22E996EE00C40C9F /* LaunchScreen.storyboard in Resources */,
 				6CB9065C22E996EE00C40C9F /* Assets.xcassets in Resources */,
+				6CA5C828231E621A001FB71A /* Dingli_city.plist in Resources */,
 				6CB9065722E996ED00C40C9F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1101,6 +1108,7 @@
 				6C24683222EAD8FB00A8CD19 /* BlockButton.swift in Sources */,
 				6C24683B22EAD8FB00A8CD19 /* BlockPan.swift in Sources */,
 				6C24683522EAD8FB00A8CD19 /* UIUserInterfaceSizeClassExtensions.swift in Sources */,
+				6CA5C826231E5CE5001FB71A /* ZCCityPickerView.swift in Sources */,
 				6C24683F22EAD8FB00A8CD19 /* CollectionsExtension.swift in Sources */,
 				6C7C2B5A22FE726600B5AE0A /* ZCLoginInputView.swift in Sources */,
 				6C2D566A2302B64F00506714 /* ZCSubmitCircleVC.swift in Sources */,
