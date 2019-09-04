@@ -55,7 +55,8 @@ class ZCHomeNavigationBar: UIView {
     }
     
     @objc func signInButtonAction(_ button: UIButton)  {
-        
+        self.viewController?.navigationController?.pushViewController(ZCSettingVerifyPhoneVC(), animated: true)
+
     }
     
     @objc func newsButtonAction(_ button: UIButton)  {
