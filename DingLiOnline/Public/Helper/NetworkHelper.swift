@@ -21,7 +21,7 @@ class NetworkHelper: NSObject {
             if let value = UserDefaults.standard.object(forKey: UserToken) {
                 return value as! String
             }
-            return "d7f16ab1-b364-463c-88e7-8df2638ef238"
+            return "d6fb1d8d-5a45-4805-9d40-c04b3b8b41b2"
         }
     }
     

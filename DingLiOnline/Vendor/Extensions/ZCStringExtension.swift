@@ -77,7 +77,7 @@ extension String {
         calendar.timeZone = timeZone!
         let theComponents = calendar.dateComponents([.day], from: date)
         
-        return weekdays[theComponents.day!]
+        return weekdays[theComponents.day!-1]
     }
 
     

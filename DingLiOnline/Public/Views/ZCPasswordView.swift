@@ -24,18 +24,31 @@ import UIKit
 class ZCPasswordView: ZCBaseView, UIKeyInput {
 
     public var delegate: ZCPasswordViewDelegate?
+    
+    
+    /// 密码的总位数
     public var passWordNum: UInt = 6
-    public var squareWidth: CGFloat = 45
+    /// 密码单元框宽
+    public var rectangleW: CGFloat = 45
+    /// 密码单元框高
+    public var rectangleH: CGFloat = 45
+    /// 密文密码圆点半径
     public var pointRadius: CGFloat = 6
-    public var boardWidth: CGFloat = 1
+    /// 密文密码圆点颜色
     public var pointColor: UIColor = UIColor.black
+    /// 密码框线宽
+    public var boardWidth: CGFloat = 1
+    /// 密码框颜色
     public var boardColor: UIColor = UIColor.gray
+    /// 密码框圆角 0：直角，大于0 圆角
+    public var boardRadius: CGFloat = 0
+    /// 密码框的真实输入值
     public var textStore: String = ""
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        super.becomeFirstResponder()
+        self.backgroundColor = UIColor.clear
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -72,19 +85,32 @@ class ZCPasswordView: ZCBaseView, UIKeyInput {
     
     
     override func draw(_ rect: CGRect) {
-        let x = (rect.width - squareWidth * CGFloat(passWordNum)) / 2
-        let y = (rect.height - squareWidth) / 2
-        
         let context = UIGraphicsGetCurrentContext()
+        let x = (rect.width - rectangleW * CGFloat(passWordNum)) / 2
+        let y = (rect.height - rectangleH) / 2
+        
         //画外框
-        context?.addRect(CGRect(x: x, y: y, w: squareWidth * CGFloat(passWordNum), h: squareWidth))
         context?.setLineWidth(boardWidth)
         context?.setStrokeColor(boardColor.cgColor)
         context?.setFillColor(UIColor.white.cgColor)
+
+        if boardRadius <= 0 {
+            context?.addRect(CGRect(x: x, y: y, w: rectangleW * CGFloat(passWordNum), h: rectangleH))
+        }else { // 当圆角半径为0 时画圆角出来也是一个矩形
+            let width = rectangleW*CGFloat(passWordNum)
+            
+            context?.move(to: CGPoint(x: x+boardRadius, y: y))//左上角开始
+            context?.addArc(tangent1End: CGPoint(x: x, y: y), tangent2End: CGPoint(x: x, y: y+boardRadius), radius: boardRadius)//左上圆角
+            context?.addArc(tangent1End: CGPoint(x: x, y: y+rectangleH), tangent2End: CGPoint(x: x+boardRadius, y: y+rectangleH), radius: boardRadius)//左下圆角
+            context?.addArc(tangent1End: CGPoint(x: x+width, y: y+rectangleH), tangent2End: CGPoint(x: x+width, y: y+boardRadius), radius: boardRadius) //右下圆角
+            context?.addArc(tangent1End: CGPoint(x: x+width, y: y), tangent2End: CGPoint(x: x+boardRadius, y: y), radius: boardRadius)//右上圆角
+            context?.closePath()
+        }
+        
         //画竖线
-        for i in 1...passWordNum {
-            context?.move(to: CGPoint(x: x+CGFloat(i)*squareWidth, y: y))
-            context?.addLine(to: CGPoint(x: x+CGFloat(i)*squareWidth, y: y+squareWidth))
+        for i in 1..<passWordNum {
+            context?.move(to: CGPoint(x: x+CGFloat(i)*rectangleW, y: y))
+            context?.addLine(to: CGPoint(x: x+CGFloat(i)*rectangleW, y: y+rectangleH))
             context?.closePath()
         }
         context?.drawPath(using: CGPathDrawingMode.fillStroke)
@@ -93,7 +119,7 @@ class ZCPasswordView: ZCBaseView, UIKeyInput {
         if textStore.count >= 1 {
             context?.setFillColor(pointColor.cgColor)
             for i in 1...textStore.count {
-                context?.addArc(center: CGPoint(x: x+(CGFloat(i)-0.5)*squareWidth, y: y+squareWidth/2), radius: pointRadius, startAngle: 0, endAngle: .pi*2, clockwise: true)
+                context?.addArc(center: CGPoint(x: x+(CGFloat(i)-0.5)*rectangleW, y: y+rectangleH/2), radius: pointRadius, startAngle: 0, endAngle: .pi*2, clockwise: true)
                 context?.drawPath(using: CGPathDrawingMode.fill)
             }
         }

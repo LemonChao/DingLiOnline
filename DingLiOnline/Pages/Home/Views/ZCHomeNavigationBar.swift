@@ -60,7 +60,7 @@ class ZCHomeNavigationBar: UIView {
     }
     
     @objc func newsButtonAction(_ button: UIButton)  {
-        
+        ZCPaymentManagerView.showPayment()
     }
     
     lazy var searchBGView: UIView = {

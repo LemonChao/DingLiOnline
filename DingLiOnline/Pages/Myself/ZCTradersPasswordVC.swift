@@ -31,6 +31,7 @@ class ZCTradersPasswordVC: ZCBaseViewController {
         let desLabel = UILabel(text: "为了您的资金安全 请先设置交易密码", textColor: ImportantColor, font: UIFont.systemFont(ofSize: FontSize(15)), aligment: .left, lines: 2, backgroundColor: UIColor.clear)
         let psLabel = UILabel(text: "请输入密码", textColor: TertiaryColor, font: UIFont.systemFont(ofSize: FontSize(15)))
         let passwordView = ZCPasswordView()
+        passwordView.becomeFirstResponder()
         passwordView.delegate = self
         let againLabel = UILabel(text: "请再次输入密码", textColor: TertiaryColor, font: UIFont.systemFont(ofSize: FontSize(15)))
         let againPSView = ZCPasswordView()
