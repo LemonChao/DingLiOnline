@@ -32,7 +32,7 @@ class ZCGoodsNoteVC: ZCBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let contentView = UIView()
+        let contentView = UIView(color: UIColor.white)
         let liuchengLab = UILabel(text: "竞买流程", textColor: PrimaryColor, font: UIFont.boldSystemFont(ofSize: FontSize(15)))
         let liuchengLine = UIView(color: LineColor)
         let buyImgView = UIImageView(contentMode: .scaleAspectFit, image: UIImage(named: "jingmailiucheng"))
@@ -95,7 +95,6 @@ class ZCGoodsNoteVC: ZCBaseViewController {
         buyImgView.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
             make.top.equalTo(liuchengLine).offset(FitWidth(15))
-//            make.left.right.equalToSuperview().inset(FitWidth(12))
         }
         baozhengLab.snp.makeConstraints { (make) in
             make.top.equalTo(buyImgView.snp_bottom).offset(FitWidth(15))
@@ -163,12 +162,7 @@ class ZCGoodsNoteVC: ZCBaseViewController {
         view.showsVerticalScrollIndicator = false
         view.showsHorizontalScrollIndicator = false
         view.delegate = self
-        if #available(iOS 11.0, *) {
-            view.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
-        } else {
-            self.automaticallyAdjustsScrollViewInsets = false
-        }
-
+        view.backgroundColor = ScrollViewBackGroundColor
         return view
     }()
     
@@ -182,8 +176,6 @@ class ZCGoodsNoteVC: ZCBaseViewController {
 
 extension ZCGoodsNoteVC: UIScrollViewDelegate {
     
-//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-//    }
 
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

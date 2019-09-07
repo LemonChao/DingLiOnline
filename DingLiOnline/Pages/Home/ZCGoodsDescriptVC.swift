@@ -36,9 +36,11 @@ class ZCGoodsDescriptVC: ZCBaseViewController {
         table.separatorStyle = UITableViewCell.SeparatorStyle.none
         table.delegate = self
         table.dataSource = self
+        table.showsVerticalScrollIndicator = false
         let copyRightImgView = UIImageView(contentMode: .scaleAspectFill, image: UIImage(named: "techSupport"))
         table.tableFooterView = copyRightImgView
         
+        table.backgroundColor = ScrollViewBackGroundColor
         table.register(ZCGoodsDescriptPropertyCell.self, forCellReuseIdentifier: NSStringFromClass(ZCGoodsDescriptPropertyCell.self))
         table.register(ZCGoodsDescriptImageCell.self, forCellReuseIdentifier: NSStringFromClass(ZCGoodsDescriptImageCell.self))
         table.register(ZCGoodsDescriptSectionHeader.self, forHeaderFooterViewReuseIdentifier: NSStringFromClass(ZCGoodsDescriptSectionHeader.self))

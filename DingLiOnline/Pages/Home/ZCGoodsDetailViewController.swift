@@ -50,13 +50,8 @@ class ZCGoodsDetailViewController: ZCBaseViewController {
         table.estimatedSectionFooterHeight = FitWidth(8)
         table.estimatedSectionHeaderHeight = FitWidth(44)
         table.tableHeaderView = tableHeaderView
-        
         table.tableFooterView = footerView
-        if #available(iOS 11.0, *) {
-            table.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
-        } else {
-            self.automaticallyAdjustsScrollViewInsets = false
-        }
+        table.backgroundColor = ScrollViewBackGroundColor
         table.register(ZCGoodsAuctionRecordCell.self, forCellReuseIdentifier: "ZCGoodsAuctionRecordCell_id")
         table.register(ZCGoodDetailServiceHeader.self, forHeaderFooterViewReuseIdentifier: NSStringFromClass(ZCGoodDetailServiceHeader.self))
         table.register(ZCGoodDetailSectionFooter.self, forHeaderFooterViewReuseIdentifier: NSStringFromClass(ZCGoodDetailSectionFooter.self))
@@ -65,19 +60,6 @@ class ZCGoodsDetailViewController: ZCBaseViewController {
         table.register(ZCGoodsAuctionRecommendHeader.self, forHeaderFooterViewReuseIdentifier: NSStringFromClass(ZCGoodsAuctionRecommendHeader.self))
         return table
     }()
-    
-//    func tableFooter() -> (footer: UIView, pageVC: ZCPageController) {
-//        let footer = UIView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-TabBarHeight))
-//        let topHolderView = UIView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: NavBarHeight-FitWidth(40)))
-//
-//        let vc = ZCPageController(titles: ["拍品描述","竞拍须知"], vcs: [descriptVC,noteVC], pageStyle: .topTabBar)
-//        vc.view.frame = CGRect(x: 0, y: topHolderView.bounds.height, w: SCREEN_WIDTH, h:footer.bounds.height - topHolderView.bounds.height)
-//        self.addChild(vc)
-//        footer.addSubview(topHolderView)
-//        footer.addSubview(vc.view)
-//
-//        return (footer, vc)
-//    }
     
     let bottomView = ZCGoodsDetailBottomView(frame: CGRect(x: 0, y: SCREEN_HEIGHT-FitWidth(49)-IndicatorHomeHeight, w: SCREEN_WIDTH, h: FitWidth(49)))
     let tableHeaderView = ZCGoodsDetailTableHeaderView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: FitWidth(485)))
