@@ -75,9 +75,9 @@ extension String {
         var calendar = Calendar.init(identifier: .gregorian)
         let timeZone = TimeZone.init(identifier: "Asia/Shanghai")
         calendar.timeZone = timeZone!
-        let theComponents = calendar.dateComponents([.day], from: date)
+        let theComponents = calendar.dateComponents([.weekday], from: date)
         
-        return weekdays[theComponents.day!-1]
+        return weekdays[theComponents.weekday!-1]
     }
 
     

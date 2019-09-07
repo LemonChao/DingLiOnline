@@ -11,6 +11,8 @@ target 'DingLiOnline' do
   pod 'SnapKit', '~> 4.2.0'
   pod 'Kingfisher', '~> 4.10.1'
   pod 'ReactiveCocoa', '~> 9.0.0'
+  pod 'IQKeyboardManager', '~> 6.4.0'
+  pod 'HMSegmentedControl', '~> 1.5.5'
   
   # AFN因为Qiniu依赖所导入
   pod 'Qiniu', '~> 7.1'

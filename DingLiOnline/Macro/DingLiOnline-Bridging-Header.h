@@ -11,3 +11,9 @@
 #import <YYKit/YYKit.h>
 #import <HXPhotoPicker/HXPhotoPicker.h>
 #import <SDCycleScrollView/SDCycleScrollView.h>
+
+/// swift库，在桥接文件里引入，可以全局使用了，解决了部分swift库的全局使用问题
+#import <SwiftyJSON/SwiftyJSON-Swift.h>//
+#import <ReactiveCocoa/ReactiveCocoa-Swift.h>
+#import <ReactiveSwift/ReactiveSwift-Swift.h>
+#import <Result/Result-Swift.h>

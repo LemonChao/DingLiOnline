@@ -8,6 +8,11 @@
 
 import UIKit
 
+protocol ZCGoodsViewWillEndDraggingDelegate: class {
+    func goodsWillEndDragging(_ scrollView: UIScrollView)
+}
+
+
 class ZCGoodsDetailViewController: ZCBaseViewController {
 
     override func viewDidLoad() {
@@ -16,7 +21,17 @@ class ZCGoodsDetailViewController: ZCBaseViewController {
         self.view.addSubview(tableView)
         
         tableHeaderView.auctionState = ZCGoodsAuctionState.over
-        tableFooterView.reloadPages()
+//        tableFooterView.reloadPages()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("goods viewWillAppear ++")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        print("goods viewWillDisappear --")
     }
     
     override func configCustomNav() {
@@ -27,16 +42,16 @@ class ZCGoodsDetailViewController: ZCBaseViewController {
     }
 
     
-    lazy var tableView: ZCSimultaneouslyTableView = {
-        let table = ZCSimultaneouslyTableView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-FitWidth(49)-IndicatorHomeHeight), style: .grouped)
+    lazy var tableView: UITableView = {
+        let table = UITableView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-FitWidth(49)-IndicatorHomeHeight), style: .grouped)
         table.delegate = self
         table.dataSource = self
         table.estimatedRowHeight = FitWidth(34)
         table.estimatedSectionFooterHeight = FitWidth(8)
         table.estimatedSectionHeaderHeight = FitWidth(44)
         table.tableHeaderView = tableHeaderView
-        table.tableFooterView = tableFooterView
-        table.backgroundColor = UIColor.red
+        
+        table.tableFooterView = footerView
         if #available(iOS 11.0, *) {
             table.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
         } else {
@@ -51,12 +66,52 @@ class ZCGoodsDetailViewController: ZCBaseViewController {
         return table
     }()
     
-    
+//    func tableFooter() -> (footer: UIView, pageVC: ZCPageController) {
+//        let footer = UIView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-TabBarHeight))
+//        let topHolderView = UIView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: NavBarHeight-FitWidth(40)))
+//
+//        let vc = ZCPageController(titles: ["拍品描述","竞拍须知"], vcs: [descriptVC,noteVC], pageStyle: .topTabBar)
+//        vc.view.frame = CGRect(x: 0, y: topHolderView.bounds.height, w: SCREEN_WIDTH, h:footer.bounds.height - topHolderView.bounds.height)
+//        self.addChild(vc)
+//        footer.addSubview(topHolderView)
+//        footer.addSubview(vc.view)
+//
+//        return (footer, vc)
+//    }
     
     let bottomView = ZCGoodsDetailBottomView(frame: CGRect(x: 0, y: SCREEN_HEIGHT-FitWidth(49)-IndicatorHomeHeight, w: SCREEN_WIDTH, h: FitWidth(49)))
     let tableHeaderView = ZCGoodsDetailTableHeaderView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: FitWidth(485)))
-    let tableFooterView = ZCGoodsDetailTableFooter(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-TabBarHeight))
-    var canScall = false
+    
+    lazy var footerView: UIView = {
+        let footer = UIView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: SCREEN_HEIGHT-TabBarHeight))
+        footer.backgroundColor = UIColor.white
+        let topHolderView = UIView(frame: CGRect(x: 0, y: 0, w: SCREEN_WIDTH, h: NavBarHeight-FitWidth(40)))
+        
+        let vc = ZCPageController(titles: ["拍品描述","竞拍须知"], vcs: [descriptVC,noteVC], pageStyle: .topTabBar)
+        vc.view.frame = CGRect(x: 0, y: topHolderView.bounds.height, w: SCREEN_WIDTH, h:footer.bounds.height - topHolderView.bounds.height)
+        self.addChild(vc)
+        footer.addSubview(topHolderView)
+        footer.addSubview(vc.view)
+
+        return footer
+    }()
+    
+    lazy var descriptVC:ZCBaseViewController = {
+        let vc = ZCGoodsDescriptVC()
+        vc.delegate = self
+        return vc
+    }()
+    lazy var noteVC:ZCBaseViewController = {
+        let vc = ZCGoodsNoteVC()
+        vc.delegate = self
+        return vc
+    }()
+//    lazy var footerPageVC: ZCPageController = {
+//        let pageVC = ZCPageController(titles: ["拍品描述","竞拍须知"], vcs: [descriptVC,noteVC], pageStyle: .topTabBar)
+//        return pageVC
+//    }()
+    
+    var goodsScroll = true
     
     
 }
@@ -112,15 +167,12 @@ extension ZCGoodsDetailViewController: UITableViewDelegate {
         /// 当 底层滚动式图滚动到指定位置时， 停止滚动，开始滚动子视图
 
         let offsetY = scrollView.contentOffset.y
-        if offsetY >= tableFooterView.y { //tableFooter 驻留
-            scrollView.setContentOffset(CGPoint(x: 0, y: tableFooterView.y), animated: false)
-            
-            if self.canScall {
-                canScall = false
-            }
-            
+        if offsetY >= footerView.y || !goodsScroll{ //tableFooter 驻留
+            scrollView.setContentOffset(CGPoint(x: 0, y: footerView.y), animated: false)
+            goodsScroll = false
+
         }
-        
+
         
     }
     
@@ -129,4 +181,20 @@ extension ZCGoodsDetailViewController: UITableViewDelegate {
     
 }
 
+extension ZCGoodsDetailViewController: ZCGoodsViewWillEndDraggingDelegate {
+    
+    func goodsWillEndDragging(_ scrollView: UIScrollView) {
+        
+        print(scrollView.contentOffset ,footerView.y)
 
+        if scrollView.contentOffset.y < 0 {// parent 滑动
+            goodsScroll = true
+        }
+        if goodsScroll {
+            scrollView.setContentOffset(CGPoint.zero, animated: false)
+        }
+        
+        
+    }
+    
+}

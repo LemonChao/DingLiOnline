@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import SwiftyJSON
+//import SwiftyJSON
 
 enum ZCAuctionState: Int {
     /// 筹备中

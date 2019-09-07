@@ -7,10 +7,29 @@
 //
 
 import UIKit
+/*
+ Descript viewWillAppear ++
+ goods viewWillAppear ++
+ D->N
+ Note viewWillAppear ++
+ Descript viewWillDisappear --
 
+ */
 /// 拍品须知
 class ZCGoodsNoteVC: ZCBaseViewController {
 
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        print("Note viewWillAppear ++")
+//    }
+//    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        print("Note viewWillDisappear --")
+    }
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let contentView = UIView()
@@ -143,7 +162,7 @@ class ZCGoodsNoteVC: ZCBaseViewController {
         let view = ZCSimultaneouslyScrollView(frame: CGRect.zero)
         view.showsVerticalScrollIndicator = false
         view.showsHorizontalScrollIndicator = false
-        view.bounces = false
+        view.delegate = self
         if #available(iOS 11.0, *) {
             view.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
         } else {
@@ -155,5 +174,22 @@ class ZCGoodsNoteVC: ZCBaseViewController {
     
     
     var noteScoll = true
+    // 代理
+    weak var delegate: ZCGoodsViewWillEndDraggingDelegate?
+
+}
+
+
+extension ZCGoodsNoteVC: UIScrollViewDelegate {
+    
+//    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+//    }
+
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        delegate?.goodsWillEndDragging(scrollView)
+    }
+    
     
 }
+
