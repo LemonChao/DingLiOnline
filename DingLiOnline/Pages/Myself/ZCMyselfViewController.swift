@@ -61,11 +61,6 @@ class ZCMyselfViewController: ZCBaseViewController {
         view.tableHeaderView = header
         view.backgroundColor = ScrollViewBackGroundColor
         view.showsVerticalScrollIndicator = false
-        if #available(iOS 11.0, *) {
-            view.contentInsetAdjustmentBehavior = UIScrollView.ContentInsetAdjustmentBehavior.never
-        } else {
-            self.automaticallyAdjustsScrollViewInsets = false
-        }
         view.separatorStyle = UITableViewCell.SeparatorStyle.none
         view.estimatedRowHeight = 200
         view.register(ZCMyselfOrderCell.self, forCellReuseIdentifier: NSStringFromClass(ZCMyselfOrderCell.self))
@@ -86,7 +81,7 @@ class ZCMyselfViewController: ZCBaseViewController {
 
 extension ZCMyselfViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 3
     }
     
     
@@ -103,9 +98,6 @@ extension ZCMyselfViewController: UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ZCMyselfAssetsCell.self)) as! ZCMyselfAssetsCell
             return cell
         case 2:
-            let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ZCMyselfPromotionCell.self)) as! ZCMyselfPromotionCell
-            return cell
-        case 3:
             let cell = tableView.dequeueReusableCell(withIdentifier: NSStringFromClass(ZCMyselfFeedbackCell.self)) as! ZCMyselfFeedbackCell
             return cell
         default:

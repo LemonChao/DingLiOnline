@@ -53,8 +53,8 @@ class ZCMyselfAssetsCell: UITableViewCell {
     
     lazy var dataArray: [[String:String]] = {
         var array = [[String:String]]()
-        let titles = ["保证金管理","我的余额","我的积分","我的会员卡","支付管理","我的委托"]
-        let imgNames = ["baozhengjinguanli","wodeyue","jifen","wodehuiyuanka","zhifuguanli","wodeweituo"]
+        let titles = ["保证金管理","我的余额","我的积分","我要推广","我的银行卡","我的委托"]
+        let imgNames = ["baozhengjinguanli","wodeyue","jifen","woyaotuiguang","zhifuguanli","wodeweituo"]
         for (index, value) in titles.enumerated() {
             let item: [String: String] = ["title": titles[index], "imgName": imgNames[index]]
             array.append(item)
@@ -81,8 +81,27 @@ extension ZCMyselfAssetsCell: UICollectionViewDataSource {
 
 
 
-
 extension ZCMyselfAssetsCell: UICollectionViewDelegate {
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.row {
+        case 0:
+            self.viewController?.navigationController?.pushViewController(ZCMyBalanceViewController(), animated: true)
+        case 1:
+            self.viewController?.navigationController?.pushViewController(ZCMyBalanceViewController(), animated: true)
+        case 2:
+            self.viewController?.navigationController?.pushViewController(ZCMyBalanceViewController(), animated: true)
+        case 3:
+            self.viewController?.navigationController?.pushViewController(ZCMyBalanceViewController(), animated: true)
+        case 4:
+            self.viewController?.navigationController?.pushViewController(ZCMyBalanceViewController(), animated: true)
+        case 5:
+            self.viewController?.navigationController?.pushViewController(ZCMyBalanceViewController(), animated: true)
+        default: break
+        }
+        
+        
+    }
     
 }
 

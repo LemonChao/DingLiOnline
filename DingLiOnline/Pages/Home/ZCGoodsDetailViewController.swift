@@ -167,7 +167,7 @@ extension ZCGoodsDetailViewController: ZCGoodsViewWillEndDraggingDelegate {
     
     func goodsWillEndDragging(_ scrollView: UIScrollView) {
         
-        print(scrollView.contentOffset ,footerView.y)
+//        print(scrollView.contentOffset ,footerView.y)
 
         if scrollView.contentOffset.y < 0 {// parent 滑动
             goodsScroll = true
