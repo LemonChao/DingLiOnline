@@ -16,6 +16,9 @@ enum ZCAuctionState: Int {
     case hotsale = 2
     /// 预展中
     case presell = 3
+    /// 已结束
+    case done = 4
+
     
     func introduce() -> (title: String, color:UIColor) {
         switch self {
@@ -25,6 +28,8 @@ enum ZCAuctionState: Int {
             return ("热拍中", GeneralRedColor)
         case .presell:
             return ("预展中", RGBA(250, 200, 66, 1))
+        case .done:
+            return ("已结束", AssistBlue)
         }
     }
     

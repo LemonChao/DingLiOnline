@@ -79,6 +79,11 @@
 		6C2D566C2302CC5900506714 /* QiniuTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2D566B2302CC5900506714 /* QiniuTools.swift */; };
 		6C3598C0231384F80095D76D /* ZCPayMarginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3598BF231384F80095D76D /* ZCPayMarginVC.swift */; };
 		6C3598C22313E6300095D76D /* ZCAddressAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3598C12313E6300095D76D /* ZCAddressAddVC.swift */; };
+		6C3EAF53232891F700B11C07 /* ZCSelectWithdrawBankCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3EAF52232891F700B11C07 /* ZCSelectWithdrawBankCardView.swift */; };
+		6C3EAF582328C92C00B11C07 /* ZCMyCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3EAF572328C92C00B11C07 /* ZCMyCardViewController.swift */; };
+		6C3EAF5B2328CA9700B11C07 /* ZCMyCardTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3EAF5A2328CA9700B11C07 /* ZCMyCardTableCell.swift */; };
+		6C3EAF5D2328E66D00B11C07 /* ZCMyBindCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3EAF5C2328E66D00B11C07 /* ZCMyBindCardViewController.swift */; };
+		6C3EAF5F2329057D00B11C07 /* ZCMySelectBankVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3EAF5E2329057D00B11C07 /* ZCMySelectBankVC.swift */; };
 		6C4EF18B22EBEDE500E3D68B /* ZCCircleNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EF18A22EBEDE500E3D68B /* ZCCircleNavigationBar.swift */; };
 		6C4EF18D22EBFA9B00E3D68B /* ZCFocusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EF18C22EBFA9B00E3D68B /* ZCFocusViewController.swift */; };
 		6C4EF19022EBFAE100E3D68B /* ZCBaseCircleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C4EF18F22EBFAE100E3D68B /* ZCBaseCircleViewController.swift */; };
@@ -108,6 +113,12 @@
 		6C8F0464230502DD00F7DDAD /* ZCCountDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8F0463230502DD00F7DDAD /* ZCCountDownButton.swift */; };
 		6C8F046823054FCC00F7DDAD /* ConvenienceInitViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8F046723054FCC00F7DDAD /* ConvenienceInitViewExtension.swift */; };
 		6C97B99A230BFB4000C0D754 /* ZCSubmitBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C97B999230BFB4000C0D754 /* ZCSubmitBottomView.swift */; };
+		6C9D9E80232747D800694195 /* ZCMyBalanceTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9D9E7F232747D800694195 /* ZCMyBalanceTableCell.swift */; };
+		6C9D9E82232750D900694195 /* ZCMyBalanceRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9D9E81232750D900694195 /* ZCMyBalanceRecordVC.swift */; };
+		6C9D9E852327542600694195 /* ZCMyBalanceWithdrawVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9D9E842327542600694195 /* ZCMyBalanceWithdrawVC.swift */; };
+		6C9D9E872327548900694195 /* ZCMyBalanceChargeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9D9E862327548900694195 /* ZCMyBalanceChargeVC.swift */; };
+		6C9D9E892327568600694195 /* ZCMyBanlanceWithdrawRecordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9D9E882327568600694195 /* ZCMyBanlanceWithdrawRecordVC.swift */; };
+		6C9D9E8B232757A000694195 /* ZCMyBalanceWithdrawRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9D9E8A232757A000694195 /* ZCMyBalanceWithdrawRecordCell.swift */; };
 		6CA0A1DC2301154800DD774A /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA0A1DB2301154800DD774A /* NetworkHelper.swift */; };
 		6CA0A1DF230143A100DD774A /* ZCFocusListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA0A1DE230143A100DD774A /* ZCFocusListModel.swift */; };
 		6CA0A1E1230150A100DD774A /* ZCBaseStructModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CA0A1E0230150A100DD774A /* ZCBaseStructModel.swift */; };
@@ -264,6 +275,11 @@
 		6C2D566E2302CE2F00506714 /* DingLiOnline-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DingLiOnline-Bridging-Header.h"; sourceTree = "<group>"; };
 		6C3598BF231384F80095D76D /* ZCPayMarginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCPayMarginVC.swift; sourceTree = "<group>"; };
 		6C3598C12313E6300095D76D /* ZCAddressAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCAddressAddVC.swift; sourceTree = "<group>"; };
+		6C3EAF52232891F700B11C07 /* ZCSelectWithdrawBankCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCSelectWithdrawBankCardView.swift; sourceTree = "<group>"; };
+		6C3EAF572328C92C00B11C07 /* ZCMyCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyCardViewController.swift; sourceTree = "<group>"; };
+		6C3EAF5A2328CA9700B11C07 /* ZCMyCardTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyCardTableCell.swift; sourceTree = "<group>"; };
+		6C3EAF5C2328E66D00B11C07 /* ZCMyBindCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyBindCardViewController.swift; sourceTree = "<group>"; };
+		6C3EAF5E2329057D00B11C07 /* ZCMySelectBankVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMySelectBankVC.swift; sourceTree = "<group>"; };
 		6C4EF18A22EBEDE500E3D68B /* ZCCircleNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCircleNavigationBar.swift; sourceTree = "<group>"; };
 		6C4EF18C22EBFA9B00E3D68B /* ZCFocusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCFocusViewController.swift; sourceTree = "<group>"; };
 		6C4EF18F22EBFAE100E3D68B /* ZCBaseCircleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseCircleViewController.swift; sourceTree = "<group>"; };
@@ -293,6 +309,12 @@
 		6C8F0463230502DD00F7DDAD /* ZCCountDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCCountDownButton.swift; sourceTree = "<group>"; };
 		6C8F046723054FCC00F7DDAD /* ConvenienceInitViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvenienceInitViewExtension.swift; sourceTree = "<group>"; };
 		6C97B999230BFB4000C0D754 /* ZCSubmitBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCSubmitBottomView.swift; sourceTree = "<group>"; };
+		6C9D9E7F232747D800694195 /* ZCMyBalanceTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyBalanceTableCell.swift; sourceTree = "<group>"; };
+		6C9D9E81232750D900694195 /* ZCMyBalanceRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyBalanceRecordVC.swift; sourceTree = "<group>"; };
+		6C9D9E842327542600694195 /* ZCMyBalanceWithdrawVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyBalanceWithdrawVC.swift; sourceTree = "<group>"; };
+		6C9D9E862327548900694195 /* ZCMyBalanceChargeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyBalanceChargeVC.swift; sourceTree = "<group>"; };
+		6C9D9E882327568600694195 /* ZCMyBanlanceWithdrawRecordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyBanlanceWithdrawRecordVC.swift; sourceTree = "<group>"; };
+		6C9D9E8A232757A000694195 /* ZCMyBalanceWithdrawRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyBalanceWithdrawRecordCell.swift; sourceTree = "<group>"; };
 		6CA0A1DB2301154800DD774A /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		6CA0A1DE230143A100DD774A /* ZCFocusListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCFocusListModel.swift; sourceTree = "<group>"; };
 		6CA0A1E0230150A100DD774A /* ZCBaseStructModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCBaseStructModel.swift; sourceTree = "<group>"; };
@@ -484,7 +506,8 @@
 			isa = PBXGroup;
 			children = (
 				6C24671F22EAA74400A8CD19 /* ZCMyselfViewController.swift */,
-				6CADFBF923239E16000F24E9 /* Controllers */,
+				6C3EAF542328C8DF00B11C07 /* 我的银行卡 */,
+				6CADFBF923239E16000F24E9 /* 我的余额 */,
 				6CD0515D231F583B00566D83 /* ZCSettingVerifyPhoneVC.swift */,
 				6CD0515F231F6B1600566D83 /* ZCTradersPasswordVC.swift */,
 				6CDD867122FAB55600EDDEE5 /* Views */,
@@ -639,6 +662,25 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		6C3EAF542328C8DF00B11C07 /* 我的银行卡 */ = {
+			isa = PBXGroup;
+			children = (
+				6C3EAF572328C92C00B11C07 /* ZCMyCardViewController.swift */,
+				6C3EAF5C2328E66D00B11C07 /* ZCMyBindCardViewController.swift */,
+				6C3EAF5E2329057D00B11C07 /* ZCMySelectBankVC.swift */,
+				6C3EAF592328CA7000B11C07 /* Views */,
+			);
+			path = "我的银行卡";
+			sourceTree = "<group>";
+		};
+		6C3EAF592328CA7000B11C07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C3EAF5A2328CA9700B11C07 /* ZCMyCardTableCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		6C4EF18922EBECA900E3D68B /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -708,6 +750,16 @@
 				6CD05161231FA24700566D83 /* ZCPasswordView.swift */,
 				6CDC1E972320AC17001D2D8C /* ZCPaymentManagerView.swift */,
 				6C7F60AA2322490800AD9F37 /* ZCPageController.swift */,
+				6C3EAF52232891F700B11C07 /* ZCSelectWithdrawBankCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6C9D9E83232753D300694195 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C9D9E7F232747D800694195 /* ZCMyBalanceTableCell.swift */,
+				6C9D9E8A232757A000694195 /* ZCMyBalanceWithdrawRecordCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -721,12 +773,17 @@
 			path = MyFocus;
 			sourceTree = "<group>";
 		};
-		6CADFBF923239E16000F24E9 /* Controllers */ = {
+		6CADFBF923239E16000F24E9 /* 我的余额 */ = {
 			isa = PBXGroup;
 			children = (
 				6CADFBFA2323A1EB000F24E9 /* ZCMyBalanceViewController.swift */,
+				6C9D9E862327548900694195 /* ZCMyBalanceChargeVC.swift */,
+				6C9D9E842327542600694195 /* ZCMyBalanceWithdrawVC.swift */,
+				6C9D9E882327568600694195 /* ZCMyBanlanceWithdrawRecordVC.swift */,
+				6C9D9E81232750D900694195 /* ZCMyBalanceRecordVC.swift */,
+				6C9D9E83232753D300694195 /* Views */,
 			);
-			path = Controllers;
+			path = "我的余额";
 			sourceTree = "<group>";
 		};
 		6CB8719322F3CC9900B6CCF2 /* Views */ = {
@@ -1112,12 +1169,14 @@
 				6CC011012306650900D14250 /* ZCBaseViewModel.swift in Sources */,
 				6C24686122EAD8FB00A8CD19 /* UIFontExtensions.swift in Sources */,
 				6C24684322EAD8FB00A8CD19 /* TimerExtensions.swift in Sources */,
+				6C9D9E8B232757A000694195 /* ZCMyBalanceWithdrawRecordCell.swift in Sources */,
 				6C24671622EA9E9F00A8CD19 /* ZCBaseViewController.swift in Sources */,
 				6CA0A1DC2301154800DD774A /* NetworkHelper.swift in Sources */,
 				6C24684A22EAD8FB00A8CD19 /* DoubleExtensions.swift in Sources */,
 				6C7C2B5C22FE990600B5AE0A /* ZCBindPhoneNumberVC.swift in Sources */,
 				6C24685622EAD8FB00A8CD19 /* DateExtensions.swift in Sources */,
 				6CE921AD22F3CF5500C997B5 /* ZCClassifyRightController.swift in Sources */,
+				6C9D9E872327548900694195 /* ZCMyBalanceChargeVC.swift in Sources */,
 				6C24671822EA9EF700A8CD19 /* ZCBaseView.swift in Sources */,
 				6CADFBF823238827000F24E9 /* ZCGoodsDescriptPropertyCell.swift in Sources */,
 				6C24684422EAD8FB00A8CD19 /* UIWindowExtensions.swift in Sources */,
@@ -1158,6 +1217,7 @@
 				6C88BCF222FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift in Sources */,
 				6C24672022EAA74400A8CD19 /* ZCMyselfViewController.swift in Sources */,
 				6C24683C22EAD8FB00A8CD19 /* UIDeviceExtensions.swift in Sources */,
+				6C9D9E852327542600694195 /* ZCMyBalanceWithdrawVC.swift in Sources */,
 				6CC010FF23063DCC00D14250 /* ZCMycircleCollectionCell.swift in Sources */,
 				6C24671E22EAA73500A8CD19 /* ZCCircleViewController.swift in Sources */,
 				6C24685422EAD8FB00A8CD19 /* ErrorTypeExtensions.swift in Sources */,
@@ -1182,9 +1242,11 @@
 				6CD4D47A23150845007A880A /* ZCBaseModel.swift in Sources */,
 				6C8BF9EE22F01E0A00FF0698 /* ZCCircleCollectionViewCell.swift in Sources */,
 				6C4EF18B22EBEDE500E3D68B /* ZCCircleNavigationBar.swift in Sources */,
+				6C3EAF5F2329057D00B11C07 /* ZCMySelectBankVC.swift in Sources */,
 				6CD4D4382314D326007A880A /* ZCClassifyVM.swift in Sources */,
 				6C24684C22EAD8FB00A8CD19 /* UIColoredView.swift in Sources */,
 				6C24683122EAD8FB00A8CD19 /* BundleExtensions.swift in Sources */,
+				6C9D9E892327568600694195 /* ZCMyBanlanceWithdrawRecordVC.swift in Sources */,
 				6C8BF9E822EFDC9E00FF0698 /* ZCGridPictureView.swift in Sources */,
 				6C24672522EAAD2400A8CD19 /* InterfaceHeader.swift in Sources */,
 				6CA0A1DF230143A100DD774A /* ZCFocusListModel.swift in Sources */,
@@ -1197,6 +1259,7 @@
 				6C8F0464230502DD00F7DDAD /* ZCCountDownButton.swift in Sources */,
 				6C24683322EAD8FB00A8CD19 /* BlockSwipe.swift in Sources */,
 				6CCECDB523100E1100BFB1FD /* ZCGoodsAuctionRecommendHeader.swift in Sources */,
+				6C9D9E80232747D800694195 /* ZCMyBalanceTableCell.swift in Sources */,
 				6CD919342310C998007FC84F /* ZCGoodsDetailTableFooter.swift in Sources */,
 				6C24683022EAD8FB00A8CD19 /* DictionaryExtensions.swift in Sources */,
 				6CCECDB3231000A800BFB1FD /* ZCGoodsAuctionInfoCell.swift in Sources */,
@@ -1221,6 +1284,7 @@
 				6C0DCC3B2318BB1C00BCCE20 /* ZCHomeViewModel.swift in Sources */,
 				6CE921D122F420A300C997B5 /* ZCClassifyCollectionSectionHeader.swift in Sources */,
 				6C24683A22EAD8FB00A8CD19 /* NSAttributedStringExtensions.swift in Sources */,
+				6C3EAF5B2328CA9700B11C07 /* ZCMyCardTableCell.swift in Sources */,
 				6CD05160231F6B1600566D83 /* ZCTradersPasswordVC.swift in Sources */,
 				6C4EF19222EBFB1400E3D68B /* ZCMycircleViewController.swift in Sources */,
 				6C4EF19622EC033900E3D68B /* ZCCircleNavigationBarCell.swift in Sources */,
@@ -1228,10 +1292,13 @@
 				6C24684B22EAD8FB00A8CD19 /* NSDictionaryExtensions.swift in Sources */,
 				6CB5BFA52316647700AC3C69 /* ZCMarqueeView.swift in Sources */,
 				6CCECDB1230FFAE500BFB1FD /* ZCGoodsAuctionInfoHeader.swift in Sources */,
+				6C9D9E82232750D900694195 /* ZCMyBalanceRecordVC.swift in Sources */,
 				6C7F60AB2322490800AD9F37 /* ZCPageController.swift in Sources */,
 				6CCECDAD230FE11500BFB1FD /* ZCGoodDetailServiceHeader.swift in Sources */,
 				6C88BCF622FC319600E5B2F3 /* ZCMyselfAssetsCollectionCell.swift in Sources */,
 				6C24686022EAD8FB00A8CD19 /* CharacterExtensions.swift in Sources */,
+				6C3EAF53232891F700B11C07 /* ZCSelectWithdrawBankCardView.swift in Sources */,
+				6C3EAF5D2328E66D00B11C07 /* ZCMyBindCardViewController.swift in Sources */,
 				6C24685522EAD8FB00A8CD19 /* StringExtensions.swift in Sources */,
 				6C24684822EAD8FB00A8CD19 /* UIViewControllerExtensions.swift in Sources */,
 				6C24685222EAD8FB00A8CD19 /* UserDefaultsExtension.swift in Sources */,
@@ -1242,6 +1309,7 @@
 				6C24684122EAD8FB00A8CD19 /* BlockWebView.swift in Sources */,
 				6C24684022EAD8FB00A8CD19 /* NSObjectExtensions.swift in Sources */,
 				6C24683622EAD8FB00A8CD19 /* BlockLongPress.swift in Sources */,
+				6C3EAF582328C92C00B11C07 /* ZCMyCardViewController.swift in Sources */,
 				6C24683D22EAD8FB00A8CD19 /* UIButtonExtensions.swift in Sources */,
 				6CDD867022FAA55600EDDEE5 /* ZCHomeAuctionRecommendView.swift in Sources */,
 				6C24671422EA9E7500A8CD19 /* ZCBaseNavigationController.swift in Sources */,

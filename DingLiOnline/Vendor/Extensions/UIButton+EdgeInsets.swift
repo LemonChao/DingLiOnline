@@ -98,7 +98,7 @@ extension UIButton {
     func imagePosition(_ position: ImagePosition, margin aMargin: CGFloat) {
         
         if position == .Left || position == .Right {
-            let imageWith = self.imageView?.image!.size.width ?? 0.0
+            let imageWith = self.imageView?.image?.size.width ?? 0.0
             let labelWidth = self.titleLabel?.sizeThatFits(CGSize(width: CGFloat(MAXFLOAT), height: CGFloat(MAXFLOAT))).width ?? 0
             let spacing = self.bounds.size.width - imageWith - labelWidth - aMargin*2
             
