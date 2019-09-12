@@ -86,7 +86,7 @@ extension ZCMyselfAssetsCell: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         switch indexPath.row {
         case 0:
-            self.viewController?.navigationController?.pushViewController(ZCMyCardViewController(), animated: true)
+            self.viewController?.navigationController?.pushViewController(ZCMySettingViewController(), animated: true)
         case 1:
             self.viewController?.navigationController?.pushViewController(ZCMyBalanceViewController(), animated: true)
         case 2:

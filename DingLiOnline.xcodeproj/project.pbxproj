@@ -101,6 +101,9 @@
 		6C81037A230E3E79002B4116 /* ZCGoodsDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C810379230E3E79002B4116 /* ZCGoodsDetailBottomView.swift */; };
 		6C81037E230E9539002B4116 /* ZCGoodsDetailTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C81037D230E9539002B4116 /* ZCGoodsDetailTableHeaderView.swift */; };
 		6C810380230E962B002B4116 /* ZCGoodsAuctionRecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C81037F230E962B002B4116 /* ZCGoodsAuctionRecordCell.swift */; };
+		6C8292352329F3FB00C477F1 /* ZCMySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8292342329F3FB00C477F1 /* ZCMySettingViewController.swift */; };
+		6C8292382329F63200C477F1 /* ZCMySettingTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C8292372329F63200C477F1 /* ZCMySettingTableCell.swift */; };
+		6C82923A232A27FB00C477F1 /* ZCMySettingAvatarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C829239232A27FB00C477F1 /* ZCMySettingAvatarVC.swift */; };
 		6C88BCEE22FBCAF800E5B2F3 /* ZCMyselfOrderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88BCED22FBCAF800E5B2F3 /* ZCMyselfOrderCell.swift */; };
 		6C88BCF022FBCBFC00E5B2F3 /* ZCMyselfAssetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88BCEF22FBCBFC00E5B2F3 /* ZCMyselfAssetsCell.swift */; };
 		6C88BCF222FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C88BCF122FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift */; };
@@ -297,6 +300,9 @@
 		6C810379230E3E79002B4116 /* ZCGoodsDetailBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGoodsDetailBottomView.swift; sourceTree = "<group>"; };
 		6C81037D230E9539002B4116 /* ZCGoodsDetailTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGoodsDetailTableHeaderView.swift; sourceTree = "<group>"; };
 		6C81037F230E962B002B4116 /* ZCGoodsAuctionRecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCGoodsAuctionRecordCell.swift; sourceTree = "<group>"; };
+		6C8292342329F3FB00C477F1 /* ZCMySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMySettingViewController.swift; sourceTree = "<group>"; };
+		6C8292372329F63200C477F1 /* ZCMySettingTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMySettingTableCell.swift; sourceTree = "<group>"; };
+		6C829239232A27FB00C477F1 /* ZCMySettingAvatarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMySettingAvatarVC.swift; sourceTree = "<group>"; };
 		6C88BCED22FBCAF800E5B2F3 /* ZCMyselfOrderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfOrderCell.swift; sourceTree = "<group>"; };
 		6C88BCEF22FBCBFC00E5B2F3 /* ZCMyselfAssetsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfAssetsCell.swift; sourceTree = "<group>"; };
 		6C88BCF122FBCCD100E5B2F3 /* ZCMyselfPromotionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZCMyselfPromotionCell.swift; sourceTree = "<group>"; };
@@ -506,6 +512,7 @@
 			isa = PBXGroup;
 			children = (
 				6C24671F22EAA74400A8CD19 /* ZCMyselfViewController.swift */,
+				6C8292332329F3B800C477F1 /* 设置 */,
 				6C3EAF542328C8DF00B11C07 /* 我的银行卡 */,
 				6CADFBF923239E16000F24E9 /* 我的余额 */,
 				6CD0515D231F583B00566D83 /* ZCSettingVerifyPhoneVC.swift */,
@@ -751,6 +758,24 @@
 				6CDC1E972320AC17001D2D8C /* ZCPaymentManagerView.swift */,
 				6C7F60AA2322490800AD9F37 /* ZCPageController.swift */,
 				6C3EAF52232891F700B11C07 /* ZCSelectWithdrawBankCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6C8292332329F3B800C477F1 /* 设置 */ = {
+			isa = PBXGroup;
+			children = (
+				6C8292342329F3FB00C477F1 /* ZCMySettingViewController.swift */,
+				6C829239232A27FB00C477F1 /* ZCMySettingAvatarVC.swift */,
+				6C8292362329F60100C477F1 /* Views */,
+			);
+			path = "设置";
+			sourceTree = "<group>";
+		};
+		6C8292362329F60100C477F1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6C8292372329F63200C477F1 /* ZCMySettingTableCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1221,6 +1246,7 @@
 				6CC010FF23063DCC00D14250 /* ZCMycircleCollectionCell.swift in Sources */,
 				6C24671E22EAA73500A8CD19 /* ZCCircleViewController.swift in Sources */,
 				6C24685422EAD8FB00A8CD19 /* ErrorTypeExtensions.swift in Sources */,
+				6C8292352329F3FB00C477F1 /* ZCMySettingViewController.swift in Sources */,
 				6CEE7A9F22F95B7F000B147E /* ZCHomeSectionHeaderView.swift in Sources */,
 				6C24683E22EAD8FB00A8CD19 /* IntExtensions.swift in Sources */,
 				6C24685322EAD8FB00A8CD19 /* UISwitchExtensions.swift in Sources */,
@@ -1253,6 +1279,7 @@
 				6CCECDAF230FE83200BFB1FD /* ZCGoodsAuctionRecordHeader.swift in Sources */,
 				6C24671A22EAA71400A8CD19 /* ZCHomeViewController.swift in Sources */,
 				6C24685C22EAD8FB00A8CD19 /* URLExtensions.swift in Sources */,
+				6C8292382329F63200C477F1 /* ZCMySettingTableCell.swift in Sources */,
 				6CB9065A22E996ED00C40C9F /* DingLiOnline.xcdatamodeld in Sources */,
 				6C81037A230E3E79002B4116 /* ZCGoodsDetailBottomView.swift in Sources */,
 				6CCD6C2122EE912A0037C491 /* ZCFocusTableViewCell.swift in Sources */,
@@ -1318,6 +1345,7 @@
 				6CD0515E231F583B00566D83 /* ZCSettingVerifyPhoneVC.swift in Sources */,
 				6C24684922EAD8FB00A8CD19 /* UIBarButtonItemExtensions.swift in Sources */,
 				6CD4D47823150824007A880A /* ZCClassifyModel.swift in Sources */,
+				6C82923A232A27FB00C477F1 /* ZCMySettingAvatarVC.swift in Sources */,
 				6CADFBF423235E95000F24E9 /* ZCGoodsDescriptImageCell.swift in Sources */,
 				6C19456922F2CD280015B381 /* ZCMyCircleHeaderView.swift in Sources */,
 				6C24685A22EAD8FB00A8CD19 /* UITextViewExtensions.swift in Sources */,

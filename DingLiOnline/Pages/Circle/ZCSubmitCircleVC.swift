@@ -78,7 +78,7 @@ class ZCSubmitCircleVC: ZCBaseViewController {
     @objc func rightButtonAction(_ button: UIButton) {
         
         if textView.text!.length <= 0 || photos.isEmpty || self.huati.length <= 0 {
-            ZCAlertTools.showWith(ViewCOntroller: self, title: "内容不完整", message: nil, buttonTitle: "确定", buttonStyle: .default)
+            ZCAlertTools.showWith(ViewController: self, title: "内容不完整", message: nil, buttonTitle: "确定", buttonStyle: .default)
             return
         }
         
