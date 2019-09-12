@@ -95,14 +95,13 @@ class ZCMyBindCardViewController: ZCBaseViewController {
         let selectVC = ZCMySelectBankVC()
         
         selectVC.backCompleteEnclosure = {(name: String) in
-            button.setImage(UIImage(named: "ICBC"), for: .selected)
-            button.setTitle(name, for: .selected)
+            button.setImage(UIImage(named: "ICBC"), for: .normal)
+            button.setTitle(name, for: .normal)
             button.backgroundColor = UIColor.white
-            button.isSelected = true
             button.imagePosition(.Left, margin: 0)
         }
         
-        self.navigationController?.pushViewController(selectVC, animated: true)
+        self.present(selectVC, animated: true, completion: nil)
     }
     
     func setupinputCell(title: String, placeholder: String) -> (view:UIView, textField:UITextField) {
@@ -167,10 +166,8 @@ class ZCMyBindCardViewController: ZCBaseViewController {
     
     lazy var bankButton: ResizeSpacingButton = {
         let button = ResizeSpacingButton(position: .Left, spacing: FitWidth(FitWidth(10)))
-        button.setTitle("工商银行-储蓄卡(8967)", for: .selected)
-        button.setTitleColor(PrimaryColor, for: .selected)
+        button.setTitleColor(PrimaryColor, for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: FontSize(15))
-        button.setImage(UIImage(named: "ICBC"), for: .selected)
         let normalImg = UIImage(color: UIColor.clear, size: CGSize(width: FitWidth(230), height: FitWidth(49)))
         button.setImage(normalImg, for: .normal)
         button.addTarget(self, action: #selector(bankButtonAction(_:)), for: .touchUpInside)
