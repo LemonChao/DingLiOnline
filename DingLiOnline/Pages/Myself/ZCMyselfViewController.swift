@@ -124,6 +124,7 @@ extension ZCMyselfViewController: UITableViewDelegate {
         
         if offsetY < colorChangePoint || offsetY == 0 {
             customNavBar.backgroundColor = UIColor.white.withAlphaComponent(0)
+            customNavBar.bottomLine.backgroundColor = LineColor.withAlphaComponent(0)
             customNavBar.title = ""
         }else {
             let alpha = (offsetY - colorChangePoint) / NavBarHeight;

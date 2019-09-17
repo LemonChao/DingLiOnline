@@ -115,14 +115,12 @@ extension ZCMySettingViewController: UITableViewDelegate,UITableViewDataSource {
         case "收货地址":
             self.navigationController?.pushViewController(ZCAddressListVC(), animated: true)
         case "实名认证":
-            self.navigationController?.pushViewController(ZCMySettingAvatarVC(), animated: true)
+            self.navigationController?.pushViewController(ZCMySettingCertificationVC(), animated: true)
         case "关于我们":
             self.navigationController?.pushViewController(ZCMySettingAboutusVC(), animated: true)
         default:
             break
         }
-        
-        
         
         
     }

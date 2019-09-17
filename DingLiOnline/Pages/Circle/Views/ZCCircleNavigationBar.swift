@@ -33,7 +33,7 @@ class ZCCircleNavigationBar: ZCBaseView {
     }
     var contentViewHeight: CGFloat = 0.0
     var parentViewController: ZCBaseViewController!
-    var lineEdgeInsets = UIEdgeInsets(top: 40, left: 4, bottom: 2, right: 4)
+    var lineEdgeInsets = UIEdgeInsets(top: 40, left: 0, bottom: 2, right: 0)
     
     
     var currentIndex = 0
