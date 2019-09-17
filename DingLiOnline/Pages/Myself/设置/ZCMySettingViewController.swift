@@ -47,7 +47,7 @@ class ZCMySettingViewController: ZCBaseViewController {
         return table
     }()
     
-    let dataArray:[[[String:String]]] = [[["text":"头像","detailText":""],["text":"昵称","detailText":"Action"],["text":"手机号","detailText":"15378769701"],["text":"重置登录密码","detailText":""],["text":"重置交易密码","detailText":""],["text":"收货地址","detailText":""]],
+    let dataArray:[[[String:String]]] = [[["text":"头像","detailText":""],["text":"昵称","detailText":"Action"],["text":"手机号","detailText":"15378769701"],["text":"重置交易密码","detailText":""],["text":"收货地址","detailText":""]],
                                          [["text":"实名认证","detailText":"未实名"]],
                                          [["text":"关于我们","detailText":""]]]
     
@@ -57,15 +57,12 @@ class ZCMySettingViewController: ZCBaseViewController {
 extension ZCMySettingViewController: UITableViewDelegate,UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return dataArray.count
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 6
-        }else {
-            return 1
-        }
+        let array = dataArray[section]
+        return array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -108,19 +105,19 @@ extension ZCMySettingViewController: UITableViewDelegate,UITableViewDataSource {
         case "头像":
             self.navigationController?.pushViewController(ZCMySettingAvatarVC(), animated: true)
         case "昵称":
-            self.navigationController?.pushViewController(ZCMySettingAvatarVC(), animated: true)
+            self.navigationController?.pushViewController(ZCMySettingNicknameVC(), animated: true)
         case "手机号":
             self.navigationController?.pushViewController(ZCMySettingAvatarVC(), animated: true)
         case "重置登陆密码":
             self.navigationController?.pushViewController(ZCMySettingAvatarVC(), animated: true)
         case "重置交易密码":
-            self.navigationController?.pushViewController(ZCMySettingAvatarVC(), animated: true)
-        case "收货在地址":
-            self.navigationController?.pushViewController(ZCMySettingAvatarVC(), animated: true)
+            self.navigationController?.pushViewController(ZCSettingVerifyPhoneVC(), animated: true)
+        case "收货地址":
+            self.navigationController?.pushViewController(ZCAddressListVC(), animated: true)
         case "实名认证":
             self.navigationController?.pushViewController(ZCMySettingAvatarVC(), animated: true)
         case "关于我们":
-            self.navigationController?.pushViewController(ZCMySettingAvatarVC(), animated: true)
+            self.navigationController?.pushViewController(ZCMySettingAboutusVC(), animated: true)
         default:
             break
         }

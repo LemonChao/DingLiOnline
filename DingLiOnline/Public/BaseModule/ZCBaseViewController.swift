@@ -14,7 +14,7 @@ class ZCBaseViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = BackGroundColor
         
-        if #available(iOS 11.0, *) {
+        if #available(iOS 11.0, *) {//这种设置慎重使用，会修改系统的VC/scrollView 也会受到影响
             UIScrollView.appearance().contentInsetAdjustmentBehavior = .never
         } else {
             automaticallyAdjustsScrollViewInsets = false
