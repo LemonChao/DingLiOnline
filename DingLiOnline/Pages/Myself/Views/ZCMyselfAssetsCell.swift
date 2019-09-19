@@ -35,10 +35,12 @@ class ZCMyselfAssetsCell: UITableViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = FitWidth(15)
         layout.minimumInteritemSpacing = FitWidth(30)
-        layout.itemSize = CGSize(width: (SCREEN_WIDTH-FitWidth(104))/3, height: FitWidth(50))//100+44
+        layout.itemSize = CGSize(width: floor((SCREEN_WIDTH-FitWidth(104))/3), height: FitWidth(50))//100+44
         let collection = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collection.dataSource = self
         collection.delegate = self
+        collection.showsVerticalScrollIndicator = false
+        collection.showsHorizontalScrollIndicator = false
         collection.backgroundColor = UIColor.white
         collection.register(ZCMyselfAssetsCollectionCell.self, forCellWithReuseIdentifier: "ZCMyselfAssetsCollectionCell")
         return collection
